@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Step 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+body, html{
+  height: 100%;
+
+}
+.first_div {
+  height: 100%;
+  width: 100%;
+
+  background-color: red;
+}
+.first_div_left{
+  margin-left:0%;
+  width:43%;
+  float:left;
+  position:relative;
+  height: 100%;
+  background:white;
+}
+.first_div_right{
+  margin-right:0px;
+  width:57%;
+  float:right;
+  position:relative;
+  background:#4035ba;
+  height: 100%;
+
+}
+.first_div_left_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.logo_img{
+  height: 42px;
+  width: 42px;
+
+}
+.first_div_left_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px
+}
+.first_div_left_three{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_three_h3{
+  font-size: 12px;
+  color: #4035ba;
+}
+.first_div_left_four{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_four_h2{
+  font-size: 18px;
+
+}
+.first_div_left_five{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+/* .first_div_left_six{
+  margin-top: 7%;
+  margin-left: 5%;
+  padding-left: 10%;
+
+} */
+
+</style>
+<style>
+.first_div_right_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.first_div_right_first_h4{
+  font-size: 12px;
+  color: #24b7f4;
+}
+.first_div_right_first_h3{
+  font-size: 18px;
+  color: white;
+}
+.first_div_right_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+.first_div_right_third{
+  margin-top: 3%;
+  margin-left: 5%;
+  text-align: center;
+}
+.next-button{
+  /* padding-left: 50px;
+  padding-right: 50px; */
+
+}
+</style>
+<style>
+.input_label{
+    width: 100%;
+    margin-bottom: 12px;
+
+}
+.profile_input{
+  width: 100%;
+}
+.select_input{
+  width: 100%;
+  margin-bottom: 12px;
+
+}
+.first_div_left_six{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.next-button{
+  width: 100%;
+
+
+}
+</style>
+</head>
+<body>
+    <div class="first_div">
+      <div class="first_div_left">
+        <div class="first_div_left_first">
+          <img src="green_icon.png" class="logo_img" >
+        </div>
+        <div class="first_div_left_second">
+          <p class="divided">
+            <img src="prog_21.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_22.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_23.png" class="logo_img" >
+          </p>
+        </div>
+        <div class="first_div_left_three">
+          <h3 class="first_div_left_three_h3">STEP 1 </h3>
+        </div>
+        <div class="first_div_left_four">
+          <h2 class="first_div_left_four_h2">Pic Topics Of Your Interest</h2>
+        </div>
+        <div class="first_div_left_five">
+          <div class="question" id="form">
+            <form>
+              <label class="input_label" id="label1" for="choice1">
+                <input type="text" autocomplete='given-name' placeholder="Politics"  class="profile_input" id="profile-name" name="FirstName" value="">
+              </label>
+
+
+
+
+
+            </form>
+          </div>
+        </div>
+        <div class="first_div_left_six">
+          <button type="button" class="btn btn-success next-button">Continue to Step 3</button>
+        </div>
+
+      </div>
+
+      <div class="first_div_right">
+      </div>
+    </div>
+
+</body>
+</html>

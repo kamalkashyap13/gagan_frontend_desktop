@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Step 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+body, html{
+  height: 100%;
+
+}
+.first_div {
+  height: 100%;
+  width: 100%;
+
+  background-color: red;
+}
+.first_div_left{
+  margin-left:0%;
+  width:43%;
+  float:left;
+  position:relative;
+  height: 100%;
+  background:white;
+}
+.first_div_right{
+  margin-right:0px;
+  width:57%;
+  float:right;
+  position:relative;
+  background:#4035ba;
+  height: 100%;
+
+}
+.first_div_left_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.logo_img{
+  height: 42px;
+  width: 42px;
+
+}
+.first_div_left_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px
+}
+.first_div_left_three{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_three_h3{
+  font-size: 12px;
+  color: #4035ba;
+}
+.first_div_left_four{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_four_h2{
+  font-size: 18px;
+
+}
+.first_div_left_five{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_six{
+  margin-top: 7%;
+  margin-left: 5%;
+  padding-left: 10%;
+
+}
+
+</style>
+<style>
+.first_div_right_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.first_div_right_first_h4{
+  font-size: 12px;
+  color: #24b7f4;
+}
+.first_div_right_first_h3{
+  font-size: 18px;
+  color: white;
+}
+.first_div_right_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+.first_div_right_third{
+  margin-top: 3%;
+  margin-left: 5%;
+  text-align: center;
+}
+.next-button{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+</style>
+</head>
+<body>
+    <div class="first_div">
+      <div class="first_div_left">
+        <div class="first_div_left_first">
+          <img src="green_icon.png" class="logo_img" >
+        </div>
+        <div class="first_div_left_second">
+          <p class="divided">
+            <img src="prog_1.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_2.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_3.png" class="logo_img" >
+          </p>
+        </div>
+        <div class="first_div_left_three">
+          <h3 class="first_div_left_three_h3">STEP 3 </h3>
+        </div>
+        <div class="first_div_left_four">
+          <h2 class="first_div_left_four_h2">Augmented Adaptive Assessment </h2>
+        </div>
+        <div class="first_div_left_five">
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width:70%">70%</div>
+          </div>
+
+        </div>
+        <div class="first_div_left_six">
+          <img src="Slice_6.png" >
+        </div>
+      </div>
+
+      <div class="first_div_right">
+        <div class="first_div_right_first">
+          <h4 class="first_div_right_first_h4">Level 1 </h4>
+          <h3 class="first_div_right_first_h3">Question 1 (Pick the Right Answer)</h3>
+        </div>
+
+        <div class="first_div_right_second">
+          <div class="question-body" id="question-body1">
+
+              <p class="question-para" id="question-para1">
+                When Vera first started conducting phone interviews, she followed a script, but that has since changed.
+              </p>
+              <p class="question-text" id="question-text1">
+                What has changed since Vera first started conducting interviews?
+              </p>
+              <div class="question" id="form">
+                <form>
+                  <label class="input_label" id="label1" for="choice1">
+                    <input class="input_class" type="radio" name="test_question" value="1" id="choice1">
+                    <span id="option1_text"> The script has changed.</span>
+                  </label>
+                  <br>
+                  <label class="input_label" id="label2" for="choice2">
+                    <input class="input_class" type="radio" name="test_question" value="2" id="choice2">
+                    <span id="option2_text">Vera does not conduct interviews anymore.</span>
+                  </label>
+                  <br>
+                   <label class="input_label" id="label3" for="choice3">
+                    <input class="input_class" type="radio" name="test_question" value="3" id="choice3">
+                    <span id="option3_text">She does not follow a script anymore.</span>
+                  </label>
+                  <br>
+                  <label class="input_label" id="label4" for="choice4">
+                    <input class="input_class" type="radio" name="test_question" value="4" id="choice4">
+                    <span id="option4_text">Vera does not conduct phone interviews.</span>
+                  </label>
+                  <br>
+                </form>
+              </div>
+
+            </div>
+        </div>
+        <div class="first_div_right_third">
+          <button type="button" class="btn btn-success next-button">Next Question</button>
+        </div>
+
+      </div>
+    </div>
+
+</body>
+</html>
