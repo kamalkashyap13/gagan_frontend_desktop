@@ -13,29 +13,105 @@
 <style>
 body, html{
   height: 100%;
-}
-.first_div{
-  /* Style for "Mask" */
   width: 100%;
+}
+.first{
   height: 100%;
+  width: 100%;
   background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%);
 }
 
+.main_h{
+  background-color: inherit;
+  /* position: fixed;
+    top: 0;
+    left: 0; */
+    height: 80px;
+    width: 100%;
+}
+.nav_left{
+  margin-left:0%;
+  width:55%;
+  float:left;
+  position:relative;
+  height: 100%
+
+}
+.nav_right{
+  margin-right:0px;
+  width:45%;
+  float:right;
+  position:relative;
+  height: 100%;
+  /* background-color:black; */
+}
+.logo_img{
+  margin-left: 70px;
+  margin-top: 6.5px;
+}
+.nav_right_first_ul {
+
+  /* margin-top: 40px; */
+
+  /* How to make text at centre? */
+  margin-top: 25px;
+
+}
+.nav_right_first_li {
+  display: inline;
+  margin-right: 40px;
+
+
+
+}
+.nav_right_first_li_a{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  /* Text style for "What is Au" */
+  letter-spacing: -0.46px;
+}
+.start_button{
+  border-radius: 21px;
+  background-color: #00d071;
+  padding: 7px 14px;
+
+}
+.start_button_span{
+  color:white;
+
+}
+.first_div{
+  height: 400px;
+/* background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%); */
+  background-color: inherit;
+  width: 100%;
+}
 .first_div_left{
   margin-left:0%;
   width:55%;
   float:left;
   position:relative;
-  height: 15%;
+  height: 100%;
 
 }
-.logo_img{
-  margin-left: 70px;
-  margin-top: 20px;
+.first_div_right{
+  margin-right:0px;
+  width:45%;
+  float:right;
+  position:relative;
+  height: 100%;
 }
-
 .first_div_left_second{
   margin-left: 70px;
+  margin-top: 120px;
+}
+.first_div_left_third{
+  margin-left: 70px;
+  margin-top: 20px;
+
 }
 .first_div_left_second_h2{
   padding-top: 70px;
@@ -62,49 +138,17 @@ body, html{
   font-size: 22px;
   line-height: 29px;
 }
-
-.first_div_right{
-  margin-right:0px;
-  width:45%;
-  float:right;
-  position:relative;
-  height: 15%;
-}
-.first_div_right_ul {
-
-  margin-top: 40px;
-
-}
-.first_div_right_li {
-  display: inline;
-  margin-right: 20px;
-
-
-
-}
-.first_div_right_li_a{
-  color: #ffffff;
-  font-family: "Helvetica Neue";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 15px;
-  /* Text style for "What is Au" */
-  letter-spacing: -0.46px;
-}
-.main_nav:hover{
-  color: white;
-
-}
 </style>
 <style>
-.second_div{
-  /* Style for "Mask" */
-  width: 100%;
+.second{
   height: 100%;
+  width: 100%;
   background-color: #f5f9ff;
+
 }
 .second_div_first{
-  padding-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
 }
 .toogle_div{
@@ -169,11 +213,11 @@ body, html{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #00d071;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #00d071;
 }
 
 input:checked + .slider:before {
@@ -190,102 +234,32 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.second_div_second{
-  height: 70%;
-  padding-top: 20px;
+
+
+.second_div_second_flex{
+  height: 420px;
 }
-.second_div_second_left{
-  margin-left:0%;
-  width:50%;
-  float:left;
-  position:relative;
-  height: 100%;
-
-
+.parent {
+  display: flex;
+  flex-wrap: wrap;
 }
-.second_div_second_right{
-  margin-right:0px;
-  width:50%;
-  float:right;
-  position:relative;
-  height: 100%;
 
-
-}
-.second_div_second_left_left{
-  margin-left:0%;
-  width:50%;
-  float:left;
-  position:relative;
-  height: 100%;
-
-
+.child {
+  flex: 1 0 20%; /* explanation below */
+  margin: 25px;
+  height: 380px;
+  background-color: #ffffff;
 }
 .second_div_second_left_left_space{
   margin-left: 10%;
-  padding-left: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: white;
   padding-bottom: 30px;
 
 }
 .second_div_second_left_left_first{
   padding-top: 10px;
-}
-.second_div_second_left_right{
-  margin-right:0px;
-  width:50%;
-  float:right;
-  position:relative;
-  height: 100%;
-
-
-}
-.second_div_second_right_left{
-  margin-left:0%;
-  width:50%;
-  float:left;
-  position:relative;
-  height: 100%;
-
-
-}
-.second_div_second_right_right{
-  margin-right:0px;
-  width:50%;
-  float:right;
-  position:relative;
-  height: 100%;
-
-
-}
-.second_div_third{
-  padding-top: 10px;
-  padding-bottom: 10p
-}
-.second_div_third_h3{
-  /* Style for "Unleash th" */
-    color: #282a2d;
-    font-family: "Helvetica Neue";
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 18px;
-    text-align: center;
-}
-.link_button{
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-}
-.second_div_four{
-  text-align: center;
-}
-.start_button{
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 20px;
-}
-.second_div_second_left_div{
-
 }
 .second_div_second_left_left_second{
     margin-top: 30px;
@@ -317,6 +291,28 @@ input:checked + .slider:before {
   font-size: 14px;
   line-height: 20px;
 
+}
+.link_button{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d8d8d8;
+}
+
+.second_div_third{
+  padding-top: 10px;
+}
+.second_div_third_h3{
+  /* Style for "Unleash th" */
+    color: #282a2d;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+}
+
+.second_div_four{
+  text-align: center;
 }
 </style>
 <style>
@@ -494,11 +490,37 @@ letter-spacing: 0.1px;
 </style>
 </head>
 <body>
-  <div class="first_div">
-      <div class="first_div_left">
-        <div class="first_div_left_first">
-          <img src="icon_1.png" class="logo_img" >
+  <div class="first">
+
+
+    <div class="main_h fixed-top">
+        <div class="nav_left">
+          <div class="nav_left_first">
+            <img src="icon_1.png" class="logo_img" >
+          </div>
         </div>
+        <div class="nav_right">
+          <!-- Main navigation elements -->
+            <div class="nav_right_first">
+
+              <ul class="nav_right_first_ul">
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a main_nav" href="#what_augli">What is Augli?</a>
+               </li>
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a main_nav" href="#features">Features</a>
+               </li>
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a start_button" href="#">
+                  <span class="start_button_span"> Get Started </span>
+                 </a>
+               </li>
+             </ul>
+            </div>
+        </div>
+    </div>
+    <div class="first_div">
+      <div class="first_div_left">
         <div class="first_div_left_second">
           <h2 class="first_div_left_second_h2">learn what you love.
             <span class="first_div_left_second_span"> smartly* </span>
@@ -507,102 +529,85 @@ letter-spacing: 0.1px;
             Augli is fun, addictive and builds up language skills in a progressive and effective manner.
           </h3>
         </div>
-        <div class="first_div_left_second"  >
-          <button type="button" class="btn btn-success start_button">Get Started</button>
+        <div class="first_div_left_third">
+          <button type="button" class="btn btn-success start_button">Start Learning</button>
         </div>
       </div>
       <div class="first_div_right">
-
-        <ul class="first_div_right_ul">
-         <li class="first_div_right_li">
-           <a class="first_div_right_li_a main_nav" href="#what_augli">What is Augli?</a>
-         </li>
-         <li class="first_div_right_li">
-           <a class="first_div_right_li_a main_nav" href="#features">Features</a>
-         </li>
-         <li class="first_div_right_li">
-           <a class="first_div_right_li_a btn btn-success" href="#">Get Started</a>
-         </li>
-       </ul>
-      </div>
-
-  </div>
-  <div class="second_div" id="what_augli">
-    <div class="second_div_first">
-      <div class="toogle_div">
-          <span class="switch_text">For Parents </span>
-          <label class="switch">
-            <input type="checkbox"  id="int_phrases" name="int_phrases" value ="Phrases" checked>
-            <span class="slider round"></span>
-          </label>
-          <span class="switch_text switch_highlight">For Students </span>
       </div>
     </div>
-    <div class="second_div_second">
-      <div class="second_div_second_left">
-
-        <div class="second_div_second_left_left">
-          <div class="second_div_second_left_left_space">
-          <div class="second_div_second_left_left_first">
-            <img src="stu_1.png" class="" >
-          </div>
-          <div class="second_div_second_left_left_second">
-            <h4 class="second_div_second_left_left_second_h4">EASY PEASY</h4>
-            <h3 class="second_div_second_left_left_second_h3">
-              We empathise with our learners
-            </h3>
-            <p class="second_div_second_left_left_second_p">
-              Augli understands your interests and engages you to read what you love.
-            </p>
-           </div>
-           <div class="second_div_second_left_left_third">
-             <button type="button" class="btn btn-link link_button">Features</button>
-           </div>
-         </div>
-        </div>
-        <!-- dsddwffdf dfgd -->
-        <div class="second_div_second_left_right">
-          <div class="second_div_second_left_left_space">
-            <div class="second_div_second_left_left_first">
-              <img src="stu_2.png" class="" >
-            </div>
-            <div class="second_div_second_left_left_second">
-              <h4 class="second_div_second_left_left_second_h4">SUPER FUN</h4>
-              <h3 class="second_div_second_left_left_second_h3">
-                Add on learning minus the stress
-              </h3>
-              <p class="second_div_second_left_left_second_p">
-                Get bite-sized daily live News to helps you absorb the world around you
-              </p>
-             </div>
-             <div class="second_div_second_left_left_third">
-               <button type="button" class="btn btn-link link_button">Features</button>
-             </div>
-          </div>
-
-        </div>
+ </div>
+<div class="second container-fluid" id="what_augli">
+  <div class="second_div_first">
+    <div class="toogle_div">
+        <span class="switch_text">For Parents </span>
+        <label class="switch">
+          <input type="checkbox"  id="int_phrases" name="int_phrases" value ="Phrases" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="switch_text switch_highlight">For Students </span>
+    </div>
+  </div>
+  <div class="second_div_second">
+    <div class="second_div_second_flex parent">
+      <div class="child">
+                  <div class="second_div_second_left_left_space">
+                      <div class="second_div_second_left_left_first">
+                        <img src="stu_1.png" class="" >
+                      </div>
+                      <div class="second_div_second_left_left_second">
+                        <h4 class="second_div_second_left_left_second_h4">EASY PEASY</h4>
+                        <h3 class="second_div_second_left_left_second_h3">
+                          We empathise with our learners
+                        </h3>
+                        <p class="second_div_second_left_left_second_p">
+                          Augli understands your interests and engages you to read what you love.
+                        </p>
+                       </div>
+                       <div class="second_div_second_left_left_third">
+                         <button type="button" class="btn btn-link link_button">Features</button>
+                       </div>
+                 </div>
       </div>
-      <div class="second_div_second_right">
-        <div class="second_div_second_right_left">
-          <div class="second_div_second_left_left_space">
-              <div class="second_div_second_left_left_first">
-                <img src="stu_3.png" class="" >
+      <div class="child">
+              <div class="second_div_second_left_left_space">
+                <div class="second_div_second_left_left_first">
+                  <img src="stu_2.png" class="" >
+                </div>
+                <div class="second_div_second_left_left_second">
+                  <h4 class="second_div_second_left_left_second_h4">SUPER FUN</h4>
+                  <h3 class="second_div_second_left_left_second_h3">
+                    Add on learning minus the stress
+                  </h3>
+                  <p class="second_div_second_left_left_second_p">
+                    Get bite-sized daily live News to helps you absorb the world around you
+                  </p>
+                 </div>
+                 <div class="second_div_second_left_left_third">
+                   <button type="button" class="btn btn-link link_button">Features</button>
+                 </div>
               </div>
-              <div class="second_div_second_left_left_second">
-                <h4 class="second_div_second_left_left_second_h4">RESULTS REALTIME</h4>
-                <h3 class="second_div_second_left_left_second_h3">
-                  Focus on scores you really care about
-                </h3>
-                <p class="second_div_second_left_left_second_p">
-                  We recommend and you practice with intersting exercises for Reading, Speaking, Vocabulary & Grammar.
-                </p>
-               </div>
-               <div class="second_div_second_left_left_third">
-                 <button type="button" class="btn btn-link link_button">Features</button>
-               </div>
-         </div>
-        </div>
-        <div class="second_div_second_right_right">
+      </div>
+      <div class="child">
+            <div class="second_div_second_left_left_space">
+                <div class="second_div_second_left_left_first">
+                  <img src="stu_3.png" class="" >
+                </div>
+                <div class="second_div_second_left_left_second">
+                  <h4 class="second_div_second_left_left_second_h4">RESULTS REALTIME</h4>
+                  <h3 class="second_div_second_left_left_second_h3">
+                    Focus on scores you really care about
+                  </h3>
+                  <p class="second_div_second_left_left_second_p">
+                    We recommend intersting exercises for Reading & Speaking.
+                  </p>
+                 </div>
+                 <div class="second_div_second_left_left_third">
+                   <button type="button" class="btn btn-link link_button">Features</button>
+                 </div>
+           </div>
+      </div>
+      <div class="child">
           <div class="second_div_second_left_left_space">
             <div class="second_div_second_left_left_first">
               <img src="stu_4.png" class="" >
@@ -613,25 +618,28 @@ letter-spacing: 0.1px;
                 Beat your own records and earn goodies
               </h3>
               <p class="second_div_second_left_left_second_p">
-                Give your brain just the right workout and get rewarded.
+                Give your brain just the right amount of workout and get rewarded for it.
               </p>
              </div>
              <div class="second_div_second_left_left_third">
                <button type="button" class="btn btn-link link_button">Features</button>
              </div>
          </div>
-        </div>
       </div>
 
-    </div>
-    <div class="second_div_third">
-      <h3 class="second_div_third_h3"> Unleash the skills that can change the way you learn. </h3>
-    </div>
-    <div class="second_div_four">
-      <button type="button" class="btn btn-success start_button">Get started</button>
-    </div>
+     </div>
+   </div>
+   <div class="second_div_third">
+     <h3 class="second_div_third_h3"> Unleash the skills that can change the way you learn. </h3>
+   </div>
+   <div class="second_div_four">
+     <button type="button" class="btn btn-success start_button">Get started</button>
+   </div>
+
+
   </div>
-  <div class="third_div" id="features">
+
+<div class="third_div" id="features">
       <div class="third_div_first">
         <h3 class="third_div_first_h3"> Features that matters</h3>
         <h4 class="third_div_first_h4"> A few benefits that stand us different from crowd</h4>
@@ -689,8 +697,9 @@ letter-spacing: 0.1px;
         <button type="button" class="btn btn-success start_button">Get started</button>
       </div>
 
-  </div>
-  <div class="four_div">
+</div>
+
+<div class="four_div container-fluid">
     <div class="four_div_first">
       <img class="low_logo" src="Fill_1.png" >
     </div>
@@ -710,9 +719,24 @@ letter-spacing: 0.1px;
 
     </div>
 
-  </div>
+</div>
+<script>
+// /* position: fixed;
+//   top: 0;
+//   left: 0;
+//   ,'position':'fixed','top':0,'left':0*/
 
+$(window).scroll(function(){
+        if($(window).scrollTop() > 0){
+            $('.main_h').css({'background-color':'white'});
+            $('.nav_right_first_li_a').css({'color':'#4689f1'});
 
+        } else {
 
+            $('.main_h').css({'background-color':'inherit'});
+            $('.nav_right_first_li_a').css({'color':'white'});
+        }
+});
+</script>
 </body>
 </html>
