@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EnglishGyani - Learn English with News</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" property="keywords" content="EnglishGyani, english, articles, news, vocabulary">
+  <meta name="og:description" property="og:description" content="The best way to learn English and keep up-to-date with news at the same time.
+  Read today's news with EnglishGyani. Complete exercises. Get instant feedback.">
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/578e02aff5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<style>
+  body, html {
+    height: 100%;
+
+	}
+	* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+	}
+		nav{
+
+			background:white;
+		}
+		.navbar-brand,
+		.navbar-nav li a {
+			line-height: 60px;
+			height: 60px;
+			padding-top: 0;
+
+		}
+		.brand_name{
+			font-family: 'Dancing Script', cursive;
+		}
+		.nav_bra{
+
+			font-size:32px;
+			font-weight:bold;
+
+
+
+		}
+		li > a{
+
+			font-size: 16px !important;
+			padding-left:40px !important;
+			padding-right:40px !important;
+		}
+		.hide_li{
+
+			visibility:hidden;
+		}
+		.dropdown{
+			margin-right:40px;
+		}
+
+
+		@media only screen and (max-width: 1090px) {
+		li > a{
+
+			font-size: 16px !important;
+			padding-left:35px !important;
+			padding-right:35px !important;
+		}
+		.dropdown{
+			margin-right:30px;
+		}
+
+}
+		@media only screen and (max-width: 1000px) {
+		li > a{
+
+			font-size: 15px !important;
+			padding-left:30px !important;
+			padding-right:30px !important;
+		}
+		.dropdown{
+			margin-right:0px;
+		}
+
+}
+@media only screen and (max-width: 890px) {
+		li > a{
+
+			font-size: 14px !important;
+			padding-left:25px !important;
+			padding-right:25px !important;
+		}
+		.dropdown{
+			margin-right:0px;
+		}
+
+}
+@media only screen and (max-width: 800px) {
+		li > a{
+
+			font-size: 13px !important;
+			padding-left:20px !important;
+			padding-right:20px !important;
+		}
+		}
+
+}
+	</style>
+	<style>
+		.first{
+			background-color:#595959;
+
+			height:80%;
+			width:100%;
+		}
+		.first_cont{
+			background:#E3120B;
+			margin-left:7%;
+			margin-right:7%;
+			color:white;
+
+			width:86%;
+			height:65%;
+		}
+		.first_heading{
+			padding-top:12%;
+			text-align:center;
+			font-family: 'Oswald', sans-serif;
+			font-size:36px;
+		}
+		.first_sub_heading{
+			padding-top:2%;
+			text-align:center;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size:24px;
+			line-height: 150%;
+		}
+		.second{
+
+			height:100%;
+			width:100%;
+		}
+	</style>
+	<style>
+		.service_class{
+		background:black;
+		height:100%;
+		margin-top:-1.5%;
+	}
+	.service_class_head{
+		padding-top:10%;
+		color:white;
+		text-align:center;
+		font-size:30px;
+	}
+	.service_class_line{
+		padding-left:48%;
+		padding-right:48%;
+
+	}
+	.service_class_icon_left, .service_class_icon_right{
+
+		text-align:center;
+
+	}
+	.service_class_icon_left{
+		margin-left:15%;
+		width:35%;
+		float:left;
+		position:relative;
+	}
+	.service_class_icon_right{
+		margin-right:15%;
+		width:35%;
+		float:right;
+		position:relative;
+	}
+	.news_icon{
+		font-size:100px;
+		color:white;
+	}
+	.second_icon{
+		margin-top:20%;
+
+	}
+	.service_class_text{
+		padding-top:5px;
+		font-size:20px;
+		padding-left:30%;
+		padding-right:30%;
+		color:white;
+
+	}
+	</style>
+	<style>
+			.aboutus{
+		position:relative;
+		width:100%;
+		height:100%;
+		margin-left:0%;
+		margin-bottom:0%;
+		background:#595959;
+		background:white;
+		background:#ededed;
+	}
+	.about_head{
+		padding-top:5%;
+
+		margin-bottom:0%;
+		padding-bottom:0%;
+
+	}
+	.about_head_text{
+		padding-top:3%;
+		font-size:30px;
+		text-align:center;
+
+
+	}
+	.about_body{
+		margin-left:0%;
+		width:100%;
+		height:60%;
+		margin-top:5%;
+	}
+	.body_box{
+		margin-left:28%;
+		margin-right:28%;
+		height:100%;
+		background:#f7fcfa;
+		background:white;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.body_box_head{
+
+		height:18%;
+
+		border-bottom-style: solid;
+		border-width: 1px;
+		border-color: gray;
+
+		margin-bottom:0%;
+	}
+	.body_box_head_text{
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		text-align:center;
+		padding-top:7%;
+
+	}
+	.body_box_body{
+		margin-top:10%;
+
+		height:40%;
+
+
+	}
+	.body_box_body_text{
+		width:80%;
+		margin-left:10%;
+		margin-right:10%;
+		font-size:16px;
+		line-height: 150%;
+	}
+	.body_box_main_body{
+
+		height:10%;
+
+
+	}
+	.body_box_main_body_ele{
+		width:80%;
+		margin-left:5%;
+		margin-right:10%;
+	}
+	.about_body li {
+		position: relative;
+		padding-left: 11px;
+		margin:0 0 10px 0;
+	}
+	.body_box_footer{
+		margin-top:0%;
+		width:100%;
+		height:18.3%;
+		margin-left:0%;
+		margin-right:0%;
+		background:	#39a3b7;
+
+	}
+	.body_box_footer_left{
+		margin-left:0%;
+		width:20%;
+		height:100%;
+		float:left;
+
+	}
+	.body_box_footer_right{
+		margin-right:0%;
+		width:80%;
+		height:100%;
+		float:right;
+		position:relative;
+	}
+	.body_box_footer_right_left{
+		margin-left:0%;
+		width:75%;
+		height:100%;
+		float:left;
+
+	}
+	.body_box_footer_right_right{
+		margin-right:0%;
+		width:25%;
+		height:100%;
+		float:right;
+		position:relative;
+
+	}
+	.left_icon{
+		margin-top:20%;
+		margin-left:50%;
+		font-size:30px;
+		color:#87f6ff;
+		font-weight:100;
+	}
+	.right_icon{
+		margin-top:20%;
+		margin-left:30%;
+		font-size:30px;
+		color:#87f6ff;
+		font-weight:100;
+	}
+	.body_box_footer_text{
+
+		margin-top:8%;
+		margin-left:5%;
+
+	}
+	 @media only screen and (max-width: 1000px) {
+		 .body_box{
+		margin-left:22%;
+		margin-right:22%;
+		}
+	}
+	 @media only screen and (max-width: 768px) {
+		.body_box{
+		margin-left:15%;
+		margin-right:15%;
+		}
+	 }
+	 @media only screen and (max-width: 500px) {
+		 .about_head{
+		padding-top:2%;
+		padding-left:10%;
+		margin-bottom:0%;
+		padding-bottom:0%;
+		height:12%;
+	}
+	.about_body{
+		margin-left:0%;
+		width:100%;
+		height:83%;
+
+	}
+		.body_box{
+		margin-left:0%;
+		margin-right:0%;
+		}
+
+	 }
+	</style>
+	<style>
+		.last{
+			width:100%;
+			height:30%;
+
+			background:#e5e5e5;
+			background:white;
+
+		}
+		.footer_ele{
+			text-align:center;
+
+		}
+		.bounceIn > i{
+			padding: 5px 10px;
+			display: inline-block;
+			-moz-border-radius: 100px;
+			-webkit-border-radius: 100px;
+			border-radius: 100px;
+			-moz-box-shadow: 0px 0px 2px #888;
+			-webkit-box-shadow: 0px 0px 2px #888;
+			box-shadow: 0px 0px 2px #888;
+			background:#323232;
+			color:white;
+	}
+	.bounceIn > 	i:hover {
+		background-color: #3b5998;
+	}
+	.bounceIn{
+		font-size:24px;
+
+	}
+	.foot_head > h3{
+		padding-top:20px;
+		font-size:30px;
+		font-weight:bold;
+
+	}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+
+		  <a class="navbar-brand nav_bra brand_name" href="#">EnglishGyani</a>
+
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right cont_ul">
+
+			<li class="active" ><a href="#home">HOME</a></li>
+
+			<li><a href="#services">SERVICES</a></li>
+
+			<li><a href="#user">CUSTOMERS</a></li>
+			<li><a href="#">SIGN IN</a></li>
+			<li><a href="#">SIGN UP</a></li>
+
+
+
+
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	<div class="first" id="home">
+		<div class="first_cont">
+			<h1 class="first_heading"> Learn English with News</h1>
+			<h2 class="first_sub_heading"> We’re a new type of english teaching company, for the intellectually curious.
+			We’re making learning  English easier and more fun that it’s ever been.
+			</h2>
+
+		</div>
+	</div>
+	<div class="service_class" id="services">
+			<h3 class="service_class_head"> User Benefits</h3>
+			<div class="service_class_line">
+				<hr>
+			</div>
+			<div>
+				<div class="service_class_icon_left">
+
+					<i class="fa fa-book news_icon" aria-hidden="true"></i>
+					<p class="service_class_text"> Learn English</p>
+				</div>
+				<div class="service_class_icon_right">
+
+
+					<i class="fa fa-newspaper-o news_icon" aria-hidden="true"></i>
+					<p class="service_class_text"> Read News</p>
+				</div>
+			</div>
+			<div class="second_icon">
+				<div class="service_class_icon_left">
+					<i class="fa fa-bookmark news_icon" aria-hidden="true"></i>
+
+					<p class="service_class_text">Bookmark Words to learn later</p>
+				</div>
+				<div class="service_class_icon_right">
+					<i class="fa fa-question-circle-o news_icon" aria-hidden="true"></i>
+
+					<p class="service_class_text"> Unlimited questions to practice</p>
+				</div>
+			</div>
+	</div>
+	<div class="aboutus" id="user">
+		<div class="about_head">
+			<h3 class="about_head_text"> USER TESTIMONIALS </h3>
+		</div>
+		<div class="about_body">
+
+			<div class="body_box" id="body_box1">
+				<div class="body_box_head">
+					<h3 class="body_box_head_text">Manish Chaturvedi</h3>
+				</div>
+				<div class="body_box_body">
+					<h3 class="body_box_body_text"><q>This application really surprised me! Learn vocabulary by reading interesting news and answer
+					questions about the content which is certailly boosting the learning outcome.
+					I can't understand why this application isn't more popular and didn't hit the one million mark...</q>
+
+					</h3>
+				</div>
+				<div class="body_box_main_body">
+					<div class="body_box_main_body_ele">
+
+					</div>
+				</div>
+				<div class="body_box_footer">
+					<div class="body_box_footer_left">
+						<span class="glyphicon glyphicon-chevron-left left_icon"></span>
+					</div>
+					<div class="body_box_footer_right">
+						<div class="body_box_footer_right_left">
+							<h3 class="body_box_footer_text"> For more industry resources</h3>
+						</div>
+						<div class="body_box_footer_right_right">
+							<span class="glyphicon glyphicon-chevron-right right_icon"></span>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="body_box" id="body_box2">
+				<div class="body_box_head">
+					<h3 class="body_box_head_text">Shivani Chaudhary </h3>
+				</div>
+				<div class="body_box_body">
+					<h3 class="body_box_body_text"><q> Absolute paragon!!! Revolutionary & absorbing.
+					For those who want to springboard thier English command.</q>
+
+					</h3>
+				</div>
+				<div class="body_box_main_body">
+					<div class="body_box_main_body_ele">
+
+					</div>
+				</div>
+				<div class="body_box_footer">
+					<div class="body_box_footer_left">
+						<span class="glyphicon glyphicon-chevron-left left_icon"></span>
+					</div>
+					<div class="body_box_footer_right">
+						<div class="body_box_footer_right_left">
+							<h3 class="body_box_footer_text"> For more industry resources</h3>
+						</div>
+						<div class="body_box_footer_right_right">
+							<span class="glyphicon glyphicon-chevron-right right_icon"></span>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="body_box" id="body_box3">
+				<div class="body_box_head">
+					<h3 class="body_box_head_text">Atif Afzal</h3>
+				</div>
+				<div class="body_box_body">
+					<h3 class="body_box_body_text"><q>What a smart app from smart people, now I can be smart just like them, Very helpful 30 mins or an hour a day that i need to improve my english </q>
+
+					</h3>
+				</div>
+				<div class="body_box_main_body">
+					<div class="body_box_main_body_ele">
+
+					</div>
+				</div>
+				<div class="body_box_footer">
+					<div class="body_box_footer_left">
+						<span class="glyphicon glyphicon-chevron-left left_icon"></span>
+					</div>
+					<div class="body_box_footer_right">
+						<div class="body_box_footer_right_left">
+							<h3 class="body_box_footer_text"> For more industry resources</h3>
+						</div>
+						<div class="body_box_footer_right_right">
+							<span class="glyphicon glyphicon-chevron-right right_icon"></span>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+	<div class="footer last" >
+		<div class="footer_ele foot_head">
+			<h3> Connect with IOP</h3>
+
+		</div>
+		<br>
+		<div class="footer_ele">
+			<a href="https://web.facebook.com/Instituteofphotography/" class="fb bounceIn" data-delay="1400"><i class="fa fa-facebook"></i></a>
+			&nbsp;
+			<a href="https://www.instagram.com/iop_delhi/" class="In bounceIn" data-delay="1400"><i class="fa fa-instagram"></i></a>
+			&nbsp;
+			<a href="https://www.instagram.com/iop_delhi/" class="li bounceIn" data-delay="1400"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			&nbsp;
+			<a href="https://www.instagram.com/iop_delhi/" class="Pi bounceIn" data-delay="1400"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="footer_ele">
+			© Copyright 2016, <span class="">EnglishGyani</span>
+
+		</div>
+	</div>
+
+<script>
+current=1;
+$(document).ready(function(){
+	$("#body_box3").hide();
+	$("#body_box2").hide();
+
+	$(document).on('click', ".left_icon", function() {
+		if (current===1){
+		$("#body_box"+current).hide();
+		current=3;
+		$("#body_box"+current).show();
+		}
+		else{
+		$("#body_box"+current).hide();
+		current-=1;
+		$("#body_box"+current).show();
+		}
+
+
+	});
+	$(document).on('click', ".right_icon", function() {
+		if (current===3){
+		$("#body_box"+current).hide();
+		current=1;
+		$("#body_box"+current).show();
+		}
+		else{
+		$("#body_box"+current).hide();
+		current+=1;
+		$("#body_box"+current).show();
+		}
+
+
+	});
+
+})
+
+
+</script>
+</body>
+</html>

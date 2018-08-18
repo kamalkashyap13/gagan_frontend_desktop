@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Step 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+body, html{
+  height: 100%;
+
+}
+.first_div {
+  height: 100%;
+  width: 100%;
+
+  background-color: red;
+}
+.first_div_left{
+  margin-left:0%;
+  width:43%;
+  float:left;
+  position:relative;
+  height: 100%;
+  background:white;
+}
+.first_div_right{
+  margin-right:0px;
+  width:57%;
+  float:right;
+  position:relative;
+  background:#4035ba;
+  height: 100%;
+
+}
+.first_div_left_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.logo_img{
+  height: 42px;
+  width: 42px;
+
+}
+.first_div_left_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px
+}
+.first_div_left_three{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_three_h3{
+  font-size: 12px;
+  color: #4035ba;
+}
+.first_div_left_four{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_four_h2{
+  font-size: 18px;
+
+}
+.first_div_left_five{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+/* .first_div_left_six{
+  margin-top: 7%;
+  margin-left: 5%;
+  padding-left: 10%;
+
+} */
+
+</style>
+<style>
+.first_div_right_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.first_div_right_first_h4{
+  font-size: 12px;
+  color: #24b7f4;
+}
+.first_div_right_first_h3{
+  font-size: 18px;
+  color: white;
+}
+.first_div_right_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+.first_div_right_third{
+  margin-top: 3%;
+  margin-left: 5%;
+  text-align: center;
+}
+.next-button{
+  /* padding-left: 50px;
+  padding-right: 50px; */
+
+}
+</style>
+<style>
+.input_label{
+    width: 100%;
+    margin-bottom: 12px;
+
+}
+.profile_input{
+  width: 100%;
+}
+.select_input{
+  width: 100%;
+  margin-bottom: 12px;
+
+}
+.first_div_left_six{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.next-button{
+  width: 100%;
+
+
+}
+</style>
+</head>
+<body>
+    <div class="first_div">
+      <div class="first_div_left">
+        <div class="first_div_left_first">
+          <img src="green_icon.png" class="logo_img" >
+        </div>
+        <div class="first_div_left_second">
+          <p class="divided">
+            <img src="prog_11.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_12.png" class="logo_img" >
+            <span class="divider"></span>
+            <img src="prog_13.png" class="logo_img" >
+          </p>
+        </div>
+        <div class="first_div_left_three">
+          <h3 class="first_div_left_three_h3">STEP 1 </h3>
+        </div>
+        <div class="first_div_left_four">
+          <h2 class="first_div_left_four_h2">Let's get started </h2>
+        </div>
+        <div class="first_div_left_five">
+          <div class="question" id="form">
+            <form>
+              <label class="input_label" id="label1" for="choice1">
+                <input type="text" autocomplete='given-name' placeholder="Name"  class="profile_input" id="profile-name" name="FirstName" value="">
+              </label>
+
+              <select class="select_input" id="profile-class">
+                <option value="class1">class1</option>
+                <option value="class2">class2</option>
+                <option value="class3">class3</option>
+                <option value="class4">class4</option>
+                <option value="class5">class5</option>
+                <option value="class6">class6</option>
+                <option value="class7">class7</option>
+                <option value="class8">class8</option>
+                <option value="class9">class9</option>
+                <option value="class10">class10</option>
+                <option value="class11">class11</option>
+                <option value="class12">class12</option>
+                <option value="class13">other</option>
+              </select>
+
+              <select class="select_input" id="profile-school">
+                <option value="school1">A V R Public School</option>
+                <option value="school2">Aarsha Public School</option>
+                <option value="school3">Ajanta Public School</option>
+                <option value="school4">Alpine School</option>
+                <option value="school5">Amadeus High School</option>
+                <option value="school6">American Excelsior Public School</option>
+                <option value="school7">American Montessori Public School</option>
+                <option value="school8">Amity International</option>
+                <option value="school9">Ascent Public School</option>
+                <option value="school10">Atmachetna</option>
+                <option value="school11">Banyan Tree</option>
+                <option value="school12">Basant Valley Public School</option>
+                <option value="school13">Blue Bells ModelSchool</option>
+                <option value="school14">Blue Bells Public School</option>
+                <option value="school15">C C A School</option>
+                <option value="school16">Chiranjiv Bharti School</option>
+                <option value="school17">Colonel's Central Academy</option>
+                <option value="school18">D A V Public School</option>
+                <option value="school19">DPS School</option>
+                <option value="school20">Drona School</option>
+                <option value="school21">Dronacharya Public School</option>
+                <option value="school22">DPS Maruti Kunj</option>
+                <option value="school23">Euro International School</option>
+                <option value="school24">Euro International School</option>
+                <option value="school25">Excelsior American School</option>
+                <option value="school26">G.D.Goenka Public</option>
+                <option value="school27">Golden Heights School</option>
+                <option value="school28">Golden High School</option>
+                <option value="school29">Golden Jubilee Air Force School</option>
+                <option value="school30">Gyan Devi Public School</option>
+                <option value="school31">Headstart</option>
+                <option value="school32">Heritage School</option>
+                <option value="school33">Holy-Heart Convent</option>
+                <option value="school34">Jiwan Jyoti Sr. Sec.</option>
+                <option value="school35">K N K Public School</option>
+                <option value="school36">Kamla International School</option>
+                <option value="school37">Kr Mangalam World School</option>
+                <option value="school77">kunskapsskolan International</option>
+                <option value="school38">Lady Fatima Public School</option>
+                <option value="school39">Lions Public School</option>
+                <option value="school40">Lord Jesus Public School</option>
+                <option value="school41">Lotus Valley</option>
+                <option value="school42">Lt Atul Katarya Memorial School</option>
+                <option value="school43">Manav Rachna International School</option>
+                <option value="school44">Manav Rachna International School</option>
+                <option value="school45">Marigold High School</option>
+                <option value="school46">Marumal High School</option>
+                <option value="school47">Meenakshi Public School</option>
+                <option value="school48">Pathways World School</option>
+                <option value="school49">Pole Star Public School</option>
+                <option value="school50">PRESIDIUM SCHOOL</option>
+                <option value="school51">Red Rose School</option>
+                <option value="school52">Ridge Valley</option>
+                <option value="school53">Rishi Public School</option>
+                <option value="school54">Rockford Convent School</option>
+                <option value="school55">Rotary Public School</option>
+                <option value="school56">Ryan International School</option>
+                <option value="school57">Saint Johns Convent School</option>
+                <option value="school58">Salwan Public School</option>
+                <option value="school59">Scottish High School</option>
+                <option value="school60">Shalom Hills International School</option>
+                <option value="school61">Sharda International School</option>
+                <option value="school62">Sherwood Convent School</option>
+                <option value="school63">Shikshantar School</option>
+                <option value="school64">Shiv Public Senior Secondary School</option>
+                <option value="school65">Shri Ram School</option>
+                <option value="school66">St. Angels School</option>
+                <option value="school67">St. PBN Public School</option>
+                <option value="school68">Starex International School</option>
+                <option value="school69">Summer Fields School</option>
+                <option value="school70">Suncity World School</option>
+                <option value="school71">Swiss Cottage School</option>
+                <option value="school72">The Pine Crest School</option>
+                <option value="school73">Ucskm Public School</option>
+                <option value="school74">Vaidik Kanya High School</option>
+                <option value="school75">Vikas high school</option>
+                <option value="school76">Tagore international school</option>
+              </select>
+
+
+            </form>
+          </div>
+        </div>
+        <div class="first_div_left_six">
+          <button type="button" class="btn btn-success next-button">Continue to Step 2</button>
+        </div>
+
+      </div>
+
+      <div class="first_div_right">
+      </div>
+    </div>
+
+</body>
+</html>
