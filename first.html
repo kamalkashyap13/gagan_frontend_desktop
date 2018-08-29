@@ -19,7 +19,7 @@ body, html{
   height: 100%;
   width: 100%;
 
-  background-color: red;
+  /* background-color: red; */
 }
 .first_div_left{
   margin-left:0%;
@@ -34,8 +34,10 @@ body, html{
   width:57%;
   float:right;
   position:relative;
-  background:#4035ba;
+  /* background:#4035ba; */
   height: 100%;
+  border-radius: 100px 0 0;
+background-image: linear-gradient(158deg, #3f28ac 0%, #466af1 100%);
 
 }
 .first_div_left_first{
@@ -90,12 +92,7 @@ body, html{
   margin-right: 5%;
 
 }
-/* .first_div_left_six{
-  margin-top: 7%;
-  margin-left: 5%;
-  padding-left: 10%;
 
-} */
 
 </style>
 <style>
@@ -124,11 +121,7 @@ body, html{
   margin-left: 5%;
   text-align: center;
 }
-.next-button{
-  /* padding-left: 50px;
-  padding-right: 50px; */
 
-}
 </style>
 <style>
 .input_label{
@@ -138,22 +131,61 @@ body, html{
 }
 .profile_input{
   width: 100%;
+  height: 50px;
+  box-shadow: 0 0 11px 1px rgba(37, 143, 245, 0.16);
+  border: 1px solid #425acd;
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #868686;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
 }
 .select_input{
   width: 100%;
   margin-bottom: 12px;
+  height: 50px;
+  box-shadow: 0 0 11px 1px rgba(37, 143, 245, 0.16);
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #868686;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
 
 }
+
 .first_div_left_six{
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
+
 
 }
 .next-button{
   width: 100%;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 700;
+  /* Text style for "Continue t" */
+  letter-spacing: 0.12px;
+  background-color: #00d071;
+  height: 50px;
+  padding-top: 12px;
 
 
+}
+.first_div_right_image{
+  background-image: url("undraw.svg");
+  /* background-position: center;  Center the image
+  background-repeat: no-repeat;  Do not repeat the image */
+  background-size: cover;
+  margin-top: 20%;
+  height: 60%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  width: 80%;
 }
 </style>
 </head>
@@ -182,23 +214,24 @@ body, html{
           <div class="question" id="form">
             <form>
               <label class="input_label" id="label1" for="choice1">
-                <input type="text" autocomplete='given-name' placeholder="Name"  class="profile_input" id="profile-name" name="FirstName" value="">
+                <input type="text" autocomplete='given-name' placeholder=" Name"  class="profile_input" id="profile-name" name="FirstName" value="">
               </label>
 
               <select class="select_input" id="profile-class">
-                <option value="class1">class1</option>
-                <option value="class2">class2</option>
-                <option value="class3">class3</option>
-                <option value="class4">class4</option>
-                <option value="class5">class5</option>
-                <option value="class6">class6</option>
-                <option value="class7">class7</option>
-                <option value="class8">class8</option>
-                <option value="class9">class9</option>
-                <option value="class10">class10</option>
-                <option value="class11">class11</option>
-                <option value="class12">class12</option>
-                <option value="class13">other</option>
+                <option value="" disabled selected> Pick Your Class</option>
+                <option value="class1"> Class1</option>
+                <option value="class2"> Class2</option>
+                <option value="class3"> Class3</option>
+                <option value="class4"> Class4</option>
+                <option value="class5"> Class5</option>
+                <option value="class6"> Class6</option>
+                <option value="class7"> Class7</option>
+                <option value="class8"> Class8</option>
+                <option value="class9"> Class9</option>
+                <option value="class10"> Class10</option>
+                <option value="class11"> Class11</option>
+                <option value="class12"> Class12</option>
+                <option value="class13"> Other</option>
               </select>
 
               <select class="select_input" id="profile-school">
@@ -286,12 +319,14 @@ body, html{
           </div>
         </div>
         <div class="first_div_left_six">
-          <button type="button" class="btn btn-success next-button">Continue to Step 2</button>
+          <div class="next-button">Continue to Step 2</div>
         </div>
 
       </div>
 
       <div class="first_div_right">
+          <div class="first_div_right_image">
+          </div>
       </div>
     </div>
 

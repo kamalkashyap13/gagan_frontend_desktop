@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Learn and Perform</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="Fill_1.svg" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<style>
+body, html{
+  height: 100%;
+  width: 100%;
+  /* background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%); */
+}
+.first_div{
+    /* height: 80%; */
+    width: 100%;
+  background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%);
+  /* background-color: #f5f9ff; */
+  /* background-image: url(hero_ima.png);
+  background-size: cover; */
+  /* background-color: #f5f9ff; */
+  border-bottom-left-radius: 200px;
+}
+.main_h{
+  background-color: inherit;
+  /* position: fixed;
+    top: 0;
+    left: 0; */
+    height: 80px;
+    width: 100%;
+}
+.nav_left{
+  margin-left:0%;
+  width:50%;
+  float:left;
+  position:relative;
+  height: 100%
+
+}
+.nav_right{
+  margin-right:0px;
+  width:50%;
+  float:right;
+  position:relative;
+  height: 100%;
+  /* background-color:black; */
+}
+.logo_img{
+  margin-left: 65px;
+  margin-top: 13px;
+}
+.nav_right_first_ul {
+
+  /* margin-top: 40px; */
+
+  /* How to make text at centre? */
+  margin-top: 15px;
+
+}
+.nav_right_first_li {
+  display: inline;
+  margin-right: 40px;
+
+
+
+}
+.nav_right_first_li_a{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  /* Text style for "What is Au" */
+  letter-spacing: -0.46px;
+}
+.start_button{
+  border-radius: 21px;
+  background-color: #00d071;
+  padding: 7px 14px;
+
+}
+.start_button_span{
+  color:white;
+
+}
+.first_div_second{
+  /* height: 400px; */
+  height: 510px;
+/* background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%); */
+  background-color: inherit;
+  /* background-color: #f5f9ff; */
+  width: 100%;
+  /* background-color: red; */
+}
+
+
+.first_div_second_left{
+  margin-left:0%;
+  width:45%;
+  float:left;
+  position:relative;
+  height: 100%;
+  /* background-color: red; */
+
+}
+.first_div_second_right{
+  margin-right:4%;
+  width:51%;
+  float:right;
+  position:relative;
+  height: 100%;
+
+}
+
+.first_div_second_right_div{
+  margin-top: 30%;
+   height: 60%;
+  /* margin-bottom: 10px; */
+  margin-bottom: 10%;
+  margin-left: 0%;
+  width: 100%;
+  background-image: url("hero_image.png");
+  /* background-position: center;  Center the image
+  background-repeat: no-repeat;  Do not repeat the image */
+  background-size: cover;
+
+}
+.first_div_second_left_second{
+  margin-left: 65px;
+  margin-top: 120px;
+}
+.first_div_second_left_third{
+  margin-left: 65px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+
+}
+.first_div_second_left_second_h2{
+  padding-top: 20px;
+  /* Style for "learn what" */
+  width: 403px;
+  height: 122px;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 59px;
+  /* Text style for "learn what" */
+  letter-spacing: -0.33px;
+}
+.first_div_second_left_second_span{
+  color: #56d811;
+}
+.first_div_second_left_second_h3{
+  /* margin-right: 80px; */
+  padding-right: 20px;
+  padding-top: 20px;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 22px;
+  line-height: 29px;
+}
+</style>
+<style>
+.second{
+  height: auto;
+  width: 100%;
+  background-color: #f5f9ff;
+  background-image: url(pen2.png);
+  background-size: cover;
+}
+.second_div_first{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.second_div_first_h3{
+  padding-bottom: 30px;
+  color: #282a2d;
+  font-family: "Helvetica Neue";
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 33px;
+  /* Text style for "Benefits t" */
+  letter-spacing: -0.57px;
+}
+.toogle_div{
+  text-align: center;
+
+}
+#overall, #daily{
+  margin: 0px 60px;
+  font-size: 16px;
+}
+.switch_text{
+  font-size: 34px;
+  margin-left: 0px;
+  margin-right: 0px;
+  /* background: gray; */
+  /* Style for "For Parent" */
+
+    opacity: 0.75;
+    color: rgba(0, 0, 0, 0.74);
+    font-family: "Benton Sans";
+    font-size: 22px;
+    font-weight: 500;
+}
+.switch_highlight{
+    font-weight: 700;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: -7px;
+  /* background: red; */
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #00d071;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00d071;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .second_div_second{
+    margin-left: 38px;
+    margin-right: 38px;
+    margin-top: 40px;
+  }
+
+  .second_div_second_flex{
+    /* height: 420px; */
+  }
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .child {
+    flex: 1 0 20%; /* explanation below */
+    margin-left: 12px;
+    margin-right: 12px;
+    /* height: 380px; */
+    /* background-color: #ffffff; */
+
+  }
+  .second_div_second_left_left_space{
+    /* margin-left: 10%; */
+    /* padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px; */
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 40px -9px rgba(0, 0, 0, 0.04);
+    border-radius: 35px 0 100px;
+
+  }
+
+  .second_div_second_left_left_first{
+    padding-top: 10px;
+  }
+  .second_div_second_left_left_second{
+      margin-top: 30px;
+  }
+  .second_div_second_left_left_second_h4{
+    /* Style for "EASY PEASY" */
+
+    color: #43b905;
+    font-family: "Helvetica Neue";
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .second_div_second_left_left_second_h3{
+    /* Style for "We empathi" */
+      color: #000000;
+      font-family: "Helvetica Neue";
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 22px;
+      /* Text style for "We empathi" */
+      letter-spacing: 0.4px;
+  }
+  .second_div_second_left_left_second_p{
+    /* Style for "Augli unde" */
+
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    line-height: 20px;
+
+  }
+  .link_button{
+      border-style: solid;
+      border-width: 1px;
+      border-color: #d8d8d8;
+  }
+
+  .second_div_third{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .second_div_third_h3{
+    /* Style for "Unleash th" */
+
+      text-align: center;
+      color: #282a2d;
+        font-family: "Helvetica Neue";
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 18px;
+  }
+
+  .second_div_four{
+    text-align: center;
+    margin-right: 100px;
+    padding-bottom: 40px;
+    /* padding-top: 40px; */
+  }
+  </style>
+  <style>
+  /* @font-face {
+      font-family:"Helvetica Neue";
+      src: url(HelveticaNeueLTStd-Bd.otf);
+  } */
+  .third_div{
+    width: 100%;
+    /* height: 100%; */
+    /* background-image: linear-gradient(229deg, #2f2d87 0%, #573dd1 100%); */
+    background-color: #f5f9ff;
+    height: auto;
+    width: 100%;
+    background-color: #f5f9ff;
+    background-image: url(feat_bg.png);
+    background-size: cover;
+
+  }
+
+  /* .features_div{
+    background-image: url(feat_bg.png);
+    background-size: cover;
+    width: 100%;
+
+
+  } */
+  .third_div_first{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+
+
+  }
+  .third_div_first_h3{
+    /* Style for "Features t" */
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 33px;
+    /* Text style for "Features t" */
+    letter-spacing: -0.57px;
+
+
+  }
+  .third_div_first_h4{
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    line-height: 18px;
+
+  }
+  .third_div_second{
+      height: 250px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+
+  }
+  .third_div_second_left{
+    margin-left:0%;
+    width:50%;
+    float:left;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+  }
+  .third_div_second_right{
+    margin-right:0px;
+    width:50%;
+    float:right;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+
+  }
+  .third_div_second_left_left{
+    margin-left:0%;
+    width:50%;
+    float:left;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+    padding-left: 30px;
+
+
+  }
+  .third_div_second_left_right{
+    margin-right:0px;
+    width:50%;
+    float:right;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+    padding-left: 30px;
+
+  }
+  .third_div_second_right_left{
+    margin-left:0%;
+    width:50%;
+    float:left;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+    padding-left: 30px;
+
+  }
+  .third_div_second_right_right{
+    margin-right:0px;
+    width:50%;
+    float:right;
+    position:relative;
+    /* height: 100%; */
+    height: auto;
+    padding-left: 30px;
+
+  }
+  .third_div_second_left_left_second{
+    padding-top: 25px;
+   padding-right: 30px;
+    border-right: 1px solid white;
+  }
+  .third_div_second_left_left_second_rand{
+    padding-top: 25px;
+   padding-right: 30px;
+
+  }
+  .third_div_second_left_left_second_h3{
+    color: #ffffff;
+    font-family: "Nexa X Bold";
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Text style for "INTERACTIV" */
+    letter-spacing: 0.43px;
+  }
+  .third_div_second_left_left_second_h4{
+    color: #ffffff;
+    font-family: "Benton Sans";
+    font-size: 16px;
+    line-height: 24.88px;
+    /* Text style for "Quick chat" */
+    letter-spacing: 0.2px;
+  }
+  .third_div_third{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  </style>
+  <style>
+  .third-child{
+    height: 300px;
+    background: white;
+    background-color: #f3f3f3;
+  }
+  .third_child_top{
+    height: 50%;
+    background-size: cover;
+
+  }
+  .third_child_bottom{
+    height: 50%;
+    padding: 20px;
+
+  }
+  .third_child_bottom_h4{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    /* Text style for "Intelligen" */
+    letter-spacing: 0.4px;
+}
+  .third_child_bottom_h5{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    line-height: 20px;
+}
+#third_child_top1{
+  background-image: url(feat1.png);
+
+}
+#third_child_top2{
+  background-image: url(feat2.png);
+
+}
+#third_child_top3{
+  background-image: url(feat3.png);
+
+}
+#third_child_top4{
+  background-image: url(feat4.png);
+
+}
+
+
+  </style>
+  <style>
+  .four_div{
+    height: 100px;
+    width: 100%;
+  }
+  .four_div_first{
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 40px;
+
+  }
+  .four_div_second{
+    height: 50px;
+  }
+
+  .four_div_second_left{
+    margin-left:0%;
+    width:50%;
+    float:left;
+    position:relative;
+    height: 100%;
+    padding-left: 40px;
+
+  }
+  .four_div_second_right{
+    margin-right:0px;
+    width:50%;
+    float:right;
+    position:relative;
+    height: 100%;
+    padding-left: 30px;
+
+  }
+  .four_div_second_right_h5{
+    padding-left: 100px;
+    color: #a7a7a7;
+  font-family: Arial;
+  font-size: 11px;
+  line-height: 22px;
+  /* Text style for "Copyright" */
+  letter-spacing: 0.1px;
+
+  }
+  .low_link{
+    /* Style for "Home" */
+
+    color: #a7a7a7;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 22px;
+    /* Text style for "Hom" */
+    letter-spacing: 0.15px;
+  }
+  </style>
+</head>
+<body>
+  <div class="first_div">
+    <div class="main_h fixed-top">
+        <div class="nav_left">
+          <div class="nav_left_first">
+            <img src="Fill_1.svg" class="logo_img" >
+          </div>
+        </div>
+        <div class="nav_right">
+          <!-- Main navigation elements -->
+            <div class="nav_right_first">
+
+              <ul class="nav_right_first_ul">
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a main_nav" href="#what_augli">What is Augli?</a>
+               </li>
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a main_nav" href="#features">Benefits</a>
+               </li>
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a main_nav" href="#features">Features</a>
+               </li>
+               <li class="nav_right_first_li">
+                 <a class="nav_right_first_li_a" href="#">
+                  <span class="btn btn-success start_button"> Get Started </span>
+                 </a>
+               </li>
+             </ul>
+            </div>
+        </div>
+    </div>
+    <div class="first_div_second">
+
+        <div class="first_div_second_left">
+          <div class="first_div_second_left_second">
+            <h2 class="first_div_second_left_second_h2">learn what you love.
+              <span class="first_div_second_left_second_span"> smartly* </span>
+            </h2>
+            <h3 class="first_div_second_left_second_h3">
+              Augli is fun, addictive and builds up language skills in a progressive and effective manner.
+            </h3>
+          </div>
+          <div class="first_div_second_left_third">
+            <button type="button" class="btn btn-success start_button">Start Learning</button>
+          </div>
+        </div>
+        <div class="first_div_second_right">
+          <div class="first_div_second_right_div">
+
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+<!-- erferfre -->
+<div class="second container-fluid" id="what_augli">
+  <div class="second_div_first">
+    <div>
+      <h3 class="second_div_first_h3" >Benefits tailored for you </h3>
+    </div>
+    <div class="toogle_div">
+        <span class="switch_text">For Parents </span>
+        <label class="switch">
+          <input type="checkbox"  id="int_phrases" name="int_phrases" value ="Phrases" checked>
+          <span class="slider round"></span>
+        </label>
+        <span class="switch_text switch_highlight">For Students </span>
+    </div>
+  </div>
+  <div class="second_div_second">
+    <div class="second_div_second_flex parent">
+      <div class="child">
+                  <div class="second_div_second_left_left_space">
+                      <div class="second_div_second_left_left_first">
+                        <img src="stu_1.png" class="" >
+                      </div>
+                      <div class="second_div_second_left_left_second">
+                        <h4 class="second_div_second_left_left_second_h4">EASY PEASY</h4>
+                        <h3 class="second_div_second_left_left_second_h3">
+                          We empathise with our learners
+                        </h3>
+                        <p class="second_div_second_left_left_second_p">
+                          Augli understands your interests and engages you to read what you love.
+                        </p>
+                       </div>
+                       <!-- <div class="second_div_second_left_left_third">
+                         <button type="button" class="btn btn-link link_button">Features</button>
+                       </div> -->
+                 </div>
+      </div>
+      <div class="child">
+              <div class="second_div_second_left_left_space">
+                <div class="second_div_second_left_left_first">
+                  <img src="stu_2.png" class="" >
+                </div>
+                <div class="second_div_second_left_left_second">
+                  <h4 class="second_div_second_left_left_second_h4">SUPER FUN</h4>
+                  <h3 class="second_div_second_left_left_second_h3">
+                    Add on learning minus the stress
+                  </h3>
+                  <p class="second_div_second_left_left_second_p">
+                    Get bite-sized daily live News to helps you absorb the world around you
+                  </p>
+                 </div>
+                 <!-- <div class="second_div_second_left_left_third">
+                   <button type="button" class="btn btn-link link_button">Features</button>
+                 </div> -->
+              </div>
+      </div>
+      <div class="child">
+            <div class="second_div_second_left_left_space">
+                <div class="second_div_second_left_left_first">
+                  <img src="stu_3.png" class="" >
+                </div>
+                <div class="second_div_second_left_left_second">
+                  <h4 class="second_div_second_left_left_second_h4">RESULTS REALTIME</h4>
+                  <h3 class="second_div_second_left_left_second_h3">
+                    Focus on scores you really care about
+                  </h3>
+                  <p class="second_div_second_left_left_second_p">
+                    We recommend intersting exercises for Reading, Speaking, Vocabulary & Grammar.
+                  </p>
+                 </div>
+                 <!-- <div class="second_div_second_left_left_third">
+                   <button type="button" class="btn btn-link link_button">Features</button>
+                 </div> -->
+           </div>
+      </div>
+      <div class="child">
+          <div class="second_div_second_left_left_space">
+            <div class="second_div_second_left_left_first">
+              <img src="stu_4.png" class="" >
+            </div>
+            <div class="second_div_second_left_left_second">
+              <h4 class="second_div_second_left_left_second_h4">GET REWARDED</h4>
+              <h3 class="second_div_second_left_left_second_h3">
+                Beat your own records and earn goodies
+              </h3>
+              <p class="second_div_second_left_left_second_p">
+                Give your brain just the right amount of workout and get rewarded for it.
+              </p>
+             </div>
+             <!-- <div class="second_div_second_left_left_third">
+               <button type="button" class="btn btn-link link_button">Features</button>
+             </div> -->
+         </div>
+      </div>
+
+     </div>
+   </div>
+   <div class="second_div_third">
+     <h3 class="second_div_third_h3"> Unleash the skills that can change the way you learn. </h3>
+   </div>
+   <div class="second_div_four">
+     <button type="button" class="btn btn-success start_button">Get started</button>
+   </div>
+
+
+  </div>
+  <div class="third_div container-fluid" id="features">
+    <div class="features_div">
+        <div class="third_div_first">
+          <h3 class="third_div_first_h3"> Features that matters</h3>
+          <h4 class="third_div_first_h4"> A few benefits that stand us different from crowd</h4>
+        </div>
+        <div class="second_div_second">
+          <div class="second_div_second_flex parent">
+            <div class="child third-child">
+                        <!-- <div class="second_div_second_left_left_space">
+                            <div class="second_div_second_left_left_first">
+                              <img src="stu_1.png" class="" >
+                            </div>
+                            <div class="second_div_second_left_left_second">
+                              <h4 class="second_div_second_left_left_second_h4">EASY PEASY</h4>
+                              <h3 class="second_div_second_left_left_second_h3">
+                                We empathise with our learners
+                              </h3>
+                              <p class="second_div_second_left_left_second_p">
+                                Augli understands your interests and engages you to read what you love.
+                              </p>
+                             </div>
+                              <div class="second_div_second_left_left_third">
+                               <button type="button" class="btn btn-link link_button">Features</button>
+                             </div>
+                       </div> -->
+                       <div class="third_child_top" id="third_child_top1">
+
+                       </div>
+                       <div class="third_child_bottom">
+                         <h4 class="third_child_bottom_h4"> Intelligent Assessment </h4>
+                         <h5 class="third_child_bottom_h5">Helps quickly assess which skills need work to generate a personalised learning plan, based on your performance. </h5>
+
+                       </div>
+            </div>
+            <div class="child third-child">
+                      <div class="third_child_top" id="third_child_top2">
+
+                      </div>
+                      <div class="third_child_bottom">
+                        <h4 class="third_child_bottom_h4"> Interactive Grammer </h4>
+                        <h5 class="third_child_bottom_h5">Play with language for better expression. Simply spot and edit common gramatical mistakes and see your scores instantly.  </h5>
+
+                      </div>
+
+            </div>
+            <div class="child third-child">
+                      <div class="third_child_top" id="third_child_top3">
+
+                      </div>
+                      <div class="third_child_bottom">
+                        <h4 class="third_child_bottom_h4"> Vocabulary Builder </h4>
+                        <h5 class="third_child_bottom_h5">Learn new words by bookmarking them daily and understand how to apply them in various contexts through retention games. </h5>
+
+                      </div>
+
+            </div>
+            <div class="child third-child">
+                    <div class="third_child_top" id="third_child_top4">
+
+                    </div>
+                    <div class="third_child_bottom">
+                      <h4 class="third_child_bottom_h4"> Record Your Speeches</h4>
+                      <h5 class="third_child_bottom_h5">Your opinion matters. Bring real stories to life and let your perspective be heard. </h5>
+
+                    </div>
+
+            </div>
+
+           </div>
+         </div>
+        <div class="third_div_third">
+          <button type="button" class="btn btn-success start_button">Get started</button>
+        </div>
+   </div>
+  </div>
+  <div class="four_div container-fluid">
+      <div class="four_div_first">
+        <img class="low_logo" src="Fill_1.png" >
+      </div>
+      <div class="four_div_second">
+        <div class="four_div_second_left">
+          <a href="#" class="low_link">Home |</a>
+          <a href="#" class="low_link"> About AUGLI |</a>
+          <a href="#" class="low_link"> Features |</a>
+          <a href="#" class="low_link"> Plans |</a>
+          <a href="#" class="low_link"> Contact |</a>
+        </div>
+        <div class="four_div_second_right">
+          <h5 class="four_div_second_right_h5">
+            © Copyright 2018, Augmented learning Pvt Ltd. All Rights Reserved.
+           </h5>
+        </div>
+
+      </div>
+
+  </div>
+  <script>
+  // /* position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   ,'position':'fixed','top':0,'left':0*/
+
+  $(window).scroll(function(){
+          if($(window).scrollTop() > 0){
+              $('.main_h').css({'background-color':'white'});
+              $('.nav_right_first_li_a').css({'color':'#4689f1'});
+
+          } else {
+
+              $('.main_h').css({'background-color':'inherit'});
+              $('.nav_right_first_li_a').css({'color':'white'});
+          }
+  });
+  </script>
+</body>
+</html>

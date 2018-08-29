@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Learn and Perform</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="Fill_1.svg" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <style>
+  body, html{
+    height: 100%;
+    width: 100%;
+  }
+  .first{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(158deg, #3f28ac 0%, #4689f1 100%);
+  }
+  .first_first{
+    height: 120px;
+  }
+  .nav_left{
+    margin-left:0%;
+    width:10%;
+    float:left;
+    position:relative;
+    height: 120px;
+    /* background-color: red; */
+
+  }
+  .nav_right{
+    margin-right:0px;
+    width:90%;
+    float:right;
+    position:relative;
+    height: 120px;
+    /* background-color:black; */
+  }
+
+  .logo_img{
+    /* margin-left: 54px; */
+
+    margin-top: 60px;
+    padding-left: 50px;
+    padding-right: 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.46);
+  }
+  .nav_right_first{
+    margin-left:0%;
+    width:70%;
+    float:left;
+    position:relative;
+    height: 120px;
+    /* background-color: red; */
+
+  }
+  .nav_right_second{
+    margin-left:0%;
+    width:30%;
+    float:left;
+    position:relative;
+    height: 120px;
+    /* background-color: red; */
+
+  }
+  .nav_right_first_h3,.nav_right_second_h3{
+    padding-top: 75px;
+    padding-left: 25px;
+    /* Style for "Select all" */
+      /* width: 404px;
+      height: 25px; */
+      color: #ffffff;
+      font-family: "Helvetica Neue";
+      font-size: 16px;
+      font-weight: 500;
+
+  }
+
+  .flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  /* background-color: DodgerBlue; */
+  padding-left: 20px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 156px;
+  margin: 5px;
+  text-align: center;
+  line-height: 110px;
+  font-size: 30px;
+
+}
+.first_second{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 40px;
+
+}
+.first_third{
+  text-align: center;
+}
+.first_third_div{
+  background-color: #00d071;
+  margin-top: 30px;
+  margin-left: 400px;
+  margin-right: 400px;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+.first_third_div_h4{
+  /* width: 208px;
+  height: 19px; */
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 700;
+  /* Text style for "Personalis" */
+  letter-spacing: 0.12px;
+}
+.int_img{
+  height: 100%;
+  width: 100%;
+
+}
+#int1, #int6, #int9{
+  border: 1px solid rgba(255, 255, 255, 0.46);
+
+}
+
+  </style>
+</head>
+<body>
+<div class="first">
+  <div class="first_first">
+    <div class="nav_left">
+      <div class="nav_left_first">
+        <img src="Fill_1.svg" class="logo_img" >
+      </div>
+
+    </div>
+    <div class="nav_right">
+      <div class="nav_right_first">
+        <h3 class="nav_right_first_h3">Select all the topics you're interested in reading about. </h3>
+      </div>
+      <div class="nav_right_second">
+       <h3 class="nav_right_second_h3">Choose 3 or more to continue.</h3>
+      </div>
+    </div>
+  </div>
+  <div class="first_second">
+      <div class="flex-container">
+          <div><img src="int1.png" class="int_img" id="int1"></div>
+          <div><img src="int2.png" class="int_img" ></div>
+          <div><img src="int3.png" class="int_img" ></div>
+          <div><img src="int4.png" class="int_img" ></div>
+          <div><img src="int5.png" class="int_img" ></div>
+          <div><img src="int6.png" class="int_img" id="int6"></div>
+      </div>
+      <div class="flex-container">
+        <div><img src="int7.png" class="int_img" ></div>
+        <div><img src="int8.png" class="int_img" ></div>
+        <div><img src="int9.png" class="int_img" id="int9" ></div>
+        <div><img src="int10.png" class="int_img" ></div>
+        <div><img src="int11.png" class="int_img" ></div>
+        <div><img src="int12.png" class="int_img" ></div>
+      </div>
+      <div class="flex-container">
+        <div><img src="int13.png" class="int_img" ></div>
+        <div><img src="int14.png" class="int_img" ></div>
+        <div><img src="int15.png" class="int_img" ></div>
+        <div><img src="int16.png" class="int_img" ></div>
+        <div><img src="int17.png" class="int_img" ></div>
+        <div><img src="int18.png" class="int_img" ></div>
+      </div>
+  </div>
+  <div class="first_third">
+    <div class="first_third_div">
+      <h4 class="first_third_div_h4">Personalise My Dashboard</h4>
+    </div>
+  </div>
+</div>
+</body>
+</html>

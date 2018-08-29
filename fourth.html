@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Augli -  Step 3</title>
+  <title>Augli -  Step 4</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
@@ -18,8 +18,8 @@ body, html{
 .first_div {
   height: 100%;
   width: 100%;
-/*
-  background-color: red; */
+
+  /* background-color: red; */
 }
 .first_div_left{
   margin-left:0%;
@@ -37,7 +37,6 @@ body, html{
   background:#4035ba;
   height: 100%;
   border-radius: 100px 0 0;
-  background-image: linear-gradient(158deg, #3f28ac 0%, #466af1 100%);
 
 }
 .first_div_left_first{
@@ -102,7 +101,7 @@ body, html{
 </style>
 <style>
 .first_div_right_first{
-  margin-top: 12%;
+  margin-top: 7%;
   margin-left: 5%;
 }
 .first_div_right_first_h4{
@@ -131,7 +130,7 @@ font-size: 18px;
   margin-left: 5%;
   margin-right: 5%;
   background: white;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 2px;
 }
 .first_div_right_third{
@@ -159,6 +158,34 @@ font-weight: 500;
 line-height: 34px;
 
 
+}
+</style>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    padding: 10px;
+    text-align: center;
+}
+
+td, th {
+    border: 1px solid #ebebeb;
+    text-align: left;
+    padding: 8px;
+    margin: 0px;
+    text-align: center;
+
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    line-height: 23px;
+}
+
+tr:nth-child(odd) {
+    background-color: #ebebeb;
 }
 </style>
 </head>
@@ -196,48 +223,30 @@ line-height: 34px;
 
       <div class="first_div_right">
         <div class="first_div_right_first">
-          <h4 class="first_div_right_first_h4">Level 1 </h4>
-          <h3 class="first_div_right_first_h3">Question 1 <span class="first_div_right_first_h3_span">(Pick the Right Answer)</span></h3>
+          <h4 class="first_div_right_first_h4">Results </h4>
+          <h3 class="first_div_right_first_h3">You’re in Level 6 - Expert Level <span class="first_div_right_first_h3_span"></span></h3>
         </div>
 
         <div class="first_div_right_second">
           <div class="question-body" id="question-body1">
-
-              <p class="question-para" id="question-para1">
-                When Vera first started conducting phone interviews, she followed a script, but that has since changed.
-              </p>
-              <p class="question-text" id="question-text1">
-                What has changed since Vera first started conducting interviews?
-              </p>
-              <div class="question" id="form">
-                <form>
-                  <label class="input_label" id="label1" for="choice1">
-                    <input class="input_class" type="radio" name="test_question" value="1" id="choice1">
-                    <span id="option1_text"> The script has changed.</span>
-                  </label>
-                  <br>
-                  <label class="input_label" id="label2" for="choice2">
-                    <input class="input_class" type="radio" name="test_question" value="2" id="choice2">
-                    <span id="option2_text">Vera does not conduct interviews anymore.</span>
-                  </label>
-                  <br>
-                   <label class="input_label" id="label3" for="choice3">
-                    <input class="input_class" type="radio" name="test_question" value="3" id="choice3">
-                    <span id="option3_text">She does not follow a script anymore.</span>
-                  </label>
-                  <br>
-                  <label class="input_label" id="label4" for="choice4">
-                    <input class="input_class" type="radio" name="test_question" value="4" id="choice4">
-                    <span id="option4_text">Vera does not conduct phone interviews.</span>
-                  </label>
-                  <br>
-                </form>
-              </div>
-
+            <table>
+              <tr>
+                <th>Vocabulary</th>
+                <th>Reading</th>
+                <th>Comprehension</th>
+                <th>Grammar</th>
+              </tr>
+              <tr>
+                <td>8.0</td>
+                <td>7.0</td>
+                <td>6.5</td>
+                <td>8.5</td>
+              </tr>
+            </table>
             </div>
         </div>
         <div class="first_div_right_third">
-          <button type="button" class="btn btn-success next-button">Next Question</button>
+          <button type="button" class="btn btn-success next-button">Pick Your Choices</button>
         </div>
 
       </div>
