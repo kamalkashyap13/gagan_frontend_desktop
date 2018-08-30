@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <style>
+  body, html{
+    height: 100%;
+    background-color: #f5f9ff;
+
+  }
+
+  .first_div{
+    padding-top: 40px;
+    height: 250px;
+    border-radius: 0 0 0 100px;
+    background-image: linear-gradient(158deg, #3f28ac 0%, #466af1 100%);
+  }
+  .first_div_first{
+
+    height: 40px;
+    /* background-color: red; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .first_div_second{
+    margin-top: 20px;
+    height: 50px;
+    /* background-color: yellow; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-bottom: 1px solid #6968f3;
+
+  }
+  .first_div_second_first{
+    height: 50px;
+  }
+  .first_div_first_left{
+    margin-left:0%;
+    width:43%;
+    float:left;
+    position:relative;
+
+    /* background:yellow; */
+
+  }
+  .logo_img{
+    height: 40px;
+  }
+  .first_div_first_right{
+    margin-right:0px;
+    width:57%;
+    float:right;
+    position:relative;
+    height: 40px;
+    /* background:black; */
+
+  }
+  .progress{
+    display: inline;
+  }
+.first_div_first_right_left{
+  margin-left:0%;
+  width:55%;
+  float:left;
+  position:relative;
+  height: 40px;
+  /* background:brown; */
+  text-align: right;
+  border-right: 1px solid white;
+  padding-bottom: 0px;
+
+
+}
+.first_div_first_right_right{
+  margin-right:0px;
+  width:45%;
+  float:right;
+  position:relative;
+  height: 40px;
+  /* background:black; */
+
+}
+.low_link{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 20px;
+}
+/* .skill_link_div{
+  display: inline;
+  height: 50px !important;
+  background-color: green;
+
+} */
+.skill_link{
+  color: #6d68e5;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* Text style for "HOME" */
+  color: #ffffff;
+  letter-spacing: -0.35px;
+  /* Text style for "READING" */
+  letter-spacing: -0.35px;
+  padding-right: 25px;
+  /* height: 50px; */
+
+}
+.progress_left{
+  padding-left:5%;
+  padding-right: 5%;
+  width:75%;
+  float:left;
+  position:relative;
+  height: 40px;
+  /* background:pink; */
+  border-right: 1px solid white;
+
+}
+.progress_right{
+  margin-right:0px;
+  width:15%;
+  float:right;
+  position:relative;
+  height: 40px;
+  /* background:black; */
+  text-align: right;
+
+}
+.face_class1{
+  height: 40px;
+  width: 100%;
+
+}
+.progress_left_h5{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 500;
+  /* Text style for "You’ve rea" */
+  letter-spacing: 0.4px;
+}
+.progress{
+  height: 15px;
+  width: 100%;
+  /* background-color: black; */
+  background-color:black !important;
+}
+
+
+.progress-bar{
+  height: 15px;
+  width: 100%;
+}
+
+/* #skill1{
+  border-bottom: 1px solid white;
+  height: 50px;
+} */
+
+
+  </style>
+  <style>
+  .second_div{
+    height: 1200px;
+
+  }
+  .second_div_first{
+    margin-top: -65px;
+    height: 1200px;
+    /* background-color: yellow; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    /* background: gray; */
+
+  }
+
+  .second_div_first_left{
+    margin-left: 0px;
+    width:71.5%;
+    float:left;
+    position:relative;
+    height: 1200px;
+    background:white;
+    border-radius: 5px;
+
+  }
+  .second_div_first_right{
+    margin-right:0px;
+    width:27%;
+    float:right;
+    position:relative;
+    height: 1200px;
+    background:black;
+
+  }
+  .second_div_first_left_first{
+    height: 240px;
+    /* background:black; */
+    margin: 20px;
+
+  }
+  .second_div_first_left_first_first{
+    height: 40px;
+    /* background-color: orange; */
+
+  }
+  .second_div_first_left_first_first_left{
+    margin-left: 0px;
+    width:80%;
+    float:left;
+    position:relative;
+    height: 40px;
+
+  }
+  .second_div_first_left_first_first_right{
+    margin-right:0px;
+    width:15%;
+    float:right;
+    position:relative;
+    height: 40px;
+    text-align: right;
+
+
+  }
+  .skill_tag_h3{
+    color: #151515;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    /* Text style for "Reading Le" */
+    letter-spacing: -0.39px;
+    padding: 10px 0px;
+
+  }
+  .skill_tag_span{
+    border-radius: 17px;
+    background-color: #00be67;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+
+  }
+  </style>
+  <style>
+  .second_div_first_left_first_second{
+    margin-top: 10px;
+  }
+  .second_div_first_left_first_second_flex{
+    height: 200px;
+    /* background-color: blue; */
+  }
+    .parent{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .child {
+      flex: 1 0 20%; /* explanation below */
+      /* margin-left: 12px;
+      margin-right: 12px; */
+      /* height: 380px; */
+      /* background-color: pink; */
+
+    }
+    #child1, #child2{
+      margin-right: 20px;
+    }
+    .child_img{
+      height: 90px;
+    }
+    .face_class{
+      height: 90px;
+    }
+    .child_txt{
+      height: 110px;
+    }
+    .child_gen{
+      padding-top: 10px;
+      color: #4259cf;
+      font-family: "Helvetica Neue";
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+    }
+    .child_main_txt{
+      color: #000000;
+      font-family: "Helvetica Neue";
+      font-size: 17px;
+      font-weight: 300;
+
+    }
+    .child_main_date{
+      color: #8e8e8e;
+      font-family: "Helvetica Neue";
+      font-size: 12px;
+      font-weight: 700;
+      /* Text style for "Aug 20 ," */
+      color: #373737;
+
+    }
+
+    #parent_father2, #parent_father3, #parent_father4{
+        margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="first_div">
+  <div class="first_div_first">
+    <div class="first_div_first_left">
+      <img src="Fill_1.svg" class="logo_img" >
+    </div>
+    <div class="first_div_first_right">
+      <div class="first_div_first_right_left">
+        <a href="#" class="low_link">Take Assessment </a>
+        <a href="#" class="low_link"> Interests </a>
+      </div>
+      <div class="first_div_first_right_right">
+        <div class="progress_left">
+           <div class="progress_top">
+            <h5 class="progress_left_h5">You’ve reached Level 8 </h5>
+          </div>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width:100%;"></div>
+            </div>
+        </div>
+        <div class="progress_right">
+          <img src="face.png" class="face_class1">
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="first_div_second">
+    <div class="first_div_second_first">
+      <!-- <div class="skill_link_div">
+
+      </div> -->
+      <a href="#" class="skill_link" id="skill1">HOME </a>
+      <a href="#" class="skill_link">READING </a>
+      <a href="#" class="skill_link">GRAMMER </a>
+      <a href="#" class="skill_link">VOCABULARY </a>
+      <a href="#" class="skill_link">SPEAKING </a>
+    </div>
+
+  </div>
+
+</div>
+<div class="second_div">
+  <div class="second_div_first">
+    <div class="second_div_first_left">
+
+        <div class="second_div_first_left_first" id="parent_father1">
+            <div class="second_div_first_left_first_first">
+              <div class="second_div_first_left_first_first_left">
+                <h4 class="skill_tag_h3"> Reading Lessons </h4>
+              </div>
+              <div class="second_div_first_left_first_first_right">
+                <span class="skill_tag_span">SEE ALL</span>
+              </div>
+            </div>
+            <div class="second_div_first_left_first_second">
+                  <div class="second_div_first_left_first_second_flex parent">
+                    <div class="child" id="child1">
+
+                      <div class="child_img">
+                        <img src="skill1.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+
+                    </div>
+                    <div class="child" id="child2">
+                      <div class="child_img">
+                        <img src="skill2.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">ART</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                    <div class="child">
+                      <div class="child_img">
+                        <img src="skill3.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">CRYPTOCURRENCY</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <div class="second_div_first_left_first" id="parent_father2">
+            <div class="second_div_first_left_first_first">
+              <div class="second_div_first_left_first_first_left">
+                <h4 class="skill_tag_h3"> Grammar </h4>
+              </div>
+              <div class="second_div_first_left_first_first_right">
+                <span class="skill_tag_span">SEE ALL</span>
+              </div>
+            </div>
+            <div class="second_div_first_left_first_second">
+                  <div class="second_div_first_left_first_second_flex parent">
+                    <div class="child" id="child1">
+
+                      <div class="child_img">
+                        <img src="skill4.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+
+                    </div>
+                    <div class="child" id="child2">
+                      <div class="child_img">
+                        <img src="skill5.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                    <div class="child">
+                      <div class="child_img">
+                        <img src="skill6.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <div class="second_div_first_left_first" id="parent_father3">
+            <div class="second_div_first_left_first_first">
+              <div class="second_div_first_left_first_first_left">
+                <h4 class="skill_tag_h3"> Vocabulary </h4>
+              </div>
+              <div class="second_div_first_left_first_first_right">
+                <span class="skill_tag_span">SEE ALL</span>
+              </div>
+            </div>
+            <div class="second_div_first_left_first_second">
+                  <div class="second_div_first_left_first_second_flex parent">
+                    <div class="child" id="child1">
+
+                      <div class="child_img">
+                        <img src="skill7.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+
+                    </div>
+                    <div class="child" id="child2">
+                      <div class="child_img">
+                        <img src="skill8.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                    <div class="child">
+                      <div class="child_img">
+                        <img src="skill9.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+        <div class="second_div_first_left_first" id="parent_father4">
+            <div class="second_div_first_left_first_first">
+              <div class="second_div_first_left_first_first_left">
+                <h4 class="skill_tag_h3"> Speaking </h4>
+              </div>
+              <div class="second_div_first_left_first_first_right">
+                <span class="skill_tag_span">SEE ALL</span>
+              </div>
+            </div>
+            <div class="second_div_first_left_first_second">
+                  <div class="second_div_first_left_first_second_flex parent">
+                    <div class="child" id="child1">
+
+                      <div class="child_img">
+                        <img src="skill10.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+
+                    </div>
+                    <div class="child" id="child2">
+                      <div class="child_img">
+                        <img src="skill11.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                    <div class="child">
+                      <div class="child_img">
+                        <img src="skill12.png" class="face_class">
+                      </div>
+                      <div class="child_txt">
+                        <h4 class="child_gen">POLITICS</h4>
+                        <h4 class="child_main_txt">Are Your Escapist Habits Wrecking Your Life? </h4>
+                        <span class="child_main_date">Aug 20</span>
+
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="second_div_first_right">
+
+
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
