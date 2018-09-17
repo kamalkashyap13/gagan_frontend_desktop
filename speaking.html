@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli -  Speaking Exercise </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <style>
+  body, html{
+    height: 100%;
+    background: #f5f9ff;
+
+  }
+  .first_div {
+    height: 100%;
+    width: 100%;
+  /*
+    background-color: red; */
+  }
+  .first_top{
+    padding: 20px 0px;
+    margin: 0px 80px;
+    border-bottom: 2px solid black;
+    height: 100px;
+  }
+  .first_div_left{
+    margin-left:0%;
+    width:10%;
+    float:left;
+    position:relative;
+    height: 80px;
+  }
+  .first_div_right{
+    margin-right:0px;
+    width:90%;
+    float:right;
+    position:relative;
+    height: 80px;
+
+
+  }
+  .first_div_right_left{
+    margin-left:0%;
+    width:43%;
+    float:left;
+    position:relative;
+    height: 100px;
+
+  }
+  .first_div_right_right{
+    margin-right:0px;
+    width:57%;
+    float:right;
+    position:relative;
+    height: 100px;
+    text-align: right;
+
+  }
+  .logo_img{
+    height: 42px;
+    width: 42px;
+
+  }
+</style>
+<style>
+.first_second{
+  margin-left: 80px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.navi_span{
+  color: #151515;
+  font-family: "Benton Sans Book";
+  font-size: 13px;
+  font-weight: 300;
+}
+.first_main_left{
+  margin-left:0%;
+  width:65%;
+  float:left;
+  position:relative;
+  height: 1000px;
+  height: auto;
+  margin-bottom: 60px;
+
+
+}
+.first_main_right{
+  margin-right:0px;
+  width:35%;
+  float:right;
+  position:relative;
+  height: 1000px;
+    height: auto;
+
+}
+</style>
+<style>
+.first_main_left_content{
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 30px;
+  height: 860px;
+  background-color: white;
+  border-radius: 5px;
+  padding:20px;
+  margin-bottom: 0px;
+
+}
+.first_main_left_content_head{
+  background-color: rgba(243, 175, 187, 0.15);
+
+  padding: 20px;
+}
+.inst_h3{
+  color: #f3afbb;
+font-family: "Benton Sans";
+font-size: 22px;
+font-weight: 500;
+/* Text style for "Exercise I" */
+letter-spacing: -0.6px;
+
+}
+.inst_p{
+  color: #000000;
+font-family: "Benton Sans Book";
+font-size: 14px;
+font-weight: 300;
+margin-bottom: 5px;
+
+}
+.first_main_left_content_second{
+  height: 100px;
+  padding: 10px;
+
+}
+.first_main_left_content_second_left{
+  margin-left:0%;
+  width:80%;
+  float:left;
+  position:relative;
+  height: 100px;
+
+}
+.first_main_left_content_second_right{
+  margin-right:0px;
+  width:20%;
+  float:right;
+  position:relative;
+  height: 100px;
+  padding-top: 20px;
+
+}
+.first_main_left_content_second_left_left{
+  margin-left:0%;
+  width:25%;
+  float:left;
+  position:relative;
+  height: 100px;
+
+}
+.first_main_left_content_second_left_right{
+  margin-right:0px;
+  width:75%;
+  float:right;
+  position:relative;
+  height: 100px;
+  padding-top: 20px;
+
+}
+.first_main_left_content_second_left_right_h2{
+  color: rgba(21, 21, 21, 0.92);
+  font-family: "Benton Sans";
+  font-size: 24px;
+  font-weight: 500;
+}
+.first_main_left_content_second_left_right_span_genre{
+
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "SCIENC" */
+  letter-spacing: 0.5px;
+}
+.first_main_left_content_second_left_right_span_date{
+
+  color: #8e8e8e;
+  font-family: "Benton Sans Book";
+  font-size: 12px;
+  font-weight: 300;
+  /* Text style for "Aug 20 ," */
+  color: #373737;
+}
+.first_main_left_content_second_left_right_span_source{
+  color: #8e8e8e;
+  font-family: "Benton Sans Book";
+  font-size: 12px;
+  font-weight: 300;
+
+}
+.first_main_left_content_second_right_span{
+  /* width: 44px;
+  height: 44px; */
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  border: 1px solid #cecece;
+  padding: 10px;
+  background-color: #ffffff;
+  margin-right: 20px;
+}
+.first_main_left_content_third{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.first_main_left_content_third_left{
+  margin-left:0%;
+  width:76%;
+  float:left;
+  position:relative;
+  height: 100px;
+
+}
+.first_main_left_content_third_right{
+  margin-right:0px;
+  width:24%;
+  float:right;
+  position:relative;
+  height: 100px;
+  /* padding-top: 20px; */
+  padding-left: 20px;
+  padding-top: 5px;
+
+}
+.first_main_left_content_third_right_span{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "Attempts" */
+  letter-spacing: 0.5px;
+}
+.content_para{
+  color: #151515;
+  font-family: "Benton Sans Book";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 47px;
+}
+.bottom_option{
+  background-color: #dee8f6;
+  height: 120px;
+  margin-left: 80px;
+  margin-top: 0px;
+  margin-right: 30px;
+  padding: 20px;
+  /* margin-bottom: 60px; */
+}
+.bottom_option_h3{
+  color: #4259cf;
+font-family: "Benton Sans";
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+/* Text style for "Pick a Con" */
+letter-spacing: 0.5px;
+}
+.option_choice{
+  margin-top: 20px;
+}
+.option_choice_example{
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  border: 1px solid #cecece;
+  background-color: #ffffff;
+  padding: 7px 15px;
+  margin-right: 10px;
+}
+.option_choice_result_button{
+  display: inline;
+  text-align: right;
+  margin-left: 240px;
+}
+#result_option{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 27px;
+  background-color: #00be67;
+  color: #ffffff;
+  font-family: "Benton Sans";
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 0px;
+  padding: 10px 15px;
+}
+</style>
+<style>
+
+.second_div_first_right_bottom{
+  margin-top: 20px;
+  margin-right: 80px;
+  height: 600px;
+  background-color: white;
+  border-radius: 5px;
+  padding:20px;
+}
+.trend_txt{
+  color: #151515;
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  /* Text style for "Trending P" */
+  letter-spacing: -0.39px;
+}
+.trend_url_left{
+margin-left: 0px;
+width:32%;
+float:left;
+position:relative;
+height: 90px;
+background:white;
+border-radius: 5px;
+
+}
+.trend_url_right{
+margin-right:0px;
+width:68%;
+float:right;
+position:relative;
+height: 90px;
+}
+.trend_url_h4{
+color: #4259cf;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 500;
+text-transform: uppercase;
+}
+.trend_url_h5{
+color: #000000;
+font-family: "Helvetica Neue";
+font-size: 14px;
+}
+.trend_url_h6{
+color: #8e8e8e;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 500;
+/* Text style for "Aug 20 ," */
+color: #373737;
+}
+.empty_position{
+  border-radius: 13px;
+  border: 1px dashed #406daf;
+  background-color: #f5f9ff;
+  padding: 4px 40px;
+
+  margin-right: 8px;
+}
+</style>
+</head>
+<body>
+  <div class="first_div">
+  <div class="first_top">
+    <div class="first_div_left">
+      <img src="green_icon.png" class="logo_img" >
+    </div>
+    <div class="first_div_right">
+      <div class="first_div_right_left">
+        <p class="divided">
+          Identify the correct Spelling
+        </p>
+      </div>
+      <div class="first_div_right_right">
+        <img src="Rectangle_5.png" class="logo_img" >
+      </div>
+    </div>
+  </div>
+
+  <div class="first_second">
+    <span class="navi_span">Home › Speaking › Summarize<span>
+  </div>
+  <div class="first_main">
+    <div class="first_main_left">
+      <div class="first_main_left_content">
+        <div class="first_main_left_content_head">
+          <h3 class="inst_h3"> Exercise Instruction </h3>
+          <p class="inst_p"> Please summarize the article in 1 minute. Try using your Powerwords to increase your score </p>
+          <p class="inst_p">Check Result to see how you performed </p>
+
+        </div>
+        <div class="first_main_left_content_second">
+          <div class="first_main_left_content_second_left">
+
+            <div class="first_main_left_content_second_left_left">
+              <img src="trend1.png">
+            </div>
+            <div class="first_main_left_content_second_left_right">
+              <h2 class="first_main_left_content_second_left_right_h2">New type of photosynthesis discovered. </h2>
+              <span class="first_main_left_content_second_left_right_span_genre">SCIENCE</span>
+              <span class="first_main_left_content_second_left_right_span_date">Aug 20 ,</span>
+              <span class="first_main_left_content_second_left_right_span_source">Source Discovery Channel</span>
+
+            </div>
+
+          </div>
+          <div class="first_main_left_content_second_right">
+            <span class="first_main_left_content_second_right_span">
+              <img src="share.png" class="content_img">
+            </span>
+            <span class="first_main_left_content_second_right_span">
+              <img src="heart.png" class="content_img">
+            </span>
+
+          </div>
+
+        </div>
+        <div class="first_main_left_content_third">
+          <div class="first_main_left_content_third_left">
+            <div class="progress" style="height:10px;margin-top:20px;">
+               <div class="progress-bar bg-warning" style="width:40%;height:10px"></div>
+            </div>
+          </div>
+          <div class="first_main_left_content_third_right">
+            <span class="first_main_left_content_third_right_span"> 1/2 Attempts</span>
+          </div>
+        </div>
+        <div class="first_main_left_content_fourth">
+          <p class="content_para">
+            <!-- <span class="empty_position"> </span> -->
+             your class six teacher taught you that water, white light and chlorophyll are needed for photosynthesis, here is your chance to prove them wrong. A new study published in Science says that certain bacteria don't need white light, and instead use far-red light for photosynthesis.
+          </p>
+          <p class="content_para">
+            The wavelength of visible light
+            <!-- <span class="empty_position"> </span>  -->
+              white light is 400 to 700
+              <span contenteditable="true">nanometre </span>
+              , and till now botanists and biologists believed that all plants used red light( 680 to 700 nm) for oxygenic photosynthesis. The new study shows that many cyanobacteria or blue-green algae can carry out photosynthesis in the far red light or near infrared light of 750 nm.
+          </p>
+
+        </div>
+
+
+      </div>
+      <div class="bottom_option">
+        <!-- <h5 class="bottom_option_h3">Pick a Conjunction</h5> -->
+        <div class="option_choice">
+          <!-- <span class="option_choice_example"> As</span>
+          <span class="option_choice_example"> If</span>
+          <span class="option_choice_example"> However</span> -->
+          <div class="option_choice_result_button">
+            <span id="result_option"> CHECK RESULT</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="first_main_right">
+      <div class="second_div_first_right_bottom">
+        <h3 class="trend_txt"> Related Articles in Grammar </h3>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend1.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend2.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend3.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend4.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend5.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+        <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend6.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
