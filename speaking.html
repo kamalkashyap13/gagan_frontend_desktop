@@ -4,6 +4,7 @@
   <title>Augli -  Speaking Exercise </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
   <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
   <link rel="icon" href="" type="image/png" >
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -105,7 +106,7 @@
   margin-top: 20px;
   margin-left: 80px;
   margin-right: 30px;
-  height: 860px;
+  height: 760px;
   background-color: white;
   border-radius: 5px;
   padding:20px;
@@ -125,6 +126,15 @@ font-weight: 500;
 /* Text style for "Exercise I" */
 letter-spacing: -0.6px;
 
+}
+.inst_h3_span{
+  color: #151515;
+  font-family: "Benton Sans";
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #181718;
+  padding: 3px 7px;
 }
 .inst_p{
   color: #000000;
@@ -232,7 +242,7 @@ margin-bottom: 5px;
 }
 .bottom_option{
   background-color: #dee8f6;
-  height: 120px;
+  height: 140px;
   margin-left: 80px;
   margin-top: 0px;
   margin-right: 30px;
@@ -250,6 +260,7 @@ letter-spacing: 0.5px;
 }
 .option_choice{
   margin-top: 20px;
+  height: auto;
 }
 .option_choice_example{
   box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.05);
@@ -259,12 +270,45 @@ letter-spacing: 0.5px;
   padding: 7px 15px;
   margin-right: 10px;
 }
-.option_choice_result_button{
-  display: inline;
-  text-align: right;
-  margin-left: 240px;
+.option_choice_result_button_left{
+  margin-left:0%;
+  width:63%;
+  float:left;
+  position:relative;
+  height: 100%;
+
 }
-#result_option{
+.option_choice_result_button{
+  margin-right:0px;
+  width:33%;
+  float:right;
+  position:relative;
+  height: 100%;
+}
+.option_choice_left{
+  margin-left:0%;
+  width:80%;
+  float:left;
+  position:relative;
+  height: 100%;
+
+}
+.option_choice_right{
+  margin-right:0px;
+  width:20%;
+  float:right;
+  position:relative;
+  height: 100%;
+  color: #4259cf;
+  font-family: "Helvetica Neue";
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-top:20px;
+  padding-left: 20px;
+
+}
+.result_option{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
   border-radius: 27px;
   background-color: #00be67;
@@ -274,7 +318,11 @@ letter-spacing: 0.5px;
   font-weight: 700;
   text-transform: uppercase;
   margin-right: 0px;
-  padding: 10px 15px;
+  padding: 10px 20px;
+}
+.result_option_text{
+  padding: 0px 5px;
+
 }
 </style>
 <style>
@@ -340,6 +388,45 @@ color: #373737;
   margin-right: 8px;
 }
 </style>
+<style>
+.result_content_p{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "EXPLAINATI" */
+  letter-spacing: 0.5px;
+  margin-top: -20px;
+}
+.result_content_div_span{
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.05);
+border-radius: 20px;
+border: 1px solid #cecece;
+background-color: #ffffff;
+color: #000000;
+font-family: "Benton Sans Book";
+font-size: 18px;
+font-weight: 300;
+padding: 2px 4px;
+margin-left: 2px;
+}
+.result_content_h4{
+  color: #151515;
+font-size: 14px;
+line-height: 23px;
+/* Text style for "Learn why" */
+
+/* Text style for ": Include" */
+font-family: "Benton Sans Book";
+font-weight: 100;
+}
+.result_content_h4_span{
+  font-family: "Benton Sans";
+  font-weight: 500;
+
+}
+</style>
 </head>
 <body>
   <div class="first_div">
@@ -350,7 +437,7 @@ color: #373737;
     <div class="first_div_right">
       <div class="first_div_right_left">
         <p class="divided">
-          Identify the correct Spelling
+          Speaking Exercise
         </p>
       </div>
       <div class="first_div_right_right">
@@ -366,8 +453,8 @@ color: #373737;
     <div class="first_main_left">
       <div class="first_main_left_content">
         <div class="first_main_left_content_head">
-          <h3 class="inst_h3"> Exercise Instruction </h3>
-          <p class="inst_p"> Please summarize the article in 1 minute. Try using your Powerwords to increase your score </p>
+          <h3 class="inst_h3"> Exercise Instruction <span class="inst_h3_span">How do we score? </span></h3>
+          <p class="inst_p"> Please summarize the article in 1 minute. Try using your Powerwords to increase your score  </p>
           <p class="inst_p">Check Result to see how you performed </p>
 
         </div>
@@ -397,7 +484,7 @@ color: #373737;
           </div>
 
         </div>
-        <div class="first_main_left_content_third">
+        <!-- <div class="first_main_left_content_third">
           <div class="first_main_left_content_third_left">
             <div class="progress" style="height:10px;margin-top:20px;">
                <div class="progress-bar bg-warning" style="width:40%;height:10px"></div>
@@ -406,7 +493,7 @@ color: #373737;
           <div class="first_main_left_content_third_right">
             <span class="first_main_left_content_third_right_span"> 1/2 Attempts</span>
           </div>
-        </div>
+        </div> -->
         <div class="first_main_left_content_fourth">
           <p class="content_para">
             <!-- <span class="empty_position"> </span> -->
@@ -421,7 +508,10 @@ color: #373737;
           </p>
 
         </div>
-
+        <div class="main-video">
+          <video id="your-video-id" controls="" autoplay=""></video>
+        </div>
+        <span class="time" id="time"> Time elasped: 0 minutes and 0 seconds</span>
 
       </div>
       <div class="bottom_option">
@@ -430,9 +520,52 @@ color: #373737;
           <!-- <span class="option_choice_example"> As</span>
           <span class="option_choice_example"> If</span>
           <span class="option_choice_example"> However</span> -->
-          <div class="option_choice_result_button">
-            <span id="result_option"> CHECK RESULT</span>
+          <div class="option_choice_result_button_left" id="activity_progress">
+            <div class="progress option_choice_left" style="height:10px;margin-top:20px;width:80%;background-color:white;">
+               <div class="progress-bar bg-warning" style="width:5%;height:10px"></div>
+            </div>
+            <div class="option_choice_right">10 SEC</div>
           </div>
+          <div class="option_choice_result_button_left" id="result_content">
+            <p class="result_content_p" >EXPLAINATION</p>
+            <div class="result_content_div">
+              <span class="result_content_div_span">
+                Comprehension: 4.8
+              </span>
+              <span class="result_content_div_span">
+                Factual: 2.8
+              </span>
+              <span class="result_content_div_span">
+                Bookmark words: 4.8
+              </span>
+            </div>
+            <h4 class="result_content_h4">
+              <span class="result_content_h4_span">
+                Learn why
+              </span>
+              :
+
+               Include Power words in your summary to leverage your score</h4>
+
+          </div>
+          <div class="option_choice_result_button" id="start_recording" onclick="Recording(event)">
+
+            <span class="result_option">
+              <img src="camera.png">
+              <span class="result_option_text" id="start_button" >  START SPEAKING </span>
+            </span>
+          </div>
+          <div class="option_choice_result_button" id="start_result">
+            <span class="result_option">
+              <span class="result_option_text" id="start_trans" >  CHECK RESULT </span>
+            </span>
+          </div>
+          <div class="option_choice_result_button" id="start_repeat">
+            <span class="result_option">
+              <span class="result_option_text" id="start_trans" >  RETAKE TEST </span>
+            </span>
+          </div>
+
         </div>
       </div>
 
@@ -508,7 +641,300 @@ color: #373737;
 
   </div>
 </div>
+<script>
+$("#start_result").hide();
+$("#start_repeat").hide();
+$("#result_content").hide();
+</script>
+<script >
+a=[]
+var myVar;
+var camera_stream;
+final_transcript = '';
+
+$("#your-video-id").hide();
+$("#time").hide();
+$(".result_display").hide();
+
+if (!('webkitSpeechRecognition' in window)) {
+alert("Upgrade your browser or user Chrome")
+}
+else {
+  var recognition = new webkitSpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+}
+recognition.onresult = function(event) {
+  for (var i = event.resultIndex; i < event.results.length; ++i) {
+
+    if (event.results[i].isFinal) {
+      final_transcript += event.results[i][0].transcript;
+    }
+  }
+
+}
+recognition.onend = function(event) {
+    bb = event;
+    //save_trascript(final_transcript);
+};
+function Recording(event) {
+  //content_para, start_recording,start_result
+  $(".content_para").hide();
+  $("#start_recording").hide();
+  $("#start_result").show();
+  $(".result_option").css("background-color", "#00be67");
+  $(".result_option").css("opacity", "0.44");
+  final_transcript = '';
+  recognition.lang = 'en-IN';//en-US, en-IN
+  recognition.start();
+  recordvideo();
+  $("#your-video-id").show();
+  // $("#time").show();
+  // startTime = new Date();
+  // setTimeout(display, 1000);
+  $(".result_display").hide();
+
+}
+
+function StopRecording(event){
+    record_video();
+    alert(11)
+    $(".result_option").css("opacity", "1");
+    $(".result_option").css("cursor", "pointer");
+    //
 
 
+
+}
+
+</script>
+<script type="text/javascript">
+ // record start time
+ // startTime = new Date();
+ // setTimeout(display, 1000);
+ // var startTime;
+
+function display() {
+   // later record end time
+   var endTime = new Date();
+
+   // time difference in ms
+   var timeDiff = endTime - startTime;
+
+   // strip the miliseconds
+   timeDiff /= 1000;
+
+   // get seconds
+   var seconds = Math.round(timeDiff % 60);
+
+   // remove seconds from the date
+   timeDiff = Math.floor(timeDiff / 60);
+
+   // get minutes
+   var minutes = Math.round(timeDiff);
+
+   // remove minutes from the date
+   timeDiff = Math.floor(timeDiff / 60);
+
+   // get hours
+   var hours = Math.round(timeDiff % 24);
+
+   // remove hours from the date
+   timeDiff = Math.floor(timeDiff / 24);
+
+   // the rest of timeDiff is number of days
+   var days = timeDiff;
+
+   document.getElementById('time').innerHTML="Time elasped: "+minutes +" minutes"+ " and " + seconds+" seconds";
+   //time.innerHTML="Time elasped: "+minutes +" minutes"+ " and " + seconds+" seconds";
+   //time.innerHTML("Time elasped: "+minutes +" minutes"+ " and " + seconds+" seconds");
+   //setTimeout(display, 1000);
+   myFunction()
+ }
+
+ function myFunction() {
+     myVar = setTimeout(display, 1000);
+ }
+ function myStopFunction() {
+    clearTimeout(myVar);
+    //$(".result_option").css("background-color", "#00be67");
+
+}
+
+</script>
+
+
+<script type="text/javascript">
+    // capture camera and/or microphone
+
+
+    function recordvideo() {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(function(camera) {
+        camera_stream = camera;
+        //alert("aa")
+        // preview camera during recording
+        document.getElementById('your-video-id').muted = true;
+        document.getElementById('your-video-id').srcObject = camera;
+
+        // recording configuration/hints/parameters
+        var recordingHints = {
+            type: 'video'
+        };
+        console.log(camera);
+        // initiating the recorder
+        recorder = RecordRTC(camera, recordingHints);
+        //alert(recorder)
+
+        // starting recording here
+        recorder.startRecording();
+        //
+        //$("#time").show();
+        startTime = new Date();
+        setTimeout(display, 10000);
+
+        //
+        // auto stop recording after 5 seconds
+        var milliSeconds = 10 * 1000;
+        //recoding
+        setTimeout(record_video, milliSeconds);
+        //alert("cc")
+
+
+
+    })
+    .catch(function(err) {
+  /* handle the error */
+alert("user  dennied")
+        });
+  }
+
+
+
+
+  //
+
+
+  function record_video() {
+    recognition.stop();
+    //alert(11)
+    $(".result_option").css("opacity", "1");
+    $(".result_option").css("cursor", "pointer");
+    $(".result_option").addClass("speaking_result_button");
+    $(".main-video").hide();
+    $(".time").show();
+    $(".time").text(final_transcript);
+    $(".first_main_left_content").css("height", "360");;
+    clearTimeout(myVar);
+    // document.getElementById('time').innerHTML="Start Again";
+//     setTimeout(function() {
+//   //your code to be executed after 1 second
+//   document.getElementById('time').innerHTML="Start Again";
+// }, 1000);
+
+
+      // stop recording
+      recorder.stopRecording(function() {
+
+          // get recorded blob
+          var blob = recorder.getBlob();
+
+          // open recorded blob in a new window
+        //  window.open( URL.createObjectURL(blob) );
+
+          // release camera
+          document.getElementById('your-video-id').srcObject = null;
+          camera_stream.getTracks().forEach(function(track) {
+             tracked = track;
+              track.stop();
+          });
+
+          // you can preview recorded data on this page as well
+          document.getElementById('your-video-id').src = URL.createObjectURL(blob);
+          $(".result_display").show();
+          // text_transcription
+          // $(".result_display").show();
+        //  $(".text_transcription").text(final_transcript);
+          $(".time").text(final_transcript);
+
+      });
+
+  }
+
+  $('body').on('click', '.speaking_result_button', function() {
+    alert("The paragraph was clicked.");
+    $(".main-video").hide();
+    $(".time").show();
+    $(".time").text(final_transcript);
+    $("#result_content").show();
+    $("#activity_progress").hide();
+
+
+   });
+</script>
+<!--
+<script>
+function save_trascript(transcript){
+		formdata=new FormData();
+		formdata.append("transcript",transcript);
+		formdata.append("url",url);
+
+
+			$.ajax({
+                 beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+                },
+				url: "/activity/speaking_test/",
+				data:formdata,
+                cache: false,
+				type: "POST",
+                contentType:false,
+                processData: false,
+				success: function(response) {
+                  score = response;
+                  update_score(score)
+
+				},
+				error: function(xhr) {
+
+
+				}
+			});
+
+	}
+
+
+  function getCookie(c_name) {
+         if(document.cookie.length > 0) {
+             c_start = document.cookie.indexOf(c_name + "=");
+             if(c_start != -1) {
+                 c_start = c_start + c_name.length + 1;
+                 c_end = document.cookie.indexOf(";", c_start);
+                 if(c_end == -1) c_end = document.cookie.length;
+                 return unescape(document.cookie.substring(c_start,c_end));
+             }
+         }
+         return "";
+     }
+
+  function update_score(li){
+    $("#comp").text(li.score[0]);
+    $("#fact").text(li.score[1]);
+    $("#bookmark").text(li.score[2]);
+  }
+
+</script>
+<script>
+  title = "{{ title | safe }}";
+  sub_title = "{{ sub_title | safe }}";
+  article_id = {{ id | safe }};
+  category = "{{ category | safe }}";
+  url = "{{ url | safe }}";
+  $("#title").text(title);
+  if (sub_title.length>12){
+    $("#sub_title").text(sub_title);
+  }
+
+</script> -->
 </body>
 </html>
