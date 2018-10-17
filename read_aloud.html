@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Augli -  Grammar</title>
+  <title>Augli -  Read Aloud</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
   <link rel="icon" href="" type="image/png" >
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+   <script src="spectrogram.js"></script>
+
   <style>
   body, html{
     height: 100%;
@@ -224,6 +226,34 @@ margin-bottom: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.first_main_left_content_third_left{
+  margin-left:0%;
+  width:76%;
+  float:left;
+  position:relative;
+  height: 100px;
+
+}
+.first_main_left_content_third_right{
+  margin-right:0px;
+  width:24%;
+  float:right;
+  position:relative;
+  height: 100px;
+  /* padding-top: 20px; */
+  padding-left: 20px;
+  padding-top: 5px;
+
+}
+.first_main_left_content_third_right_span{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "Attempts" */
+  letter-spacing: 0.5px;
+}
 .content_para{
   color: #151515;
   font-family: "Benton Sans Book";
@@ -233,7 +263,7 @@ margin-bottom: 5px;
 }
 .bottom_option{
   background-color: #dee8f6;
-  height: 120px;
+  height: 180px;
   margin-left: 80px;
   margin-top: 0px;
   margin-right: 30px;
@@ -263,7 +293,7 @@ letter-spacing: 0.5px;
 .option_choice_result_button{
   display: inline;
   text-align: right;
-  margin-left: 180px;
+  margin-left: 240px;
 }
 #result_option{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
@@ -275,7 +305,7 @@ letter-spacing: 0.5px;
   font-weight: 700;
   text-transform: uppercase;
   margin-right: 0px;
-  padding: 10px 15px;
+  padding: 5px 7px;
 }
 </style>
 <style>
@@ -337,8 +367,91 @@ color: #373737;
   border: 1px dashed #406daf;
   background-color: #f5f9ff;
   padding: 4px 40px;
-
   margin-right: 8px;
+}
+.span_powerwords{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-weight: 700;
+  border-bottom: 2px dashed #d0d9ea;
+}
+.span_bookmarkword{
+  color: #e7b64e;
+  font-family: "Benton Sans";
+  font-weight: 500;
+}
+</style>
+<style>
+.tooltip_div{
+  width: 380px;
+  padding: 20px;
+  margin: -20px;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 0 0;
+  background-color: #ffffff;
+  text-align: left;
+}
+.tooltip_h3{
+  color: #151515;
+  font-family: "Benton Sans Book";
+  font-size: 20px;
+  font-weight: 300;
+}
+.tooltip_h5{
+  color: #494848;
+  font-family: "Benton Sans Book";
+  font-size: 14px;
+  font-weight: 300;
+}
+.tooltip_p1{
+  color: #605f5f;
+  font-size: 17px;
+
+  /* Text style for "deeply dis" */
+  color: #494848;
+  font-family: "Benton Sans - Regular";
+  font-weight: 400;
+  /* Text style for "" */
+
+
+}
+.tooltip_p2{
+  font-size: 17px;
+
+  color: #494848;
+  font-family: "Benton Sans Book";
+  font-weight: 300;
+  /* Text style for ""she was g" */
+  font-family: Helvetica;
+
+}
+.tooltip_span{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "BOOKMARK" */
+  letter-spacing: 0.5px;
+}
+</style>
+<style>
+
+.viewport_left{
+  margin-left:0%;
+  width:70%;
+  float:left;
+  position:relative;
+
+
+}
+.viewport_right{
+  margin-right:0px;
+  width:30%;
+  float:right;
+  position:relative;
+
+
 }
 </style>
 </head>
@@ -346,30 +459,30 @@ color: #373737;
   <div class="first_div">
   <div class="first_top">
     <div class="first_div_left">
-      <img src="green_icon.png" class="logo_img" >
+      <img src="Fill_1.svg" class="logo_img" >
     </div>
     <div class="first_div_right">
       <div class="first_div_right_left">
         <p class="divided">
-          Identify the correct Preposition
+          Bookmark the Power Words
         </p>
       </div>
       <div class="first_div_right_right">
-        <img src="Rectangle_5.png" class="logo_img" >
+        <img src="3-layers.png" class="logo_img" >
       </div>
     </div>
   </div>
 
   <div class="first_second">
-    <span class="navi_span">Home › Grammar › Preposition<span>
+    <span class="navi_span">Home › Speak › Read Aloud<span>
   </div>
   <div class="first_main">
     <div class="first_main_left">
       <div class="first_main_left_content">
         <div class="first_main_left_content_head">
           <h3 class="inst_h3"> Exercise Instruction </h3>
-          <p class="inst_p"> Complete the passage by dragging appropriate words into the correct boxes.</p>
-          <p class="inst_p">Click on Check Result to see how you performed </p>
+          <p class="inst_p"> Click on Powerword to learn the meaning</p>
+          <p class="inst_p">Click CHECK RESULT to see how you have performed.</p>
 
         </div>
         <div class="first_main_left_content_second">
@@ -379,10 +492,10 @@ color: #373737;
               <img src="trend1.png" class="act_img">
             </div>
             <div class="first_main_left_content_second_left_right">
-              <h2 class="first_main_left_content_second_left_right_h2" id="article_head_text">New type of photosynthesis discovered. </h2>
-              <span class="first_main_left_content_second_left_right_span_genre" id="article_tag">SCIENCE</span>
-              <span class="first_main_left_content_second_left_right_span_date" id="article_date">Aug 20 ,</span>
-              <span class="first_main_left_content_second_left_right_span_source" id="article_footer_time">Source Discovery Channel</span>
+              <h2 class="first_main_left_content_second_left_right_h2">New type of photosynthesis discovered. </h2>
+              <span class="first_main_left_content_second_left_right_span_genre">SCIENCE</span>
+              <span class="first_main_left_content_second_left_right_span_date">Aug 20 ,</span>
+              <span class="first_main_left_content_second_left_right_span_source">Source Discovery Channel</span>
 
             </div>
 
@@ -398,42 +511,42 @@ color: #373737;
           </div>
 
         </div>
-        <div class="first_main_left_content_third">
-          <div class="progress" style="height:10px">
-             <div class="progress-bar bg-warning" style="width:40%;height:10px"></div>
-          </div>
-        </div>
-        <div class="first_main_left_content_fourth" id="add_content">
-          <!-- <p class="content_para" id="para1">
-            <span class="empty_position" id="empty_loc1" ondrop="drop(event)" ondragover="allowDrop(event)" > </span>
-             your class six teacher
-             <span class="empty_position" id="empty_loc2" ondrop="drop(event)" ondragover="allowDrop(event)"> </span>
 
-             taught you that water, white light and chlorophyll are needed for photosynthesis, here is your chance to prove them wrong. A new study published in Science says that certain bacteria don't need white light, and instead use far-red light for photosynthesis.
-          </p> -->
-
-        </div>
+        <div class="first_main_left_content_fourth">
+          <p class="content_para">
+            They saw that water, sanitation and hygiene are desperately needed in homes and at school in order for children to have healthy, happy, childhoods.
+          </p>
+                </div>
 
 
       </div>
       <div class="bottom_option">
-        <h5 class="bottom_option_h3">Pick a Conjunction</h5>
-        <div class="option_choice" id="option_choice_parent">
-          <span class="option_choice_example" id="drag_span_option1" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span ondragstart="drag(event)" id="drag_option1" draggable="true"> As </span>
-           </span>
-           <span class="option_choice_example" id="drag_span_option2" ondrop="drop(event)" ondragover="allowDrop(event)">
-             <span ondragstart="drag(event)" id="drag_option2" draggable="true"> If </span>
-            </span>
-            <span class="option_choice_example" id="drag_span_option3" ondrop="drop(event)" ondragover="allowDrop(event)">
-              <span ondragstart="drag(event)" id="drag_option3" draggable="true"> However </span>
-             </span>
-
-          <div class="option_choice_result_button">
-            <span id="result_option"> CHECK RESULT</span>
+        <h5 class="bottom_option_h3" id="start_first_record">Recording</h5>
+        <div class="option_choice">
+          <div class="viewport_left">
+            <canvas id="viewport" height="72" width="400" />
+          </div>
+          <div class="viewport_right">
+            <span id="result_option"> START PREPARE</span>
+            <span id="result_option2"> START RECOGNIZE</span>
+            <!-- <span> Headset Recommended</span>  -->
           </div>
         </div>
       </div>
+      <img id="recimg" src="./Test SpeakingPal API_files/record-button-off.gif" height="40">
+      	<div><font face="courier" color="green"><span id="rec_level">__________</span></font></div>
+      <div>Sentence ID:&nbsp;<span id="sentence_id"></span></div>
+      <input type="text" name="asr_sentence" id="asr_sentence" size="100" value="they saw that water sanitation and hygiene are desperately needed in homes">
+
+      <td width="120" align="center">
+    		<div><font face="courier" color="green">
+    				<span id="rec_level">__________</span>
+    			</font>
+    		</div>
+    	</td>
+
+      <div id="callback"></div>
+    	<div id="results"></div>
 
     </div>
     <div class="first_main_right">
@@ -507,116 +620,71 @@ color: #373737;
 
   </div>
 </div>
+
+</div>
+<script src="./Test SpeakingPal API_files/spapi-all.js"></script>
+<script src="./Test SpeakingPal API_files/md5-min.js"></script>
+<script src="./Test SpeakingPal API_files/test-norjs-asr6.js"></script>
+
 <script>
 $(document).ready(function(){
-play_content1=[{
-  "original_text":'{{ original_text | safe }}',
-  "option_object":'{{ option_object | safe }}',
-  "heading": "{{ title | safe }}",
-  "genre":"{{genre | safe}}",
-  "date":"{{date | safe}}",
-  "source":"{{source | safe}}",
-  "id": 1
-}];
-play_content=[{
-  "original_text":'<p class="content_para" id="para1"> <span class="empty_position" id="empty_loc1" ondrop="drop(event)" ondragover="allowDrop(event)" > </span> your class six teacher <span class="empty_position" id="empty_loc2" ondrop="drop(event)" ondragover="allowDrop(event)"> </span> taught you that water, white light and chlorophyll are needed for photosynthesis, here is your chance to prove them wrong. A new study <span class="empty_position" id="empty_loc3" ondrop="drop(event)" ondragover="allowDrop(event)" > </span> published in Science says that certain bacteria dont need white light, and instead use far-red light for photosynthesis. </p>',
-  "option_object":[{'word1':"on",'concept':'ddfdfd'},{'word1':"in",'concept':'ddfdfd'},{'word1':"at",'concept':'ddfdfd'}],
-  "heading": "Looking for a formula",
-  "genre":"ENTERTAINMENT",
-  "date":"2018-08-23",
-  "source":"hindu",
-  "id": 1
-}];
+  // 1 page_load - testAPI()
+  // 2 with text - startWS()
+  // 3 testRec()
+  // 4 stopAPI()
+  // 5 destroyAPI()
 
-$(".first_main_right").hide();
-$('title').text("Augli - "+ play_content[0].heading);
-$("#article_date").text(play_content[0].date);
-$("#article_head_text").text(play_content[0].heading);
-$("#article_footer_time").text(play_content[0].source);
-$(".question_no_error").text(play_content[0].errorcount);
-$("#article_tag").text(play_content[0].genre);
-$("#add_content").append(play_content[0].original_text);
-$("#drag_option1").text(play_content[0].option_object[2].word1);
-$("#drag_option2").text(play_content[0].option_object[0].word1);
-$("#drag_option3").text(play_content[0].option_object[1].word1);
-//on,in,at
+  //
+  //var myVar = setInterval(startWS, 5000);
+  //start_first_record
+  $("#start_first_record").click(function(){
+    alert(1);
+      testAPI()
 
-$("#result_option").click(function(e){
-  run_check();
 });
 
-//$("#empty_loc"+j).css("color","#ff4c4c");
+  $("#result_option").click(function(){
+    startWS()
+    //testRec()
+    // var spectrogram = new Spectrogram("viewport");
+    // navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
+
+});
+//
+$("#result_option2").click(function(){
+  //startWS()
+  testRec()
+  // var spectrogram = new Spectrogram("viewport");
+  // navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
+
+});
 
 });
 </script>
-<script>
-//multiple drops in single location
-//progress bar
-// data populate -frontend, backend
-//feedback - color code, tooltip, bottom
-// no of mistake 3
-// para data -3 position
-// 3 word in order, randomise and then add to bottomm option
-// correction -- for all blank son equal to corrected
-//feedback - color coding, tooltip, bottom
-//reset
-function run_check() {
-  for (var i = 0; i < 3; i++) {
-    j=i+1
-    child_drop = $("#empty_loc"+j).children();
-    if(child_drop.length==1){
-      txt = $("#empty_loc"+j).children().text();
-      alert(txt)
-      if(txt==play_content[0].option_object[i].word1){
-        $("#empty_loc"+j).css("color","#66b266");
-      }
-      else{
-        $("#empty_loc"+j).css("color","#ff4c4c");
-      }
+<!-- <script>
+https://github.com/sebleier/spectrogram.js/tree/master
+document.addEventListener('DOMContentLoaded', function() {
+  var spectrogram = new Spectrogram("viewport");
+  navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
 
-    }
-    else{
-      $("#empty_loc"+j).css("color","#ff4c4c");
-      $("#empty_loc"+j).css("background-color","#ff4c4c");
-    }
-
-
-    }
-  }
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-function drag(ev) {
-      b = ev.target.id
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-   a = ev.target
-   //  alert($(ev.target).children())
-   //  if ( $(ev.target).children().length > 0 ) {
-   //   aaa=0;
-   // }
-   // else{
-   //   ev.preventDefault();
-   //   var data = ev.dataTransfer.getData("text");
-   //   ev.target.appendChild(document.getElementById(data));
-   //
-   // }
-   //$("#drag_option3").parent().attr("id").substring(0,9) =="empty_loc2"
-   if ($(a).parent().attr("id").substring(0,9) =="empty_loc"){
-
-   }
-   else{
-       ev.preventDefault();
-       var data = ev.dataTransfer.getData("text");
-       ev.target.appendChild(document.getElementById(data));
-
-   }
-}
-</script>
-
-
+  <interpretation grammar=".SENTENCE" score="3" time="6740,109">
+  <instance>they saw that water sanitation and hygiene are desperately needed in homes</instance>
+  <input>
+  <input mode="speech" score="3">they</input>
+  <input mode="speech" score="4">saw</input>
+  <input mode="speech" score="3">that</input>
+  <input mode="speech" score="3">water</input>
+  <input mode="speech" score="4">sanitation</input>
+  <input mode="speech" score="4">and</input>
+  <input mode="speech" score="4">hygiene</input>
+  <input mode="speech" score="2">are</input>
+  <input mode="speech" score="4">desperately</input>
+  <input mode="speech" score="3">needed</input>
+  <input mode="speech" score="3">in</input>
+  <input mode="speech" score="2">homes</input>
+  </input>
+})
+</script> -->
 
 </body>
 </html>

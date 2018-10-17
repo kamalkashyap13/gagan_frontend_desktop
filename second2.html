@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- {% load static %} -->
+<html lang="en">
+<head>
+  <title>Augli -  Step 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="{% static 'user/images/green_icon.png' %}" type="image/png" >
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="semantic.min.css">
+  <script src="semantic.min.js"></script>
+<style>
+body, html{
+  height: 100%;
+
+}
+.first_div {
+  height: 100%;
+  width: 100%;
+/*
+  background-color: red; */
+}
+.first_div_left{
+  margin-left:0%;
+  width:43%;
+  float:left;
+  position:relative;
+  height: 100%;
+  background:white;
+}
+.first_div_right{
+  margin-right:0px;
+  width:57%;
+  float:right;
+  position:relative;
+  background:#4035ba;
+  height: 100%;
+  height: 100%;
+  border-radius: 100px 0 0;
+background-image: linear-gradient(158deg, #3f28ac 0%, #466af1 100%);
+
+}
+.first_div_left_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.logo_img{
+  height: 42px;
+  width: 42px;
+
+}
+.first_div_left_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.divided {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+  margin: 5px
+}
+.first_div_left_three{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_three_h3{
+  font-size: 12px;
+  color: #4035ba;
+}
+.first_div_left_four{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.first_div_left_four_h2{
+  font-size: 18px;
+
+}
+.first_div_left_five{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+/* .first_div_left_six{
+  margin-top: 7%;
+  margin-left: 5%;
+  padding-left: 10%;
+
+} */
+
+</style>
+<style>
+.first_div_right_first{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+.first_div_right_first_h4{
+  font-size: 12px;
+  color: #24b7f4;
+}
+.first_div_right_first_h3{
+  font-size: 18px;
+  color: white;
+}
+.first_div_right_second{
+  margin-top: 7%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+.first_div_right_third{
+  margin-top: 3%;
+  margin-left: 5%;
+  text-align: center;
+}
+.next-button{
+  /* padding-left: 50px;
+  padding-right: 50px; */
+
+}
+</style>
+<style>
+.input_label{
+    width: 100%;
+    margin-bottom: 12px;
+
+}
+.profile_input{
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 0 11px 1px rgba(37, 143, 245, 0.16);
+  border: 1px solid #425acd;
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #868686;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.dropdown{
+  padding-top: 10px;
+  margin-top: 20px;
+
+}
+option{
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.select_id{
+  padding-top: 10px;
+  margin-top: 20px;
+}
+/* .select_input{
+  width: 100%;
+  margin-bottom: 12px;
+
+} */
+.first_div_left_six{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+
+}
+.next-button{
+  width: 100%;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 700;
+  /* Text style for "Continue t" */
+  letter-spacing: 0.12px;
+  background-color: #00d071;
+  height: 50px;
+  padding-top: 12px;
+
+
+}
+.first_div_right_image{
+  background-image: url("{% static 'user/images/undraw2.svg' %}");
+  /* background-position: center;  Center the image
+  background-repeat: no-repeat;  Do not repeat the image */
+  background-size: cover;
+  margin-top: 20%;
+  height: 60%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  width: 80%;
+}
+.select_input{
+  width: 100%;
+  margin-bottom: 12px;
+  height: 50px;
+  box-shadow: 0 0 11px 1px rgba(37, 143, 245, 0.16);
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #868686;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+
+}
+/* option{
+  margin-bottom: 12px;
+  height: 50px;
+  padding-left: 20px;
+
+} */
+</style>
+<style>
+..ui.dropdown {
+  max-width: 800px;
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.selection.dropdown .menu {
+/*      max-height: 8.01428571rem; /* + 1.335714285 to 9.349999995rem */
+/*      max-height: 9.349999995rem; /* Adds a half */
+        max-height: 16.02857142rem; /* Double size */
+    }
+}
+@media only screen and (min-width: 768px) {
+    .ui.selection.dropdown .menu {
+/*         max-height: 10.68571429rem; /* + 1.3357142863 to 12.0214285763rem */
+      max-height: 12.0214285763rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .ui.selection.dropdown .menu {
+      max-height: 16.02857143rem; /* + 1.3357142858 to 17.3642857158rem */
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .ui.selection.dropdown .menu {
+        max-height: 21.37142857rem; /* + 1.3357142856 to 22.7071428556rem */
+    }
+}
+</style>
+</head>
+<body>
+    <div class="first_div">
+      <div class="first_div_left">
+        <div class="first_div_left_first">
+          <img src="{% static 'user/images/green_icon.png' %}" class="logo_img" >
+        </div>
+        <div class="first_div_left_second">
+          <p class="divided">
+            <img src="{% static 'user/images/prog_21.png' %}" class="logo_img" >
+            <span class="divider"></span>
+            <img src="{% static 'user/images/prog_22.png' %}" class="logo_img" >
+            <span class="divider"></span>
+            <img src="{% static 'user/images/prog_23.png' %}" class="logo_img" >
+          </p>
+        </div>
+        <div class="first_div_left_three">
+          <h3 class="first_div_left_three_h3">STEP 2 </h3>
+        </div>
+        <div class="first_div_left_four">
+          <h2 class="first_div_left_four_h2">Pic Topics Of Your Interest</h2>
+        </div>
+        <div class="first_div_left_five">
+          <div class="question" id="form">
+            <form>
+              <label class="input_label" id="label1" for="choice1">
+                <!-- <input type="text" autocomplete='given-name' placeholder="Politics"  class="profile_input" id="profile-name" name="FirstName" value=""> -->
+                <!-- <select class="ui fluid search dropdown" multiple="" id="interest-genre"> -->
+                <select name="skills" multiple="" id="select_id" class="profile_input label ui selection fluid dropdown">
+                  <option value="" disabled selected> Pick Your Interest</option>
+                  <!-- <option value="genre1">Politics</option> -->
+                  <option value="genre2">Sports</option>
+                  <option value="genre3">Science</option>
+                  <option value="genre4">Entertainment</option>
+                  <!-- <option value="genre5">World</option>-->
+                  <option value="genre6">Nation</option>
+                  <!-- <option value="genre7">Environment</option>  -->
+                  <option value="genre8">Business and Commerce</option>
+                  <option value="genre9">Tech</option>
+                  <!-- <option value="genre10">Lifestyle</option>
+                  <option value="genre11">Nature</option>
+                  <option value="genre12">Leisure</option>
+                  <option value="genre13">Travel</option>
+                  <option value="genre14">Spiritual</option>
+                  <option value="genre15">Fiction</option>
+                  <option value="genre16">Healthcare</option>
+                  <option value="genre16">Space</option> -->
+                  <option value="genre18">Others</option>
+                  <option value="genre19">Opinion</option>
+                </select>
+
+
+              </label>
+
+  <!-- <label>Select Topics</label>
+    <select name="skills" multiple="" class="label ui selection fluid dropdown">
+      <option value="">All</option>
+      <option value="1">Change Methodology</option>
+      <option value="2">Cognitive Computing & AI</option>
+      <option value="3">Connectivity & Collaboration</option>
+      <option value="4">Culture in Action</option>
+      <option value="5">Future of Work</option>
+      <option value="6">HR Transformation</option>
+      <option value="7">Human-centered Design</option>
+      <option value="8">Machine Learning & AI</option>
+      <option value="9">Operational Effectiveness</option>
+      <option value="10">Operational Excellence</option>
+      <option value="11">Organizational Change</option>
+
+    </select> -->
+
+            </form>
+          </div>
+        </div>
+        <div class="first_div_left_six">
+          <div class="next-button">Continue to Step 3</div>
+        </div>
+
+      </div>
+
+      <div class="first_div_right">
+        <div class="first_div_right_image">
+        </div>
+      </div>
+    </div>
+    <script>
+    $(".next-button").on("click", function(){
+
+         var interest_genre = $("#interest-genre").val();
+
+         a = save_question(interest_genre);
+
+
+     });
+     function save_question(interest_genre){
+
+        formdata=new FormData();
+
+         formdata.append("interest_genre",interest_genre);
+
+          $.ajax({
+
+
+             beforeSend: function (xhr, settings) {
+                         xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+             },
+            url: "/user/add_profile_data2/",
+            data:formdata,
+             cache: false,
+            type: "POST",
+             contentType:false,
+             processData: false,
+            success: function(response) {
+                main = response.main;
+                 body = response.body;
+
+                 window.location.href = "/assessment/adaptive/";
+    },
+            error: function(xhr) {
+               fill_modal_data("Profile created!","Redirecting to Assessment page.")
+             }
+           });
+      }
+      function getCookie(c_name) {
+             if(document.cookie.length > 0) {
+                 c_start = document.cookie.indexOf(c_name + "=");
+                 if(c_start != -1) {
+                     c_start = c_start + c_name.length + 1;
+                     c_end = document.cookie.indexOf(";", c_start);
+                     if(c_end == -1) c_end = document.cookie.length;
+                     return unescape(document.cookie.substring(c_start,c_end));
+                 }
+             }
+             return "";
+         }
+
+         $('.label.ui.dropdown')
+  .dropdown();
+
+$('.no.label.ui.dropdown')
+  .dropdown({
+  useLabels: false
+});
+
+$('.ui.button').on('click', function () {
+  $('.ui.dropdown')
+    .dropdown('restore defaults')
+})
+    </script>
+</body>
+</html>

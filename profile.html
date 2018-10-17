@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Augli</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
+  <link rel="icon" href="" type="image/png" >
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/Globegitter/chartist-plugin-tooltip/master/dist/chartist-plugin-tooltip.css">
+  <script src="https://rawgit.com/Globegitter/chartist-plugin-tooltip/master/dist/chartist-plugin-tooltip.min.js"></script>
+  <style>
+  body, html{
+    height: 100%;
+    background-color: #f5f9ff;
+
+  }
+
+  .first_div{
+    padding-top: 40px;
+    height: 250px;
+    border-radius: 0 0 0 100px;
+    background-image: linear-gradient(158deg, #3f28ac 0%, #466af1 100%);
+  }
+  .first_div_first{
+
+    height: 40px;
+    /* background-color: red; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .first_div_second{
+    margin-top: 20px;
+    height: 50px;
+    /* background-color: yellow; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    border-bottom: 1px solid #6968f3;
+
+  }
+  .first_div_second_first{
+    height: 50px;
+  }
+  .first_div_first_left{
+    margin-left:0%;
+    width:43%;
+    float:left;
+    position:relative;
+
+    /* background:yellow; */
+
+  }
+  .logo_img{
+    height: 40px;
+  }
+  .first_div_first_right{
+    margin-right:0px;
+    width:57%;
+    float:right;
+    position:relative;
+    height: 40px;
+    /* background:black; */
+
+  }
+  .progress{
+    display: inline;
+  }
+.first_div_first_right_left{
+  margin-left:0%;
+  width:55%;
+  float:left;
+  position:relative;
+  height: 40px;
+  /* background:brown; */
+  text-align: right;
+  border-right: 1px solid white;
+  padding-top: 15px;
+
+
+}
+.first_div_first_right_right{
+  margin-right:0px;
+  width:45%;
+  float:right;
+  position:relative;
+  height: 40px;
+  /* background:black; */
+
+}
+.low_link{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 20px;
+}
+/* .skill_link_div{
+  display: inline;
+  height: 50px !important;
+  background-color: green;
+
+} */
+.skill_link{
+  color: #6d68e5;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  /* Text style for "HOME" */
+  color: #ffffff;
+  letter-spacing: -0.35px;
+  /* Text style for "READING" */
+  letter-spacing: -0.35px;
+  padding-right: 25px;
+  /* height: 50px; */
+
+}
+.progress_left{
+  padding-left:5%;
+  padding-right: 5%;
+  width:75%;
+  float:left;
+  position:relative;
+  height: 40px;
+  /* background:pink; */
+  border-right: 1px solid white;
+
+}
+.progress_right{
+  margin-right:0px;
+  width:15%;
+  float:right;
+  position:relative;
+  height: 40px;
+  /* background:black; */
+  text-align: right;
+
+}
+.face_class1{
+  height: 40px;
+  width: 100%;
+
+}
+.progress_left_h5{
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-weight: 500;
+  /* Text style for "You’ve rea" */
+  letter-spacing: 0.4px;
+}
+.progress{
+  height: 15px;
+  width: 100%;
+  /* background-color: black; */
+  background-color:black !important;
+}
+
+
+.progress-bar{
+  height: 15px;
+  width: 100%;
+}
+
+/* #skill1{
+  border-bottom: 1px solid white;
+  height: 50px;
+} */
+
+
+  </style>
+  <style>
+  .second_div{
+    height: 1200px;
+
+  }
+  .second_div_first{
+    margin-top: 35px;
+    height: 1200px;
+    /* background-color: yellow; */
+    width:92%;
+    margin-left: 4%;
+    margin-right: 4%;
+    /* background: gray; */
+
+  }
+
+  .second_div_first_left{
+    margin-left: 0px;
+    width:71.5%;
+    float:left;
+    position:relative;
+    height: 1200px;
+    background:white;
+    border-radius: 5px;
+
+  }
+  .second_div_first_right{
+    margin-right:0px;
+    width:27%;
+    float:right;
+    position:relative;
+    height: 1200px;
+    /* background:black; */
+
+  }
+  .second_div_first_left_first{
+    height: 240px;
+    /* background:black; */
+    margin: 20px;
+
+  }
+  .second_div_first_left_first_first{
+    height: 40px;
+    /* background-color: orange; */
+
+  }
+  .second_div_first_left_first_first_left{
+    margin-left: 0px;
+    width:80%;
+    float:left;
+    position:relative;
+    height: 40px;
+
+  }
+  .second_div_first_left_first_first_right{
+    margin-right:0px;
+    width:15%;
+    float:right;
+    position:relative;
+    height: 40px;
+    text-align: right;
+
+
+  }
+  .skill_tag_h3{
+    color: #151515;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    /* Text style for "Reading Le" */
+    letter-spacing: -0.39px;
+    padding: 10px 0px;
+
+  }
+  .skill_tag_span{
+    border-radius: 17px;
+    background-color: #00be67;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+
+  }
+  </style>
+  <style>
+  .second_div_first_left_first_second{
+    margin-top: 10px;
+  }
+  .second_div_first_left_first_second_flex{
+    height: 200px;
+    /* background-color: blue; */
+  }
+    .parent{
+      display: flex;
+      flex-wrap: wrap
+    }
+    .child{
+      /* flex: 1 0 20%; */
+        margin-left: 0px;
+        margin-right: 3%;
+        flex-grow: 0;
+  	    width: 30%;
+      /* height: 380px; */
+      /* background-color: pink; */ */
+        /* width: 33.33%;
+        float: left; */
+
+
+    }
+    /* #child1, #child2{
+      margin-right: 20px;
+    } */
+    .child_left{
+      /* margin-right: 20px; */
+    }
+    .child_img{
+      height: 90px;
+    }
+    .face_class{
+      height: 90px;
+    }
+    .child_txt{
+      height: 110px;
+    }
+    .child_gen{
+      padding-top: 10px;
+      color: #4259cf;
+      font-family: "Helvetica Neue";
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+
+    }
+    .child_main_txt{
+      color: #000000;
+      font-family: "Helvetica Neue";
+      font-size: 17px;
+      font-weight: 300;
+
+    }
+    .child_main_date{
+      color: #8e8e8e;
+      font-family: "Helvetica Neue";
+      font-size: 12px;
+      font-weight: 700;
+      /* Text style for "Aug 20 ," */
+      color: #373737;
+
+    }
+
+    #parent_father2, #parent_father3, #parent_father4{
+        margin-top: 50px;
+    }
+  </style>
+  <style>
+  .second_div_first_right_top{
+    height: 260px;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .second_div_first_right_bottom{
+    margin-top: 40px;
+    height: 660px;
+    background-color: white;
+    border-radius: 5px;
+    padding:20px;
+  }
+  .trend_txt{
+    color: #151515;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    /* Text style for "Trending P" */
+    letter-spacing: -0.39px;
+  }
+  .trend_url_left{
+  margin-left: 0px;
+  width:40%;
+  float:left;
+  position:relative;
+  height: 100px;
+  background:white;
+  border-radius: 5px;
+
+}
+.trend_url_right{
+  margin-right:0px;
+  width:60%;
+  float:right;
+  position:relative;
+  height: 100px;
+}
+.trend_url_h4{
+  color: #4259cf;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 500;
+text-transform: uppercase;
+}
+.trend_url_h5{
+  color: #000000;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+}
+.trend_url_h6{
+  color: #8e8e8e;
+font-family: "Helvetica Neue";
+font-size: 10px;
+font-weight: 500;
+/* Text style for "Aug 20 ," */
+color: #373737;
+}
+  </style>
+
+  <style>
+  .first_div_third{
+    margin-top: 40px;
+  width:92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  color: white;
+  border-top: 1px solid #6968f3;
+}
+.nav_pagination{
+  color: #ffffff;
+  font-family: "Benton Sans Book";
+  font-size: 13px;
+  font-weight: 300;
+}
+.third_second_span{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.nav_pagination_bottom{
+  color: #ffffff;
+  font-family: "Benton Sans - Regular";
+  font-size: 31px;
+  font-weight: 400;
+}
+
+span.block {
+    display:block;
+}
+.first_div_third_third{
+  margin-top: 10px;
+}
+  </style>
+  <style>
+  .second_div_first_left_div{
+    padding: 20px;
+  }
+  #first_graph, #first_graph2, #second_graph {
+    height: 200px;
+  }
+  /* .ct-series-a .ct-bar{
+    stroke-width: 25px;
+    stroke: #ffbe3c;
+
+  }
+.ct-series-a .ct-bar,.ct-series-a .ct-line,.ct-series-a .ct-point,.ct-series-a .ct-slice-donut{
+    stroke: #ffbe3c;
+
+  }
+  .ct-label.ct-horizontal.ct-end {
+    width: 45px !important;
+
+  } */
+  /* https://gionkunz.github.io/chartist-js/getting-started.html */
+  .badges_parent{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    margin-bottom:-10px
+}
+.badges_parent .badges_child{
+    cursor:pointer;
+    margin-bottom:10px;
+    max-width:77px;
+    width:22%
+}
+.badges_parent .badges_child:hover{
+    opacity:.8
+}
+.badges_parent .badges_child_empty{
+    height:0;
+    max-width:77px;
+    width:22%
+}
+.badges_h3{
+  color: #151515;
+  font-family: "Benton Sans";
+  font-size: 20px;
+  font-weight: 500;
+  /* Text style for "Badges" */
+  letter-spacing: -0.44px;
+}
+
+.last_image{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+  </style>
+  <style>
+  .first_div_third_third_left{
+    margin-left:0%;
+    width:40%;
+    float:left;
+    position:relative;
+    height: 40px;
+    /* background-color: red; */
+
+  }
+  .first_div_third_third_right{
+    margin-right:0px;
+    width:60%;
+    float:right;
+    position:relative;
+    height: 40px;
+    /* background-color: yellow; */
+
+  }
+  .first_div_third_third_left_left{
+    margin-left:0%;
+    width:60%;
+    float:left;
+    position:relative;
+    height: 40px;
+    /* background-color: black; */
+
+  }
+  .first_div_third_third_left_right{
+    margin-right:0px;
+    width:40%;
+    float:right;
+    position:relative;
+    height: 40px;
+    /* background-color: green; */
+
+  }
+  .first_div_third_third_left_right_left{
+    margin-left:0%;
+    width:40%;
+    float:left;
+    position:relative;
+    height: 40px;
+    /* background-color: black; */
+
+  }
+  .first_div_third_third_left_right_right{
+    margin-right:0px;
+    width:60%;
+    float:right;
+    position:relative;
+    height: 40px;
+    /* background-color: green; */
+
+  }
+  .first_div_third_third_right_left{
+    margin-left:0%;
+    width:40%;
+    float:left;
+    position:relative;
+    height: 40px;
+
+  }
+  .first_div_third_third_right_right{
+    margin-right:0px;
+    width:60%;
+    float:right;
+    position:relative;
+    height: 40px;
+
+  }
+  .first_div_third_third_right_left_left{
+    margin-left:0%;
+    width:30%;
+    float:left;
+    position:relative;
+    height: 40px;
+
+  }
+  .first_div_third_third_right_left_right{
+    margin-right:0px;
+    width:70%;
+    float:right;
+    position:relative;
+    height: 40px;
+
+  }
+  </style>
+</head>
+<body>
+
+<div class="first_div">
+  <div class="first_div_first">
+    <div class="first_div_first_left">
+      <img src="Fill_1.svg" class="logo_img" >
+    </div>
+    <div class="first_div_first_right">
+      <div class="first_div_first_right_left">
+        <a href="#" class="low_link">Performance Dashboard </a>
+        <a href="#" class="low_link"> Interests </a>
+      </div>
+      <div class="first_div_first_right_right">
+        <div class="progress_left">
+           <div class="progress_top">
+            <h5 class="progress_left_h5">You’ve reached Level 8 </h5>
+          </div>
+            <div class="progress">
+              <div class="progress-bar bg-warning" style="width:100%;"></div>
+            </div>
+        </div>
+        <div class="progress_right">
+          <img src="Face.png" class="face_class1">
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+<!--face.png  <div class="first_div_second">
+    <div class="first_div_second_first">
+      <div class="skill_link_div">
+
+      </div>
+      <a href="#" class="skill_link" id="skill1">HOME </a>
+      <a href="#" class="skill_link">READING </a>
+      <a href="#" class="skill_link">GRAMMER </a>
+      <a href="#" class="skill_link">VOCABULARY </a>
+      <a href="#" class="skill_link">SPEAKING </a>
+    </div>
+
+  </div> -->
+  <div class="first_div_third">
+    <div class="first_div_third_first">
+      <span class="nav_pagination">Home › Dashboard </span>
+    </div>
+    <div class="first_div_third_third">
+      <div class="first_div_third_third_left">
+        <div class="first_div_third_third_left_left">
+              <span class="nav_pagination_bottom">
+                Dashboard
+              </span>
+
+        </div>
+        <div class="first_div_third_third_left_right">
+            <div class="first_div_third_third_left_right_left">
+              <span class="power_back">
+                    <img src="1_back.svg" class="power_icon_bolt">
+              </span>
+            </div>
+            <div class="first_div_third_third_left_right_right">
+              <span class="third_second_span_text_span">
+                <span class="block">50K</span>
+                <span class="block">BOLTS</span>
+              </span>
+            </div>
+
+        </div>
+
+      </div>
+      <div class="first_div_third_third_right">
+        <div class="first_div_third_third_right_left">
+            <div class="first_div_third_third_right_left_left">
+              <span class="power_back">
+                    <img src="2_back.svg" class="power_icon_bolt">
+              </span>
+            </div>
+            <div class="first_div_third_third_right_left_right">
+              <span class="third_second_span_text_span">
+                <span class="block">Scribbler</span>
+                <span class="block">Level 4</span>
+              </span>
+            </div>
+
+        </div>
+        <div class="first_div_third_third_right_right">
+          <span class="block">RANK</span>
+          <span class="block">#17/100</span>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- <div class="first_div_third_second">
+      <span class="third_second_span">
+
+        Dashboard
+      </span>
+      <span class="third_second_span">
+        <span class="power_back">
+              <img src="1_back.svg" class="power_icon_bolt">
+        </span>
+        <span class="third_second_span_text_span">
+          <span class="block">50K</span>
+          <span class="block">BOLTS</span>
+
+        </span>
+      </span>
+      <span class="third_second_span">
+        <span class="power_back">
+              <img src="2_back.svg" class="power_icon_bolt">
+        </span>
+        <span class="third_second_span_text_span">
+
+          <span class="block">Scribbler</span>
+          <span class="block">Level 4</span>
+        </span>
+      </span>
+      <span class="third_second_span">
+        <div class="third_second_span_text_span span_div">
+        <!-- RANK #17/100 -->
+        <!-- <span> 1? </span>
+        <span> dd </span>
+        <div class="span_div"> 1? </div>
+        <div class="span_div"> dd </div>
+      </div>
+      </span>
+    </div> -->
+
+  </div>
+
+</div>
+<div class="second_div">
+  <div class="second_div_first">
+    <div class="second_div_first_left">
+      <div class="second_div_first_left_div">
+        <h3>Performance</h3>
+
+            <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">
+                    <span class="block">746</span>
+                    <span class="block">Engagment (30 days)</span>
+                  </a>
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1">
+                    <span class="block">69%</span>
+                    <span class="block">Genres(30 days)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2">
+                    <span class="block">746</span>
+                    <span class="block">Engagment (30 days)</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                  <!-- <h3>HOME</h3> -->
+                  <div class="ct-chart ct-perfect-fourth" id="first_graph"></div>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <div class="ct-chart ct-perfect-fourth" id="second_graph"></div>
+
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                  <h3>Menu 2</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+              </div>
+
+      </div>
+      <!-- <div>
+        <h3>Performance</h3>
+
+             Nav tabs
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">
+                    <span class="block">746</span>
+                    <span class="block">Engagment (30 days)</span>
+                  </a>
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1">
+                    <span class="block">69%</span>
+                    <span class="block">Genres(30 days)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2">
+                    <span class="block">746</span>
+                    <span class="block">Engagment (30 days)</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                  <!-- <h3>HOME</h3> -->
+                  <div class="ct-chart ct-perfect-fourth" id="first_graph2"></div>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <h3>Menu 1</h3>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                  <h3>Menu 2</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+              </div>
+
+      </div>
+
+
+
+    </div>
+    <div class="second_div_first_right">
+      <div class="second_div_first_right_top">
+        <h3 class="badges_h3">Badges</h3>
+        <div class="badges_parent">
+          <div class="badges_child">
+            <img src="badge_1.png" class="trend_img">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_2.png" class="trend_img">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_3.png" class="trend_img">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_4.png" class="trend_img">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_5.png" class="trend_img">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_6.png" class="trend_img last_image">
+
+          </div>
+          <div class="badges_child">
+            <img src="badge_7.png" class="trend_img last_image" id="">
+
+          </div>
+          <div class="badges_child_empty">
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="second_div_first_right_bottom">
+        <h3 class="trend_txt"> Trending Posts </h3>
+
+        <!-- <div class="trend_url">
+          <div class="trend_url_left">
+            <img src="trend6.png" class="trend_img">
+          </div>
+          <div class="trend_url_right">
+            <h4 class="trend_url_h4"> CRYPTOCURRENCY </h4>
+            <h5 class="trend_url_h5"> Are Your Escapist Habits Wrecking Your Life? </h5>
+            <h6 class="trend_url_h6"> Aug 20 </h6>
+          </div>
+        </div> -->
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+var data = {
+  labels: ['Oct 1', 'Oct 2', 'Oct 3','Oct 4','Oct 5','Oct 6','Oct 7','Oct 8','Oct 9','Oct 10','Oct 11','Oct 12','Oct 13','Oct 14','Oct 15',],
+// 'Oct 16', 'Oct 17', 'Oct 18','Oct 19','Oct 20','Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28','Oct 29','Oct 30',],
+
+  series: [
+    // [
+    //   {meta: 'description de sfd df ss', value: 20 },
+    //   {meta: 'description', value: 5},
+    //   {meta: 'description', value: 13},
+    //   {meta: 'description de sfd df ss', value: 12 },
+    //   {meta: 'description', value: 25},
+    //   {meta: 'description', value: 9  }
+    // ],
+    [
+      {meta: 'description de sfd df ss', value: 20 },
+      {meta: 'description', value: 5},
+      {meta: 'description', value: 13},
+      {meta: 'description de sfd df ss', value: 12 },
+      {meta: 'description', value: 25},
+      {meta: 'description', value: 9  },
+      {meta: 'description de sfd df ss', value: 0 },
+      {meta: 'description', value: 13},
+      {meta: 'description', value: 19},
+      {meta: 'description de sfd df ss', value: 10 },
+      {meta: 'description', value: 2},
+      {meta: 'description', value: 19  },
+      {meta: 'description de sfd df ss', value: 12 },
+      {meta: 'description', value: 9},
+      {meta: 'description', value: 23},
+
+      // {meta: 'description de sfd df ss', value: 20 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 13},
+      // {meta: 'description de sfd df ss', value: 12 },
+      // {meta: 'description', value: 25},
+      // {meta: 'description', value: 9  },
+      // {meta: 'description de sfd df ss', value: 20 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 24},
+      // {meta: 'description de sfd df ss', value: 12 },
+      // {meta: 'description', value: 25},
+      // {meta: 'description', value: 9  },
+      // {meta: 'description de sfd df ss', value: 7 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 19},
+    ],
+  ]
+};
+
+var options = {
+  high: 30,
+  low: 0,
+  plugins: [
+    Chartist.plugins.tooltip()
+  ],
+  axisX: {
+    labelInterpolationFnc: function(value, index) {
+      return index % 5 === 0 ? value : null;
+    }
+  }
+};
+
+new Chartist.Bar('#first_graph', data, options);
+</script>
+<script>
+var data = {
+  // labels: ['Oct 1', 'Oct 2', 'Oct 3','Oct 4','Oct 5','Oct 6','Oct 7','Oct 8','Oct 9','Oct 10','Oct 11','Oct 12','Oct 13','Oct 14','Oct 15',],
+  // series: [
+  //   [
+  //     {meta: 'description de sfd df ss', value: [5,5] },
+  //     {meta: 'description', value: [5,5]},
+  //     // {meta: 'description', value: 13},
+  //     // {meta: 'description de sfd df ss', value: 12 },
+  //     // {meta: 'description', value: 25},
+  //     // {meta: 'description', value: 9  },
+  //     // {meta: 'description de sfd df ss', value: 0 },
+  //     // {meta: 'description', value: 13},
+  //     // {meta: 'description', value: 19},
+  //     // {meta: 'description de sfd df ss', value: 10 },
+  //     // {meta: 'description', value: 2},
+  //     // {meta: 'description', value: 19  },
+  //     // {meta: 'description de sfd df ss', value: 12 },
+  //     // {meta: 'description', value: 9},
+  //     // {meta: 'description', value: 23},
+  //   ],
+  // ]
+  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+  series: [
+    [800000, 1200000, 1400000, 1300000],
+    [200000, 400000, 500000, 300000],
+    [100000, 200000, 400000, 600000]
+  ]
+};
+
+var options = {
+  high: 30,
+  low: 0,
+  plugins: [
+    Chartist.plugins.tooltip()
+  ],
+  stackBars: true,
+  axisY: {
+    labelInterpolationFnc: function(value) {
+      return (value / 1000) + 'k';
+    }
+  },
+  axisX: {
+    labelInterpolationFnc: function(value, index) {
+      return index % 5 === 0 ? value : null;
+    }
+  }
+};
+
+//new Chartist.Bar('#second_graph', data, options);
+new Chartist.Bar('#second_graph', {
+  labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+  series: [
+    [800000, 1200000, 1400000, 1300000],
+    [200000, 400000, 500000, 300000],
+    [100000, 200000, 400000, 600000]
+  ]
+}, {
+  stackBars: true,
+  axisY: {
+    labelInterpolationFnc: function(value) {
+      return (value / 1000) + 'k';
+    }
+  }
+}).on('draw', function(data) {
+  if(data.type === 'bar') {
+    data.element.attr({
+      style: 'stroke-width: 30px'
+    });
+  }
+});
+</script>
+<script>
+var data2 = {
+  labels: ['Oct 1', 'Oct 2', 'Oct 3','Oct 4','Oct 5','Oct 6','Oct 7','Oct 8','Oct 9','Oct 10','Oct 11','Oct 12','Oct 13','Oct 14','Oct 15',],
+// 'Oct 16', 'Oct 17', 'Oct 18','Oct 19','Oct 20','Oct 21','Oct 22','Oct 23','Oct 24','Oct 25','Oct 26','Oct 27','Oct 28','Oct 29','Oct 30',],
+  series: [
+    [
+      {meta: 'description de sfd df ss', value: 20 },
+      {meta: 'description', value: 5},
+      {meta: 'description', value: 13},
+      {meta: 'description de sfd df ss', value: 12 },
+      {meta: 'description', value: 25},
+      {meta: 'description', value: 9  },
+      {meta: 'description de sfd df ss', value: 0 },
+      {meta: 'description', value: 13},
+      {meta: 'description', value: 19},
+      {meta: 'description de sfd df ss', value: 10 },
+      {meta: 'description', value: 2},
+      {meta: 'description', value: 19  },
+      {meta: 'description de sfd df ss', value: 12 },
+      {meta: 'description', value: 9},
+      {meta: 'description', value: 23},
+
+      // {meta: 'description de sfd df ss', value: 20 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 13},
+      // {meta: 'description de sfd df ss', value: 12 },
+      // {meta: 'description', value: 25},
+      // {meta: 'description', value: 9  },
+      // {meta: 'description de sfd df ss', value: 20 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 24},
+      // {meta: 'description de sfd df ss', value: 12 },
+      // {meta: 'description', value: 25},
+      // {meta: 'description', value: 9  },
+      // {meta: 'description de sfd df ss', value: 7 },
+      // {meta: 'description', value: 5},
+      // {meta: 'description', value: 19},
+    ],
+    // [
+    //   {meta: 'description de sfd df ss', value: 10 },
+    //   {meta: 'description', value: 15},
+    //   {meta: 'description', value: 23},
+    //   {meta: 'description de sfd df ss', value: 12 },
+    //   {meta: 'description', value: 5},
+    //   {meta: 'description', value: 19  }
+    // ],
+    // [
+    //   {meta: 'description de sfd df ss', value: 15 },
+    //   {meta: 'description', value: 15},
+    //   {meta: 'description', value: 15},
+    //   {meta: 'description de sfd df ss', value: 15 },
+    //   {meta: 'description', value: 15},
+    //   {meta: 'description', value: 15}
+    // ],
+  ]
+};
+
+var options2 = {
+  high: 30,
+  low: 0,
+  plugins: [
+    Chartist.plugins.tooltip()
+  ],
+  axisX: {
+    labelInterpolationFnc: function(value, index) {
+      return index % 5   === 0 ? value : null;
+    }
+  }
+};
+
+new Chartist.Line('#first_graph2', data2, options2);
+//tooltip
+//badges not downloadable
+</script>
+</body>
+</html>

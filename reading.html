@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="icon" href="{% static 'questions/images/col_lo.png' %}" type="image/png" > -->
   <link rel="icon" href="" type="image/png" >
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <style>
   body, html{
     height: 100%;
@@ -378,12 +378,66 @@ color: #373737;
   font-weight: 500;
 }
 </style>
+<style>
+.tooltip_div{
+  width: 380px;
+  padding: 20px;
+  margin: -20px;
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 10px 0 0;
+  background-color: #ffffff;
+  text-align: left;
+}
+.tooltip_h3{
+  color: #151515;
+  font-family: "Benton Sans Book";
+  font-size: 20px;
+  font-weight: 300;
+}
+.tooltip_h5{
+  color: #494848;
+  font-family: "Benton Sans Book";
+  font-size: 14px;
+  font-weight: 300;
+}
+.tooltip_p1{
+  color: #605f5f;
+  font-size: 17px;
+
+  /* Text style for "deeply dis" */
+  color: #494848;
+  font-family: "Benton Sans - Regular";
+  font-weight: 400;
+  /* Text style for "" */
+
+
+}
+.tooltip_p2{
+  font-size: 17px;
+
+  color: #494848;
+  font-family: "Benton Sans Book";
+  font-weight: 300;
+  /* Text style for ""she was g" */
+  font-family: Helvetica;
+
+}
+.tooltip_span{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "BOOKMARK" */
+  letter-spacing: 0.5px;
+}
+</style>
 </head>
 <body>
   <div class="first_div">
   <div class="first_top">
     <div class="first_div_left">
-      <img src="green_icon.png" class="logo_img" >
+      <img src="Fill_1.svg" class="logo_img" >
     </div>
     <div class="first_div_right">
       <div class="first_div_right_left">
@@ -392,7 +446,7 @@ color: #373737;
         </p>
       </div>
       <div class="first_div_right_right">
-        <img src="Rectangle_5.png" class="logo_img" >
+        <img src="3-layers.png" class="logo_img" >
       </div>
     </div>
   </div>
@@ -444,12 +498,13 @@ color: #373737;
           <p class="content_para">
             <!-- <span class="empty_position"> </span> -->
              your class six teacher taught you that water, white light and
-             <span class="span_powerwords"> chlorophyll </span>
+             <span class="span_powerwords btn1"> chlorophyll </span>
              are needed for photosynthesis, here is your chance to prove them wrong. A new study published in Science says that certain bacteria don't need white light, and instead use far-red light for photosynthesis.
           </p>
           <p class="content_para">
             The wavelength of visible light
             <!-- <span class="empty_position"> </span>    -->
+            <span class="span_powerwords btn2"> nanometre </span>
             white light is 400 to 700 nanometre, and till now botanists
             <span class="span_bookmarkword"> chlorophyll<sup class="star">*</sup>  </span>
              and biologists believed that all plants used red light( 680 to 700 nm) for oxygenic photosynthesis. The new study shows that many cyanobacteria or blue-green algae can carry out photosynthesis in the far red light or near infrared light of 750 nm.
@@ -544,6 +599,15 @@ color: #373737;
   </div>
 </div>
 
+</div>
+<!-- <div class="tooltip_div"><h3 class="tooltip_h3"> Traumatic</h3><h5 class="tooltip_h5"> adjective</h5><p class="tooltip_p1">deeply disturbing or distressing. </p><p class="tooltip_p2">she was going through a traumatic divorce </p><span class="tooltip_span"><img src="bookmark.png"> REMOVE BOOKMARK </span></div> -->
+<script>
+$(document).ready(function(){
+    $('.btn1').tooltip({title: '<div class="tooltip_div"><h3 class="tooltip_h3"> Traumatic</h3><h5 class="tooltip_h5"> adjective</h5><p class="tooltip_p1">deeply disturbing or distressing. </p><p class="tooltip_p2">she was going through a traumatic divorce </p><span class="tooltip_span"><img src="bookmark.png">  BOOKMARK </span></div>', html: true, placement: "bottom"});
+    $('.btn2').tooltip({title: '<div class="tooltip_div"><h3 class="tooltip_h3"> Nanometer</h3><h5 class="tooltip_h5"> adjective</h5><p class="tooltip_p1">deeply disturbing or distressing. </p><p class="tooltip_p2">she was going through a traumatic divorce </p><span class="tooltip_span"><img src="bookmark.png">  BOOKMARK </span></div>', html: true, placement: "bottom"});
+
+});
+</script>
 
 </body>
 </html>

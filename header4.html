@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- {% load static %} -->
 <html lang="en">
 <head>
   <title>Augli -  Learn and Perform</title>
@@ -64,7 +65,7 @@ body, html{
 }
 .nav_right_first_li {
   display: inline;
-  margin-right: 40px;
+  margin-right: 48px;
 
 
 
@@ -624,6 +625,115 @@ input:checked + .slider {
     letter-spacing: 0.15px;
   }
   </style>
+  <style>
+  .modal_body{
+
+  }
+  .modal_top{
+    /* padding: 40px 50px; */
+    height: 300px;
+
+  }
+  .modal_top_left{
+    margin-left:0%;
+    width:50%;
+    float:left;
+    position:relative;
+    height: 300px;
+    background:white;
+    padding: 40px 50px;
+    border-right: 1px solid #d9d9d9;
+  }
+  .modal_top_right{
+    margin-right:0px;
+    width:50%;
+    float:right;
+    position:relative;
+    height: 300px;
+    padding: 40px 50px;
+  }
+  .modal_top_left_text{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .profile_input{
+    width: 280px;
+    height: 40px;
+    box-shadow: 0 0 11px 1px rgba(37, 143, 245, 0.16);
+    border: 1px solid #425acd;
+    background-color: #ffffff;
+    padding-left: 20px;
+    color: #868686;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+  }
+
+  .login_modal_button{
+    width: 280px;
+    /* height: 40px; */
+    padding: 15px 0px;
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .login_button{
+    background-color: #00d071;
+  }
+  .modal_top_left_check_text{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .create_button{
+    background-color: #000000;
+  }
+  .facebook_button{
+    background-color: #3b5998;
+
+  }
+  .google_button{
+    background-color: #ff6149;
+  }
+  .modal_top_right_text{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .modal_or{
+    color: #000000;
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .modal_bottom{
+    background-color: #573dd1;
+    text-align: center;
+    /* height: 100px; */
+    padding: 20px 0px;
+  }
+  .modal_bottom_message{
+    color: #ffffff;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .forget_link{
+    color: #00e599;
+    text-decoration: underline;
+  }
+  </style>
+
 </head>
 <body>
   <div class="first_div">
@@ -649,7 +759,7 @@ input:checked + .slider {
                </li>
                <li class="nav_right_first_li">
                  <a class="nav_right_first_li_a" href="#">
-                  <span class="btn btn-success start_button"> Get Started </span>
+                  <span class="btn btn-success start_button" data-toggle="modal" data-target="#myModal">  Get Started </span>
                  </a>
                </li>
              </ul>
@@ -703,11 +813,11 @@ input:checked + .slider {
                         <img src="stu_1.png" class="" >
                       </div>
                       <div class="second_div_second_left_left_second">
-                        <h4 class="second_div_second_left_left_second_h4">EASY PEASY</h4>
-                        <h3 class="second_div_second_left_left_second_h3">
+                        <h4 class="second_div_second_left_left_second_h4" id="student_first_text_first">EASY PEASY</h4>
+                        <h3 class="second_div_second_left_left_second_h3" id="student_first_text_second">
                           We empathise with our learners
                         </h3>
-                        <p class="second_div_second_left_left_second_p">
+                        <p class="second_div_second_left_left_second_p" id="student_first_text_third">
                           Augli understands your interests and engages you to read what you love.
                         </p>
                        </div>
@@ -722,11 +832,11 @@ input:checked + .slider {
                   <img src="stu_2.png" class="" >
                 </div>
                 <div class="second_div_second_left_left_second">
-                  <h4 class="second_div_second_left_left_second_h4">SUPER FUN</h4>
-                  <h3 class="second_div_second_left_left_second_h3">
+                  <h4 class="second_div_second_left_left_second_h4" id="student_second_text_first">SUPER FUN</h4>
+                  <h3 class="second_div_second_left_left_second_h3" id="student_second_text_second">
                     Add on learning minus the stress
                   </h3>
-                  <p class="second_div_second_left_left_second_p">
+                  <p class="second_div_second_left_left_second_p" id="student_second_text_third">
                     Get bite-sized daily live News to helps you absorb the world around you
                   </p>
                  </div>
@@ -741,11 +851,11 @@ input:checked + .slider {
                   <img src="stu_3.png" class="" >
                 </div>
                 <div class="second_div_second_left_left_second">
-                  <h4 class="second_div_second_left_left_second_h4">RESULTS REALTIME</h4>
-                  <h3 class="second_div_second_left_left_second_h3">
+                  <h4 class="second_div_second_left_left_second_h4" id="student_third_text_first">RESULTS REALTIME</h4>
+                  <h3 class="second_div_second_left_left_second_h3" id="student_third_text_second">
                     Focus on scores you really care about
                   </h3>
-                  <p class="second_div_second_left_left_second_p">
+                  <p class="second_div_second_left_left_second_p" id="student_third_text_third">
                     We recommend intersting exercises for Reading, Speaking, Vocabulary & Grammar.
                   </p>
                  </div>
@@ -760,11 +870,11 @@ input:checked + .slider {
               <img src="stu_4.png" class="" >
             </div>
             <div class="second_div_second_left_left_second">
-              <h4 class="second_div_second_left_left_second_h4">GET REWARDED</h4>
-              <h3 class="second_div_second_left_left_second_h3">
+              <h4 class="second_div_second_left_left_second_h4" id="student_fourth_text_first">GET REWARDED</h4>
+              <h3 class="second_div_second_left_left_second_h3" id="student_fourth_text_second">
                 Beat your own records and earn goodies
               </h3>
-              <p class="second_div_second_left_left_second_p">
+              <p class="second_div_second_left_left_second_p" id="student_fourth_text_third">
                 Give your brain just the right amount of workout and get rewarded for it.
               </p>
              </div>
@@ -882,6 +992,73 @@ input:checked + .slider {
       </div>
 
   </div>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg" >
+      <div class="modal-content">
+
+
+        <!-- <div class="modal_body">
+          <div class="modal_image">
+            <img src="modal_logout.png" class="modal_image" >
+          </div>
+          <div class="modal_mid">
+            <h4 class="modal_main_message"> Are you sure you want to  log out? </h4>
+            <h5 class="modal_secondary_message"> You will be asked to verify your identity  the next time you sign in. </h5>
+          </div>
+          <div class="modal_bottom">
+            <span class="modal_button_cancel" data-dismiss="modal">CANCEL</span>
+            <span class="modal_button_logout">Yes, Log out</span>
+          </div>
+        </div> -->
+        <div class="modal_body">
+          <div class="modal_top">
+            <div class="modal_top_left">
+              <div>
+                <h4 class="modal_top_left_text">Login</h4>
+                <form>
+                  <label class="input_label" id="label1" for="choice1">
+                    <input type="text" autocomplete='given-name' placeholder=" Name"  class="profile_input" id="profile-name" name="FirstName" value="">
+                  </label>
+                  <label class="input_label" id="label1" for="choice1">
+                    <input type="text" autocomplete='given-name' placeholder=" Name"  class="profile_input"  name="FirstName" value="">
+                  </label>
+                  <label class="input_label" id="label1" for="choice1">
+                    <input type="checkbox"  id="profile-name" name="FirstName" value="">
+                    <span class="modal_top_left_check_text"> Keep me signed in </span>
+                  </label>
+                  <br>
+                  <!-- <button class="login_modal_button login_button" type="button">LOG IN</button> -->
+                  <h5 class="login_modal_button login_button">LOG IN</h5>
+                </form>
+
+              </div>
+            </div>
+            <div class="modal_top_right">
+              <div>
+                <h4 class="modal_top_right_text">If you don’t already have an account click the button below to create your account.</h4>
+                <!-- <button class="login_modal_button create_button" type="button">CREATE ACCOUNT</button> -->
+                <h5 class="login_modal_button create_button" >CREATE ACCOUNT</h5>
+                <h5 class="modal_or"> OR </h5>
+                <!-- <button class="login_modal_button facebook_button" type="button">SIGN IN WITH FACEBOOK</button> -->
+                <h5 class="login_modal_button facebook_button" >SIGN IN WITH FACEBOOK</h5>
+                <!-- <button class="login_modal_button google_button" type="button">SIGN IN WITH GOOGLE</button> -->
+                <h5 class="login_modal_button google_button" >SIGN IN WITH GOOGLE</h5>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal_bottom">
+              <h5 class="modal_bottom_message"> So you can’t get in to your account? Did you <span class="forget_link"> forget your password?</span> </h5>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
   <script>
   // /* position: fixed;
   //   top: 0;
@@ -898,6 +1075,48 @@ input:checked + .slider {
               $('.main_h').css({'background-color':'inherit'});
               $('.nav_right_first_li_a').css({'color':'white'});
           }
+  });
+
+  $("#int_phrases").click(function(){
+    aaa = this;
+    if(aaa.checked===true){
+        $('#student_first_text_first').text('EASY PEASY');
+        $('#student_first_text_second').text('Read up your favourite topics');
+        $('#student_first_text_third').text('AugLi understands your interests and encourages you to read more around the topics you love.');
+
+        $('#student_second_text_first').text('FRESH Everyday');
+        $('#student_second_text_second').text('Live NEWS topics served hot ');
+        $('#student_second_text_third').text('Expand your perspective. Get bite-sized daily live News to keep you up-to-date with the world around you.');
+
+        $('#student_third_text_first').text('Future Proofing ');
+        $('#student_third_text_second').text('Focus on areas that will truly make a difference ');
+        $('#student_third_text_third').text("Get recommendations for building their future skills. Expand their perspectives through engaging activities specially designed to focus on your child's action areas.");
+
+        $('#student_fourth_text_first').text('Define what your deserve');
+        $('#student_fourth_text_second').text('Beat your score and earn goodies ');
+        $('#student_fourth_text_third').text("With full visibility to their progress, we create a unique way to engage with your children Thats the true treat! What's more, you can even sponsor these treats!");
+
+
+    }
+    else{
+
+      $('#student_first_text_first').text('EASY PEASY');
+      $('#student_first_text_second').text('Your child is unique');
+      $('#student_first_text_third').text("AugLi does not believe in one-size-fits-all. We recognise that engagement is higher when reading is aligned to your child's interest areas.");
+
+      $('#student_second_text_first').text('FRESH Everyday');
+      $('#student_second_text_second').text('Live NEWS topics served hot ');
+      $('#student_second_text_third').text('Bite-sized daily live News to keep kids up-to-date with the world around them, at their own pace. ');
+
+      $('#student_third_text_first').text('Rise to the Challenge');
+      $('#student_third_text_second').text('Focus on scores that matter ');
+      $('#student_third_text_third').text('Let your natural ability to think take a sharper edge. Practice with engaging activities designed to focus on your action areas. ');
+
+      $('#student_fourth_text_first').text('Define what your deserve');
+      $('#student_fourth_text_second').text('Beat your score and earn goodies ');
+      $('#student_fourth_text_third').text('A unique Pact to excel gets you the rewards that you really enjoy. Go Play ! ');
+
+    }
   });
   </script>
 </body>
