@@ -1,6 +1,6 @@
 (function (global) {
 
-var callbackStatus = "";
+ callbackStatus = "";
 var speakingPal = new SpApi();
 
 function testAPI() {
@@ -22,11 +22,17 @@ function initComplete(evt){
 	console.log('InitComplete: got event msg=' + evt.msg);
 	callbackStatus = "InitComplete: "+evt.msg;
 	document.getElementById("callback").innerHTML = callbackStatus;
+	// alert(12332);
+	if (callbackStatus=="InitComplete: Success"){
+		startWS()
+			}
 }
 
 function micCallback(evt){
 	callbackStatus = callbackStatus + " Mic: "+evt.msg;
 	document.getElementById("callback").innerHTML = callbackStatus;
+	// alert(23321);
+
 }
 
 
@@ -56,7 +62,7 @@ function extractSpConfidence(numStr){
 }
 
 function processResult(resultXml){
-	alert(resultXml);
+	//alert(resultXml);
 	alala = resultXml;
 	resultXml = resultXml.replace(/\n/g, "");
 	resultXml = resultXml.replace("</instance><input>","</instance><abba>");
@@ -82,6 +88,16 @@ function processResult(resultXml){
 			+ "\n";
     }
 
+
+		$(".speakingpal_stuff").hide();
+		$(".resultloud").show();
+
+		$(".next_speaking").hide();
+		$("#next_button").show();
+
+		$("#resultloud_left1").show();
+	  $("#resultloud_left2").hide();
+		show_feedback(alala);
 	return textToDisplay;
 }
 
@@ -89,7 +105,7 @@ function testCallback2(evt){
 	if(evt.err == 0) {
 		var resultText = processResult(evt.data);
 		//callbackStatus = "Recognition Result:\n" + evt.data + "\n";
-		alert(resultText);
+		//alert(resultText);
 		callbackStatus = "Recognition Result:\n" + resultText
 			+ "\n\nScore Explanation:\n"
 			+ "6 Perfect / Native speaker level\n"
@@ -121,6 +137,15 @@ function testCallback3(){
 function openSockComplete(evt){
 	callbackStatus = "\nOpenSocket: " + evt.data + "\n";
 	document.getElementById("callback").innerText = callbackStatus;
+	//alert(23321);
+	document.getElementById("callback").innerText = 'start';
+	//$("#result_option2").show();
+	//recgnise_button
+	$('.recgnise_button').attr('id', 'result_option2');
+	$('.recgnise_button').css('background-color', '#00be67');
+	$('.recgnise_button').css('cursor', 'pointer');
+	$("#resultloud_left2").show();
+	$("#resultloud_left0").hide();
 }
 
 
@@ -135,7 +160,7 @@ function testRec(){
 	console.log("Entered testRec, asr_sentence: " + theSentence);
 	document.getElementById("callback").innerText = "";
 	//speakingPal.recognize("[(hi i come here every year)]","123",actualCallback,testCallback2);
-	alert(theSentence,theSentenceId,firstChar)
+	//alert(theSentence,theSentenceId,firstChar)
 	speakingPal.recognize(theSentence,theSentenceId,actualCallback,testCallback2,testCallback3,20000);
 	//document.getElementById("recimg").src = "record-button.gif";
 
@@ -143,7 +168,7 @@ function testRec(){
 
 function startWS(){
 	console.log("Entered startWS");
-	alert("Entered startWS");
+	// alert("Entered startWS");
 	speakingPal.prepare(openSockComplete);
 
 	var dateObj = new Date(Date.now());

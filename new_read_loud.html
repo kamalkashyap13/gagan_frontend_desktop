@@ -262,7 +262,7 @@ margin-bottom: 5px;
   font-weight: 300;
   line-height: 47px;
 }
-.bottom_option{
+.bottom_option, {
   background-color: #dee8f6;
   height: 180px;
   margin-left: 80px;
@@ -460,6 +460,93 @@ color: #373737;
   color: blue;
 }
 </style>
+<style>
+.resultloud{
+  margin-left: 80px;
+  margin-right: 30px;
+  height: 120px;
+  background-color: #e9edf4;
+  padding: 20px;
+
+}
+.resultloud_left{
+  margin-left:0%;
+  width:60%;
+  float:left;
+  position:relative;
+  height: 120px;
+
+
+}
+.resultloud_right{
+  margin-right:0px;
+  width:40%;
+  float:right;
+  position:relative;
+  height: 120px;
+  padding-top: 20px;
+
+}
+
+.resultloud_h3{
+  color: #4259cf;
+  font-family: "Benton Sans";
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "EXPLAINATI" */
+  letter-spacing: 0.5px;
+}
+
+#feed_word{
+  color: #151515;
+  font-family: "Benton Sans";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  /* Text style for "" */
+  font-family: "Benton Sans Book";
+  font-weight: 300;
+}
+
+#resultloud_h4{
+color: #151515;
+font-family: "Benton Sans Book";
+font-size: 14px;
+font-weight: 300;
+line-height: 23px;
+}
+.recgnise_button, .next_button, .next_speaking{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 27px;
+  background-color: #00be67;
+  background-color: #ccf2e0;
+
+  color: #ffffff;
+  font-family: "Benton Sans";
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding: 8px 15px;
+  /* margin-top: 20px; */
+}
+.next_button, .next_speaking{
+  display: none;
+  background-color: #00be67;
+}
+.word_red{
+  color: #ff4336;
+
+}
+.word_yellow{
+  color: #e7b64e;
+
+}
+.word_green{
+  color: #00be67;
+}
+</style>
 </head>
 <body>
   <div class="first_div">
@@ -520,29 +607,50 @@ color: #373737;
 
         <div class="first_main_left_content_fourth">
           <p class="content_para">
-            They saw that water, sanitation and hygiene are desperately needed in homes and at school in order for children to have healthy, happy, childhoods.
+            they saw that water sanitation and hygiene are desperately needed in homes
+            <!-- <span class="word_red">they </span>
+            <span class="word_yellow">saw </span>
+            <span class="word_green">water </span> -->
           </p>
         </div>
 
 
       </div>
-      <div>
+      <div class="resultloud">
         <!--<span class="feedback_star"id="feedback_star1">&#9733;</span>-->
+        <div class="resultloud_left" id="resultloud_left0">
 
-       <h3 class="">EXPLAINATION</h3>
-         <div class="">
-             <span id="feed_word">Fair</span>
-             <!-- //fas fa-star -->
-              <i class="far fa-star" id="feed_star1"></i>
-              <i class="far fa-star" id="feed_star2"></i>
-              <i class="far fa-star" id="feed_star3"></i>
-              <i class="far fa-star" id="feed_star4"></i>
-              <i class="far fa-star" id="feed_star5"></i>
-              <i class="far fa-star" id="feed_star6"></i>
           </div>
-        <h4 id="">Obvious mistake, may not be recognized</h4>
+        <div class="resultloud_left" id="resultloud_left1">
+           <h3 class="resultloud_h3">EXPLAINATION</h3>
+             <div class="resultloud_star_div">
+                 <span id="feed_word">Fair</span>
+                 <!-- //fas fa-star -->
+                  <i class="far fa-star" id="feed_star1"></i>
+                  <i class="far fa-star" id="feed_star2"></i>
+                  <i class="far fa-star" id="feed_star3"></i>
+                  <i class="far fa-star" id="feed_star4"></i>
+                  <i class="far fa-star" id="feed_star5"></i>
+                  <i class="far fa-star" id="feed_star6"></i>
+              </div>
+            <h4 id="resultloud_h4">Obvious mistake, may not be recognized</h4>
+          </div>
+          <div class="resultloud_left" id="resultloud_left2">
+            <td width="120" align="center">
+              <div><font face="courier" color="green">
+                  <span id="rec_level">__________</span>
+                </font>
+              </div>
+            </td>
+          </div>
+          <div class="resultloud_right">
+            <span class="recgnise_button" id="result_option2"> Start Speaking</span>
+            <span class="next_speaking" id="next_speaking"> Speaking</span>
+            <span class="next_button" id="next_button"> Next Exercise</span>
+          </div>
       </div>
-      <div class="speakingpal_stuff">
+
+       <div class="speakingpal_stuff">
                 <div class="bottom_option">
                   <h5 class="bottom_option_h3" id="start_first_record">Init</h5>
                   <div class="option_choice">
@@ -551,10 +659,11 @@ color: #373737;
                     </div>
                     <div class="viewport_right">
                       <span id="result_option"> PREPARE</span>
-                      <span id="result_option2"> RECOGNIZE</span>
-                      <!-- <span> Headset Recommended</span>  -->
+                      <span id=""> RECOGNIZE</span>
+                       <span> Headset Recommended</span>
                     </div>
                   </div>
+                  <span id=""> RECOGNIZE</span>
                 </div>
                 <img id="recimg" src="./Test SpeakingPal API_files/record-button-off.gif" height="40">
               	<div>
@@ -568,12 +677,12 @@ color: #373737;
                 </div>
                 <input type="text" name="asr_sentence" id="asr_sentence" size="100" value="they saw that water sanitation and hygiene are desperately needed in homes">
 
-                <td width="120" align="center">
+                <!-- <td width="120" align="center">
               		<div><font face="courier" color="green">
               				<span id="rec_level">__________</span>
               			</font>
               		</div>
-              	</td>
+              	</td> -->
 
                 <div id="callback"></div>
               	<div id="results"></div>
@@ -660,39 +769,21 @@ color: #373737;
 
 <script>
 $(document).ready(function(){
-  // 1 page_load - testAPI()
-  // 2 with text - startWS()
-  // 3 testRec()
-  // 4 stopAPI()
-  // 5 destroyAPI()
+  //speakingpal_stuff, resultloud_left1
+  $(".speakingpal_stuff").hide();
+  $("#resultloud_left1").hide();
+  $("#resultloud_left2").hide();
 
-  //
-  //var myVar = setInterval(startWS, 5000);
-  //start_first_record
+//main event
 testAPI()
-  $("#start_first_record").click(function(){
-    // alert(1);
 
 
-
-});
-
-  $("#result_option").click(function(){
-    startWS()
-    //testRec()
-    // var spectrogram = new Spectrogram("viewport");
-    // navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
-
-});
-//
-$("#result_option2").click(function(){
-  //startWS()
+$( ".first_main" ).on( "click", "#result_option2", function() {
   testRec()
-  // var spectrogram = new Spectrogram("viewport");
-  // navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
-
+  //next_speaking
+  $("#result_option2").hide();
+  $("#next_speaking").show();
 });
-
 
 });
 
@@ -745,7 +836,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 function show_feedback(alala){
   word_list = [];
-  word_pos = [];
+  word_score = [];
   var regex1 = /<input/gi, result1, indices1 = [];
   while ( (result1 = regex1.exec(alala)) ) {
       indices1.push(result1.index);
@@ -764,8 +855,10 @@ function show_feedback(alala){
     current_word = subsr_input.substring(word_start+1,word_end)
     console.log(current_word);
     console.log(current_score);
+    word_list.push(current_word);
+    word_score.push(current_score);
   }
-  overall = parseInt(alala.substring(43,44))
+  overall = parseInt(alala.substring(44,45))
   //<i class="far fa-star" id="feed_star1"></i>
   for (j=0;j<overall;j++){
     ind = j+1
@@ -774,6 +867,33 @@ function show_feedback(alala){
     $("#feed_star"+ind).addClass("fas fa-star");
 
   }
+  show_feedback_color_text(word_list,word_score)
+}
+//  <span class="word_red">they </span>
+// <span class="word_yellow">saw </span>
+// <span class="word_green">water </span>
+function show_feedback_color_text(word_list,word_score){
+  main_add_html =""
+  for (j=0;j<word_list.length;j++){
+    if(word_score[j]>4){
+      current_add_html = '<span class="word_green">' + word_list[j] + '</span>'
+
+    }
+    else if (word_score[j]>2) {
+      current_add_html = '<span class="word_yellow">' + word_list[j] + '</span>'
+
+    }
+    else {
+      current_add_html = '<span class="word_red">' + word_list[j] + '</span>'
+
+    }
+
+    main_add_html+=" "+current_add_html
+  }
+
+  $(".content_para").html(main_add_html);
+
+
 }
 </script>
 </body>

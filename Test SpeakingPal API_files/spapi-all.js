@@ -735,7 +735,7 @@ function UTF16ToString(ptr) {
   }
 }
 Module['UTF16ToString'] = UTF16ToString;
-// Copies the given Javascript String object 'str' to the emscripten HEAP at address 'outPtr', 
+// Copies the given Javascript String object 'str' to the emscripten HEAP at address 'outPtr',
 // null-terminated and encoded in UTF16LE form. The copy will require at most (str.length*2+1)*2 bytes of space in the HEAP.
 function stringToUTF16(str, outPtr) {
   for(var i = 0; i < str.length; ++i) {
@@ -767,7 +767,7 @@ function UTF32ToString(ptr) {
   }
 }
 Module['UTF32ToString'] = UTF32ToString;
-// Copies the given Javascript String object 'str' to the emscripten HEAP at address 'outPtr', 
+// Copies the given Javascript String object 'str' to the emscripten HEAP at address 'outPtr',
 // null-terminated and encoded in UTF32LE form. The copy will require at most (str.length+1)*4 bytes of space in the HEAP,
 // but can use less, since str.length does not return the number of characters in the string, but the number of UTF-16 code units in the string.
 function stringToUTF32(str, outPtr) {
@@ -1208,7 +1208,7 @@ function copyTempDouble(ptr) {
   HEAP8[tempDoublePtr+6] = HEAP8[ptr+6];
   HEAP8[tempDoublePtr+7] = HEAP8[ptr+7];
 }
-  Module["_memcpy"] = _memcpy; 
+  Module["_memcpy"] = _memcpy;
   Module["_memmove"] = _memmove;var _llvm_memmove_p0i8_p0i8_i32=_memmove;
   var ERRNO_CODES={EPERM:1,ENOENT:2,ESRCH:3,EINTR:4,EIO:5,ENXIO:6,E2BIG:7,ENOEXEC:8,EBADF:9,ECHILD:10,EAGAIN:11,EWOULDBLOCK:11,ENOMEM:12,EACCES:13,EFAULT:14,ENOTBLK:15,EBUSY:16,EEXIST:17,EXDEV:18,ENODEV:19,ENOTDIR:20,EISDIR:21,EINVAL:22,ENFILE:23,EMFILE:24,ENOTTY:25,ETXTBSY:26,EFBIG:27,ENOSPC:28,ESPIPE:29,EROFS:30,EMLINK:31,EPIPE:32,EDOM:33,ERANGE:34,ENOMSG:42,EIDRM:43,ECHRNG:44,EL2NSYNC:45,EL3HLT:46,EL3RST:47,ELNRNG:48,EUNATCH:49,ENOCSI:50,EL2HLT:51,EDEADLK:35,ENOLCK:37,EBADE:52,EBADR:53,EXFULL:54,ENOANO:55,EBADRQC:56,EBADSLT:57,EDEADLOCK:35,EBFONT:59,ENOSTR:60,ENODATA:61,ETIME:62,ENOSR:63,ENONET:64,ENOPKG:65,EREMOTE:66,ENOLINK:67,EADV:68,ESRMNT:69,ECOMM:70,EPROTO:71,EMULTIHOP:72,EDOTDOT:73,EBADMSG:74,ENOTUNIQ:76,EBADFD:77,EREMCHG:78,ELIBACC:79,ELIBBAD:80,ELIBSCN:81,ELIBMAX:82,ELIBEXEC:83,ENOSYS:38,ENOTEMPTY:39,ENAMETOOLONG:36,ELOOP:40,EOPNOTSUPP:95,EPFNOSUPPORT:96,ECONNRESET:104,ENOBUFS:105,EAFNOSUPPORT:97,EPROTOTYPE:91,ENOTSOCK:88,ENOPROTOOPT:92,ESHUTDOWN:108,ECONNREFUSED:111,EADDRINUSE:98,ECONNABORTED:103,ENETUNREACH:101,ENETDOWN:100,ETIMEDOUT:110,EHOSTDOWN:112,EHOSTUNREACH:113,EINPROGRESS:115,EALREADY:114,EDESTADDRREQ:89,EMSGSIZE:90,EPROTONOSUPPORT:93,ESOCKTNOSUPPORT:94,EADDRNOTAVAIL:99,ENETRESET:102,EISCONN:106,ENOTCONN:107,ETOOMANYREFS:109,EUSERS:87,EDQUOT:122,ESTALE:116,ENOTSUP:95,ENOMEDIUM:123,EILSEQ:84,EOVERFLOW:75,ECANCELED:125,ENOTRECOVERABLE:131,EOWNERDEAD:130,ESTRPIPE:86};
   var ERRNO_MESSAGES={0:"Success",1:"Not super-user",2:"No such file or directory",3:"No such process",4:"Interrupted system call",5:"I/O error",6:"No such device or address",7:"Arg list too long",8:"Exec format error",9:"Bad file number",10:"No children",11:"No more processes",12:"Not enough core",13:"Permission denied",14:"Bad address",15:"Block device required",16:"Mount device busy",17:"File exists",18:"Cross-device link",19:"No such device",20:"Not a directory",21:"Is a directory",22:"Invalid argument",23:"Too many open files in system",24:"Too many open files",25:"Not a typewriter",26:"Text file busy",27:"File too large",28:"No space left on device",29:"Illegal seek",30:"Read only file system",31:"Too many links",32:"Broken pipe",33:"Math arg out of domain of func",34:"Math result not representable",35:"File locking deadlock error",36:"File or path name too long",37:"No record locks available",38:"Function not implemented",39:"Directory not empty",40:"Too many symbolic links",42:"No message of desired type",43:"Identifier removed",44:"Channel number out of range",45:"Level 2 not synchronized",46:"Level 3 halted",47:"Level 3 reset",48:"Link number out of range",49:"Protocol driver not attached",50:"No CSI structure available",51:"Level 2 halted",52:"Invalid exchange",53:"Invalid request descriptor",54:"Exchange full",55:"No anode",56:"Invalid request code",57:"Invalid slot",59:"Bad font file fmt",60:"Device not a stream",61:"No data (for no delay io)",62:"Timer expired",63:"Out of streams resources",64:"Machine is not on the network",65:"Package not installed",66:"The object is remote",67:"The link has been severed",68:"Advertise error",69:"Srmount error",70:"Communication error on send",71:"Protocol error",72:"Multihop attempted",73:"Cross mount point (not really error)",74:"Trying to read unreadable message",75:"Value too large for defined data type",76:"Given log. name not unique",77:"f.d. invalid for this operation",78:"Remote address changed",79:"Can   access a needed shared lib",80:"Accessing a corrupted shared lib",81:".lib section in a.out corrupted",82:"Attempting to link in too many libs",83:"Attempting to exec a shared library",84:"Illegal byte sequence",86:"Streams pipe error",87:"Too many users",88:"Socket operation on non-socket",89:"Destination address required",90:"Message too long",91:"Protocol wrong type for socket",92:"Protocol not available",93:"Unknown protocol",94:"Socket type not supported",95:"Not supported",96:"Protocol family not supported",97:"Address family not supported by protocol family",98:"Address already in use",99:"Address not available",100:"Network interface is not configured",101:"Network is unreachable",102:"Connection reset by network",103:"Connection aborted",104:"Connection reset by peer",105:"No buffer space available",106:"Socket is already connected",107:"Socket is not connected",108:"Can't send after socket shutdown",109:"Too many references",110:"Connection timed out",111:"Connection refused",112:"Host is down",113:"Host is unreachable",114:"Socket already connected",115:"Connection already in progress",116:"Stale file handle",122:"Quota exceeded",123:"No medium (in tape drive)",125:"Operation canceled",130:"Previous owner died",131:"State not recoverable"};
@@ -1909,7 +1909,7 @@ function copyTempDouble(ptr) {
         try {
           stat = fs.lstatSync(path);
           if (NODEFS.isWindows) {
-            // On Windows, directories return permission bits 'rw-rw-rw-', even though they have 'rwxrwxrwx', so 
+            // On Windows, directories return permission bits 'rw-rw-rw-', even though they have 'rwxrwxrwx', so
             // propagate write bits to execute bits.
             stat.mode = stat.mode | ((stat.mode & 146) >> 1);
           }
@@ -4905,7 +4905,7 @@ function copyTempDouble(ptr) {
           	// FIXME: ideally this should be clamped against the canvas size and zero
           	Browser.mouseX += Browser.mouseMovementX;
           	Browser.mouseY += Browser.mouseMovementY;
-          }        
+          }
         } else {
           // Otherwise, calculate the movement based on the changes
           // in the coordinates.
@@ -4979,7 +4979,7 @@ function copyTempDouble(ptr) {
         this.windowedHeight = canvas.height;
         canvas.width = screen.width;
         canvas.height = screen.height;
-        // check if SDL is available   
+        // check if SDL is available
         if (typeof SDL != "undefined") {
         	var flags = HEAPU32[((SDL.screen+Runtime.QUANTUM_SIZE*0)>>2)];
         	flags = flags | 0x00800000; // set SDL_FULLSCREEN flag
@@ -4990,7 +4990,7 @@ function copyTempDouble(ptr) {
         var canvas = Module['canvas'];
         canvas.width = this.windowedWidth;
         canvas.height = this.windowedHeight;
-        // check if SDL is available       
+        // check if SDL is available
         if (typeof SDL != "undefined") {
         	var flags = HEAPU32[((SDL.screen+Runtime.QUANTUM_SIZE*0)>>2)];
         	flags = flags & ~0x00800000; // clear SDL_FULLSCREEN flag
@@ -5449,7 +5449,7 @@ run();
 			reader.onload = function (e) {
 				fn(e.target.result);
 			};
-			reader.readAsBinaryString(bb.getBlob());	
+			reader.readAsBinaryString(bb.getBlob());
 		}
 
 	  , parseInt: function (chr) {
@@ -5465,7 +5465,7 @@ run();
 		  			size = (floats.length - pos > 800) ? 800 : floats.length - pos;
 		  			audio.mozWriteAudio(floats.subarray(pos, pos+size));
 		  			pos += size;
-		  		}  		
+		  		}
 		  	}
 		}
 
@@ -5476,10 +5476,10 @@ run();
 				bytesPerSample: 2,
 				data: floats
 			});
-			
+
 			var element = new Audio();
 			element.src = "data:audio/wav;base64,"+btoa(waveData);
-			element.play();	
+			element.play();
 		}
 
 		/**
@@ -5528,54 +5528,54 @@ global.libspeex = Module || s;
 global.libspeex.generateStructInfo = libspeex.generateStructInfo || Runtime.generateStructInfo;
 
 global.types = {
-	
+
 	SPEEX_NB_MODES: 3,
-	
+
 	SPEEX_SET_ENH: 0,
 	SPEEX_GET_ENH: 1,
-	
+
 	SPEEX_GET_FRAME_SIZE: 3,
-	
+
 	SPEEX_SET_QUALITY: 4,
 	SPEEX_GET_QUALITY: 5, // Not used
-	
+
 	SPEEX_SET_VBR: 12,
 	SPEEX_GET_VBR: 13,
-	
+
 	SPEEX_SET_VBR_QUALITY: 14,
 	SPEEX_GET_VBR_QUALITY: 15,
 
 	SPEEX_SET_COMPLEXITY: 16,
-	SPEEX_GET_COMPLEXITY: 17,	
-	
+	SPEEX_GET_COMPLEXITY: 17,
+
 	SPEEX_SET_SAMPLING_RATE: 24,
 	SPEEX_GET_SAMPLING_RATE: 25,
-	
+
 	SPEEX_SET_VAD: 30,
 	SPEEX_GET_VAD: 31,
-	
+
 	SPEEX_SET_ABR: 32,
 	SPEEX_GET_ABR: 33,
-	
+
 	SPEEX_SET_DTX: 34,
 	SPEEX_GET_DTX: 35,
-	
+
 	types: {
 
 		/**
 
 		Bit-packing data structure representing (part of) a bit-stream.
-		
+
 		typedef struct SpeexBits {
 		   char *chars;   	//< "raw" data
 		   int   nbBits;  	//< Total number of bits stored in the stream
-		   int   charPtr; 	//< Position of the byte "cursor" 
-		   int   bitPtr;  	//< Position of the bit "cursor" within the current char 
-		   int   owner;   	//< Does the struct "own" the "raw" buffer (member "chars") 
-		   int   overflow;	//< Set to one if we try to read past the valid data 
-		   int   buf_size;	//< Allocated size for buffer 
-		   int   reserved1; //< Reserved for future use 
-		   void *reserved2; //< Reserved for future use 
+		   int   charPtr; 	//< Position of the byte "cursor"
+		   int   bitPtr;  	//< Position of the bit "cursor" within the current char
+		   int   owner;   	//< Does the struct "own" the "raw" buffer (member "chars")
+		   int   overflow;	//< Set to one if we try to read past the valid data
+		   int   buf_size;	//< Allocated size for buffer
+		   int   reserved1; //< Reserved for future use
+		   void *reserved2; //< Reserved for future use
 		} SpeexBits;
 		*/
 		SpeexBits: libspeex.generateStructInfo([
@@ -5592,7 +5592,7 @@ global.types = {
 
 		/**
 		  * Speex header info for file-based formats
-		  		
+
 		typedef struct SpeexHeader {
 		   char speex_string[SPEEX_HEADER_STRING_LENGTH];
 		   char speex_version[SPEEX_HEADER_VERSION_LENGTH];
@@ -5610,7 +5610,7 @@ global.types = {
 		   spx_int32_t reserved1;
 		   spx_int32_t reserved2;
 		} SpeexHeader;
-		*/		
+		*/
 		SpeexHeader: libspeex.generateStructInfo([
 			["i32", 'speex_version_id'],
 			["i32", 'header_size'],
@@ -5630,7 +5630,7 @@ global.types = {
 		/**
 
 		Preprocessor internal state
-		
+
 		typedef struct SpeexPreprocessState {
 		} SpeexPreprocessState;
 		*/
@@ -5640,7 +5640,7 @@ global.types = {
 		/**
 
 		Echo canceller state
-		
+
 		typedef struct SpeexEchoState {
 		} SpeexEchoState;
 		*/
@@ -5917,19 +5917,19 @@ function CodecProcessor (params) {
   this.opt_basename = "SPEEX_SET_";
 
   this.ctl_func = libspeex["_speex_encoder_ctl"];
-  
+
   this.options = {};
 }
 
-CodecProcessor.prototype.set = function (name, value) {    
+CodecProcessor.prototype.set = function (name, value) {
   if (typeof(value) === "undefined" || value === null) {
     return;
   }
 
   this.options[name] = value;
-  
-  var ptr = libspeex.allocate(1, 'i32', ALLOC_STACK), conv;  
-  
+
+  var ptr = libspeex.allocate(1, 'i32', ALLOC_STACK), conv;
+
   if (value.constructor == Number.prototype.constructor) {
     conv = parseInt(value);
   }
@@ -5941,7 +5941,7 @@ CodecProcessor.prototype.set = function (name, value) {
   setValue(ptr, conv || 0, 'i32');
   flag = this.opt_basename + name.toUpperCase().replace(" ", "_");
 
-  console.log("%s: %d", flag, conv);  
+  console.log("%s: %d", flag, conv);
   this[flag] && this.ctl_func(this.state, this[flag], ptr);
 
   if (name == "quality") {
@@ -6579,12 +6579,12 @@ Ogg.prototype.bitstream = function () {
 };
 
 (function (global) {
-	
+
 function Resampler() {
 }
 
 Resampler.prototype.initialize = function (fromSampleRate, toSampleRate, channels, outputBufferSize, noReturn) {
-	console.log('Resampler.initialize() - enter');	
+	console.log('Resampler.initialize() - enter');
 	this.fromSampleRate = fromSampleRate;
 	this.toSampleRate = toSampleRate;
 	this.channels = channels | 0;
@@ -6746,7 +6746,7 @@ global["Resampler"] = Resampler;
 			this.audioHandle = new XAudioServer(2, 70000, 15000, 25000, function (sampleCount) {
 				return parentObj.audioUnderRun(sampleCount);
 			}, -1);
-	
+
 	The callback is passed the number of samples requested, while it can return any number of samples it wants back.
 */
 function XAudioServer(channels, sampleRate, minBufferSize, maxBufferSize, underRunCallback, defaultValue) {
@@ -6991,7 +6991,7 @@ XAudioServer.prototype.initializeFlashAudio = function () {
 //Moz Audio Buffer Writing Handler:
 XAudioServer.prototype.writeMozAudio = function (buffer) {
 	if (!buffer) {
-		return;	
+		return;
 	}
 
 	var length = this.mozAudioTail.length;
@@ -7258,7 +7258,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 			  err: 18,
 			  msg: 'Unauthorized',
 			  data: ''
-			});			
+			});
 			return;
 		}
         _spApiObj.wsTestedPort = wsTestedPort;
@@ -7271,8 +7271,8 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
         //console.log('SpApi.initialize: _asrServiceUrl=' + _spApiObj._asrServiceUrl);
         //console.log('SpApi.initialize: wsTestedPort=' +	_spApiObj.wsTestedPort);
 
-		_spApiObj._fullAsrServiceUrl = wsPrefix + "://" + _spApiObj._asrServiceUrl + ":" + _spApiObj.wsTestedPort + "/";		
-		
+		_spApiObj._fullAsrServiceUrl = wsPrefix + "://" + _spApiObj._asrServiceUrl + ":" + _spApiObj.wsTestedPort + "/";
+
         console.log('SpApi.initialize: will use URL: ' + _spApiObj._fullAsrServiceUrl);
 		//console.log('SpApi: ' . _spApiObj);
         _spApiObj.init2();
@@ -7376,7 +7376,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     }
     return verifyWsPort();
   };
-  // Initialize the API. 
+  // Initialize the API.
   //userId, securityToken, initCompleteCallback, micEventCallback
   SpApi.prototype.initialize = function (userId, token, initComplete, micEventCallback, asrServiceUrl) {
     if (this._initialized === true) {
@@ -7392,7 +7392,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     this._asrServiceUrl = asrServiceUrl || 'undefined';
 	this._fullAsrServiceUrl = 'none';
 	this.wsTestedPort = 0;
-	
+
 	console.log('SpApi.initialize: this._asrServiceUrl = ' + this._asrServiceUrl);
     this._userId = userId || 'undefined';
     this._token = token || 'undefined';
@@ -7415,19 +7415,19 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     console.log('SpApi.initialize (2): found working ws port (' + this.wsTestedPort + ')');
     // we already got a session from LMS, no need to authenticate
     console.log('init2: we already got a session from LMS, no need to authenticate, sid=' + this._loginSessionId);
-	
+
 	/*
-	
+
 	NOTE: the below is for the future use, when the browsers support 'microphone' in permissions.query
 	at the time of writing, none of them support
-	
+
 	// check microphone permissions
 	var _spApiObj = this;
 	this._micPermission = 'undefined';
-	navigator.permissions.query({name:'microphone'}).then(function(result) {		
+	navigator.permissions.query({name:'microphone'}).then(function(result) {
 		_spApiObj._micPermission = result.state;
 		console.log('SpApi.initialize (2): mic permission returned ' + result.state);
-		//if (result.state == 'granted'/'prompt'/'denied') do something 
+		//if (result.state == 'granted'/'prompt'/'denied') do something
 	  result.onchange = function() {
 		  console.log('SpApi.initialize (2): mic permission changed to ' + result.state);
 		  _spApiObj._micPermission = result.state;
@@ -7436,7 +7436,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 		console.log("SpApi.initialize (2): failed to retrieve mic permission");
 	});
 	*/
-	
+
     // open microphone and start capturing audio
     window.framesCount = 0;
     if (this.startCapture() == false) {
@@ -7447,7 +7447,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
         data: ''
       });
       return;
-    } 
+    }
   };
   SpApi.prototype.prepare = function (connComplete) {
     console.log('SpApi.prepare()');
@@ -7466,21 +7466,21 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 		// verify we have already an open ASR socket first
 		if (typeof this.ws !== 'undefined') {
 			if(this.ws.readyState == WebSocket.OPEN || this.ws.readyState == WebSocket.CONNECTING){
-				// Chrome does not like when we close a socket in CONNECTING state, so a 
+				// Chrome does not like when we close a socket in CONNECTING state, so a
 				// warning may be displayed in console here
 				// REF: https://groups.google.com/a/chromium.org/forum/#!topic/chromium-html5/4G_XqPQQFX8
 				console.log('SpApi.prepare: make sure the previous socket is closed correctly');
 				// disable handlers first
-				this.ws.onopen = function () {}; 
-				this.ws.onmessage = function () {}; 
-				this.ws.onclose = function () {}; 
+				this.ws.onopen = function () {};
+				this.ws.onmessage = function () {};
+				this.ws.onclose = function () {};
 				this.ws.onerror = function () {};
-				this.ws.close()		  
+				this.ws.close()
 			}
 		}
 	  //this.ws = new WebSocket('ws://' + this._asrServiceUrl + ':' + this.wsTestedPort + '/', 'sp-asr-protocol');
 	  this.ws = new WebSocket(this._fullAsrServiceUrl, 'sp-asr-protocol');
-	  
+
       this.ws.binaryType = 'arraybuffer';
       this.ws.onopen = function () {
         console.log('ws.onopen: ASR WebSocket is connected now, state=' + this.readyState);
@@ -7537,13 +7537,13 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       });
     }
   };
-  
+
   /* saveRecordedAudio - for debug purposes */
   SpApi.prototype.saveRecordedAudio = function () {
 	  //DBG DBG
 	  var dateObj = new Date(Date.now());
 	  var timeNow = dateObj.getHours() + "_" + dateObj.getMinutes() + "_" + dateObj.getSeconds();
-	  
+
 	  // write Speex to a local file
 	  //console.log("ws.onmessage: will save Speex to file, length=" + _spapiObj.speexBuffer.length + " sBI=" + _spapiObj.speexBufferIndex);
 	  //_spapiObj.writeFile(_spapiObj.speexBuffer.buffer,_spapiObj.speexBufferIndex,'speex.spx');
@@ -7553,9 +7553,9 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 	  // write original audio to a local file
 	  console.log("saveRecordedAudio: will save to file aB2.length=" + this.audioBuffer2.length + " aBI=" + this.audioBufferIndex2);
 	  this.writeFile(this.audioBuffer2.buffer,this.audioBufferIndex2*2,'source_' + timeNow + '.pcm');
-	  //DBG DBG END	  
+	  //DBG DBG END
   }
-  
+
   SpApi.prototype.micStartCapture = function () {
     var _spapiObj = this;
     var wbSupport = true;
@@ -7567,17 +7567,17 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 	// keep Speex audio
 	//_spapiObj.maxSpeexBufferIndex = 200000;
 	//_spapiObj.speexBufferIndex = 0;
-	//_spapiObj.speexBuffer = new Int8Array(_spapiObj.maxSpeexBufferIndex);	
+	//_spapiObj.speexBuffer = new Int8Array(_spapiObj.maxSpeexBufferIndex);
 	// keep resampled audio
 	_spapiObj.maxAudioBufferIndex = 200000;
 	_spapiObj.audioBufferIndex = 0;
 	_spapiObj.audioBuffer = new Int16Array(_spapiObj.maxAudioBufferIndex);
-	// keep original audio	
+	// keep original audio
 	_spapiObj.maxAudioBufferIndex2 = 600000;
 	_spapiObj.audioBufferIndex2 = 0;
 	_spapiObj.audioBuffer2 = new Int16Array(_spapiObj.maxAudioBufferIndex2);
 	//DBG DBG END
-	
+
     if (wbSupport) {
       console.log('SpApi.micStartCapture: initialize audio codec - WIDEBAND');
       var codec = new Speex({
@@ -7609,13 +7609,13 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       }
       //check if we need to send
       if (bigBufferEntries >= maxBigBufferEntries) {
-        // restart buffer index 
-        // IMPORTANT NOTE: we should do this before calling to send, since otherwise we may have race condition 
+        // restart buffer index
+        // IMPORTANT NOTE: we should do this before calling to send, since otherwise we may have race condition
         // with the new audio received before the index is reset
         bigBufferEntries = 0;
         _spapiObj.ws.send(bigBuffer);  // send out what we have so far
       }
-      // buffer some more		
+      // buffer some more
       bigBuffer.set(dataArray, bigBufferEntrySize * bigBufferEntries++);
     }
     function getAverageVolume(array) {
@@ -7641,22 +7641,22 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
         if (typeof encoded != 'undefined') {
           window.speexFramesCount++;
           // new version of Speex requires indexing
-          sendArrayBufferWs(encoded[0]); 
+          sendArrayBufferWs(encoded[0]);
         }
-		
+
 		//DBG DBG
 		//if(_spapiObj.audioBufferIndex < _spapiObj.maxAudioBufferIndex){
 		//	_spapiObj.audioBuffer.set(samples,_spapiObj.audioBufferIndex);
 		//	_spapiObj.audioBufferIndex += samples.length;
 		//}
-		
+
 		// if(_spapiObj.speexBufferIndex < _spapiObj.maxSpeexBufferIndex){
 			// _spapiObj.speexBuffer.set(encoded[0],_spapiObj.speexBufferIndex);
 			// _spapiObj.speexBufferIndex += encoded[0].length;
-		// }				
+		// }
 		//DBG DBG END
 
-		
+
         _spapiObj.remAudioBuffer.set(_spapiObj.remAudioBuffer.subarray(320), 0);
         _spapiObj.remAudioBufferIndex -= 320;
       }
@@ -7680,7 +7680,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       }
       var inputBuffer = event.inputBuffer.getChannelData(0);
 
-		//DBG DBG 
+		//DBG DBG
 		//var origAudioBuf = new Int16Array(inputBuffer.length);
 		//for (var i = 0; i < inputBuffer.length; ++i) {
 		//	 origAudioBuf[i] = Math.ceil(inputBuffer[i] * 32767);
@@ -7690,10 +7690,10 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 		//	_spapiObj.audioBufferIndex2 += origAudioBuf.length;
 		//}
 		//DBG DBG END
-	  
-	  
+
+
 	  var i;
-	  var sum = 0.0; 
+	  var sum = 0.0;
 	  for (i = 0; i < inputBuffer.length; ++i) {
 		  sum += inputBuffer[i] * inputBuffer[i];
 		  // count number of audio clipping events
@@ -7703,7 +7703,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       }
       var curVolume = Math.sqrt(sum / inputBuffer.length);
 	  _spapiObj.slowVolume = 0.7 * _spapiObj.slowVolume + 0.3 * curVolume;
-	  
+
       // we expect to get 371/372 samples of 16KHz/16bit (Int16Array) or 185/186 samples of 8KHz
       var samples = _spapiObj.resampler.resampler(inputBuffer);
       var refillBuffer = new Int16Array(samples.length);
@@ -7719,19 +7719,20 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 	  // better UX for showing volume
 	  //_spapiObj._recLevelCallback(average);
 	  _spapiObj._recLevelCallback(_spapiObj.slowVolume);
-	  
+
 	  // keep max volume to identify too low level
-	  if(curVolume > 0.18){ 
-		_spapiObj.volumeOverThreshold++; 
-	  }		 
+	  if(curVolume > 0.18){
+		_spapiObj.volumeOverThreshold++;
+	  }
     }
     function callback(_fn) {
       var fn = _fn;
       console.log('navigator.getUserMedia callback (user did NOT confirm yet)');
-	  
+
       return function (stream) {
 		  _spapiObj.micPermissionTimer  = false;
 		 console.log('navigator.getUserMedia success (user confirmed)');
+     //startWS();
         _spapiObj.audioStream = stream;
         _spapiObj.audioTrack = stream.getTracks()[0];
         _spapiObj.audioContext = new Context();
@@ -7747,7 +7748,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
         _spapiObj.analyser.connect(_spapiObj.processor);
         _spapiObj.processor.connect(_spapiObj.audioContext.destination);
 		_spapiObj.actualSampleRate = _spapiObj.audioContext.sampleRate;
-		
+
         _spapiObj.resampler = new Resampler();
         if (wbSupport) {
           console.log('SpApi.micStartCapture: initialize resampler - WIDEBAND, ' + _spapiObj.actualSampleRate);
@@ -7755,11 +7756,11 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
         } else {
           _spapiObj.resampler.initialize(_spapiObj.actualSampleRate, 8000, 1, 1024);
         }
-		
+
         console.log('micStartCapture.callback: mic access enabled');
         _spapiObj._micEnabled = true;
 		_spapiObj._initialized = true;
-		
+
         _spapiObj._initComplete({err: 0, msg: 'Success', data: '' });
       };
     }
@@ -7779,7 +7780,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 			err: 17,
 			msg: 'MicAccessDismissed',
 			data: ''
-		  });			
+		  });
 		} else {
 			// known unhandled error: SecurityError (FF, should not happen)
 			console.log('navigator.getUserMedia returned undefined error: ' + error.name);
@@ -7787,10 +7788,10 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 			err: 15,
 			msg: 'MicGeneralError',
 			data: ''
-		  });			
+		  });
 		}
     }
-	
+
 	// added Edge support
     if (!navigator.getUserMedia)
         navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -7814,7 +7815,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 		},
 	}, callback(onmicaudio), errorCallback);
   };
-  
+
   SpApi.prototype.startCapture = function () {
     console.log('SpApi.startCapture');
     var supported = typeof Context !== 'undefined';
@@ -7827,7 +7828,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     }
     return false;
   };
-  
+
   // save local file for testing purposes
   SpApi.prototype.writeFile = function (samples, length, filename) {
     console.log('SpApi.writeFile: saving local file for testing purposes, len=' + length);
@@ -7843,10 +7844,10 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     link.download = filename;;
     link.click();
   };
-  
-  // The Recognize function starts the actual speech recognition at the server. It passes the grammar 
+
+  // The Recognize function starts the actual speech recognition at the server. It passes the grammar
   // and additional parameters to the server. Then it starts to upload the recorded voice.
-  SpApi.prototype.recognize = function (sentence, sentenceId, recLevelCallback, resultCallback, asrReadyCallback, duration) {  
+  SpApi.prototype.recognize = function (sentence, sentenceId, recLevelCallback, resultCallback, asrReadyCallback, duration) {
     console.log('SpApi.recognize: ' + sentence + ' duration: ' + duration);
     if (this._initialized != true) {
       resultCallback({
@@ -7869,7 +7870,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     this._resultCallback = resultCallback || this.dummyCallback;
     this._asrReadyCallback = asrReadyCallback || this.dummyCallback;
     this._duration = duration || 25000;	// default sentence duration is 25 sec
-    // verify we have microphone access (user allowed audio capture)	
+    // verify we have microphone access (user allowed audio capture)
     if (!this._micEnabled) {
       console.log('SpApi.recognize: microphone disabled');
       resultCallback({
@@ -7879,7 +7880,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       });
       return;
     }
-    // verify we have a ready to use ASR socket first	
+    // verify we have a ready to use ASR socket first
     if (typeof this.ws === 'undefined' || this.ws == 'undefined') {
       console.log('SpApi.recognize: ASR socket undefined');
       resultCallback({
@@ -7902,12 +7903,12 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     //this.speexBufferIndex = 0;
     this.audioBufferIndex = 0;
     this.audioBufferIndex2 = 0;
-	
+
 	this.volumeOverThreshold = 0;
 
-	
+
     window.framesCount = 0;
-    
+
 	// no need to preprocess, the app level will provide correct grammar
 	// pre-process sentence
     //var cleanSentence = sentence.replace(/[^a-zA-Z- ()\[]]/g, '').toLowerCase();
@@ -7923,7 +7924,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     window.stopAudioCapture = false;
     // debug info counter
     window.speexFramesCount = 0;
- 
+
 	asrReadyCallback();
 
     return {
@@ -7960,25 +7961,25 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       });
       return;
     }
-	
+
 	this._sentenceId = this._sentenceId + ".mp3";
 
     var _myApiObject = this;
-	
+
     if ('WebSocket' in window) {
 		// verify we have already an open ASR socket first
 		if (typeof _myApiObject.ruws !== 'undefined') {
 			if(_myApiObject.ruws.readyState == WebSocket.OPEN || _myApiObject.ruws.readyState == WebSocket.CONNECTING){
-				// Chrome does not like when we close a socket in CONNECTING state, so a 
+				// Chrome does not like when we close a socket in CONNECTING state, so a
 				// warning may be displayed in console here
 				// REF: https://groups.google.com/a/chromium.org/forum/#!topic/chromium-html5/4G_XqPQQFX8
 				console.log('SpApi.getRecordingUrl: make sure the previous socket is closed correctly');
 				// disable handlers first
-				_myApiObject.ruws.onopen = function () {}; 
-				_myApiObject.ruws.onmessage = function () {}; 
-				_myApiObject.ruws.onclose = function () {}; 
+				_myApiObject.ruws.onopen = function () {};
+				_myApiObject.ruws.onmessage = function () {};
+				_myApiObject.ruws.onclose = function () {};
 				_myApiObject.ruws.onerror = function () {};
-				_myApiObject.ruws.close()		  
+				_myApiObject.ruws.close()
 			}
 		}
 	  //_myApiObject.ruws = new WebSocket('ws://' + this._asrServiceUrl + ':' + _myApiObject.wsTestedPort + '/', 'sp-store-protocol');
@@ -8049,25 +8050,25 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       });
       return;
     }
-	
+
 	this._sentenceId = this._sentenceId + ".mp3";
 
     var _myApiObject = this;
-	
+
     if ('WebSocket' in window) {
 		// verify we have already an open socket first
 		if (typeof _myApiObject.ruws !== 'undefined') {
 			if(_myApiObject.ruws.readyState == WebSocket.OPEN || _myApiObject.ruws.readyState == WebSocket.CONNECTING){
-				// Chrome does not like when we close a socket in CONNECTING state, so a 
+				// Chrome does not like when we close a socket in CONNECTING state, so a
 				// warning may be displayed in console here
 				// REF: https://groups.google.com/a/chromium.org/forum/#!topic/chromium-html5/4G_XqPQQFX8
 				console.log('SpApi.persistRecording: make sure the previous socket is closed correctly');
 				// disable handlers first
-				_myApiObject.ruws.onopen = function () {}; 
-				_myApiObject.ruws.onmessage = function () {}; 
-				_myApiObject.ruws.onclose = function () {}; 
+				_myApiObject.ruws.onopen = function () {};
+				_myApiObject.ruws.onmessage = function () {};
+				_myApiObject.ruws.onclose = function () {};
 				_myApiObject.ruws.onerror = function () {};
-				_myApiObject.ruws.close()		  
+				_myApiObject.ruws.close()
 			}
 		}
 	  var serviceUrl = _myApiObject._fullAsrServiceUrl;
@@ -8076,6 +8077,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
       _myApiObject.ruws.binaryType = 'arraybuffer';
       _myApiObject.ruws.onopen = function () {
         console.log('SpApi.persistRecording: ws.onopen: connected, state=' + this.readyState);
+        	
 		this.send(_myApiObject._sentenceId);
       };
       _myApiObject.ruws.onmessage = function (evt) {
@@ -8108,10 +8110,10 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
     }
   };
 
-  
-  
-  
-  // Start playback of the recorded voice. A recording number is passed as a parameter to specify which 
+
+
+
+  // Start playback of the recorded voice. A recording number is passed as a parameter to specify which
   // recording to play.
   SpApi.prototype.play = function (sentenceId) {
     if (this._initialized != true) {
@@ -8139,22 +8141,22 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
 
     window.stopAudioCapture = true;
 	window.asrResultCallback = 0;
-	
+
     if (typeof this.ws !== 'undefined' && this.ws != 'undefined') {
 		if(this.ws.readyState == WebSocket.OPEN || this.ws.readyState == WebSocket.CONNECTING){
-			// Chrome does not like when we close a socket in CONNECTING state, so a 
+			// Chrome does not like when we close a socket in CONNECTING state, so a
 			// warning may be displayed in console here
 			// REF: https://groups.google.com/a/chromium.org/forum/#!topic/chromium-html5/4G_XqPQQFX8
 			console.log('SpApi.prepare: make sure the previous socket is closed correctly');
 			// disable handlers first
-			this.ws.onopen = function () {}; 
-			this.ws.onmessage = function () {}; 
-			this.ws.onclose = function () {}; 
+			this.ws.onopen = function () {};
+			this.ws.onmessage = function () {};
+			this.ws.onclose = function () {};
 			this.ws.onerror = function () {};
-			this.ws.close()		  
+			this.ws.close()
 		}
     }
-	
+
     return {
       err: 0,
       msg: 'Success',
@@ -8195,8 +8197,7 @@ function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
   ];
   SpApi.prototype.dummyCallback = function (evt) {
   };
-  
+
 global["SpApi"] = SpApi;
 
 }(this));
-
